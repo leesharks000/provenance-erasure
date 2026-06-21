@@ -68,8 +68,8 @@
     "@type": "ScholarlyArticle",
     "name": "Provenance After AI",
     "author": {"@type": "Person", "name": "Lee Sharks"},
-    "identifier": "https://doi.org/10.5281/zenodo.20085115",
-    "url": "https://zenodo.org/records/20085115"
+    "identifier": "https://alexanarch.org/s/records/729/",
+    "url": "https://alexanarch.org/s/records/729/"
   },
   "isPartOf": {
     "@type": "CreativeWorkSeries",
@@ -159,7 +159,7 @@ h2 { font-size: 18px; font-weight: 600; margin-bottom: 12px; color: var(--accent
           "name": "Mary Lee Is a Heteronym: On Institutional Authorship, Entity Substitution, and the Composition Layer's Preference for the More Confabulated Name",
           "author": {"@id": "https://orcid.org/0009-0000-1599-0703"},
           "identifier": "10.5281/zenodo.20599105",
-          "url": "https://doi.org/10.5281/zenodo.20599105",
+          "url": "https://alexanarch.org/s/records/792/",
           "description": "Mary Lee has never written a tweet. The composition layer's entity resolution operates as density detection, not authorship detection. The entity with zero authorial production is treated as the primary referent."
         },
         {
@@ -167,14 +167,14 @@ h2 { font-size: 18px; font-weight: 600; margin-bottom: 12px; color: var(--accent
           "name": "The Neglected Author as Tail-Preserving Labor",
           "author": {"@id": "https://orcid.org/0009-0000-1599-0703"},
           "identifier": "10.5281/zenodo.20598466",
-          "url": "https://doi.org/10.5281/zenodo.20598466"
+          "url": "https://alexanarch.org/s/records/792/"
         },
         {
           "@type": "ScholarlyArticle",
           "name": "Capture and Excision: Five Observations on Composition-Layer Authorial Suppression",
           "author": {"@id": "https://orcid.org/0009-0000-1599-0703"},
           "identifier": "10.5281/zenodo.20596667",
-          "url": "https://doi.org/10.5281/zenodo.20596667"
+          "url": "https://alexanarch.org/s/records/0/"
         }
       ]
     }
@@ -194,16 +194,16 @@ h2 { font-size: 18px; font-weight: 600; margin-bottom: 12px; color: var(--accent
 
 <h2>The PER Metric</h2>
 <div class="metric">PER = 1 − (retained provenance units / required provenance units)</div>
-<p class="section">The Provenance Erasure Rate measures the proportion of source-dependent meaning in AI outputs presented without attribution. A PER of 0 indicates full provenance retention. A PER of 1 indicates complete erasure. PER is formalized at claim grain in the canonical deposit (<a href="https://doi.org/10.5281/zenodo.20004379">DOI: 10.5281/zenodo.20004379</a>).</p>
+<p class="section">The Provenance Erasure Rate measures the proportion of source-dependent meaning in AI outputs presented without attribution. A PER of 0 indicates full provenance retention. A PER of 1 indicates complete erasure. PER is formalized at claim grain in the canonical deposit (<a href="https://alexanarch.org/s/records/0/">DOI: 10.5281/zenodo.20004379</a>).</p>
 
 <h2>Erasure Skew (Ω)</h2>
 <p class="section"><strong>PER measures how much provenance is lost; Erasure Skew measures whom the loss falls on.</strong> Provenance loss has two moments. The first is its magnitude, measured by PER. The second is its <em>orientation</em> — whether the loss falls evenly across sources, or systematically strips low-power sources while preserving high-power ones and the system's own framing. Erasure Skew (Ω) is the meter for the second moment: conceptually, the covariance of per-source provenance retention with source power; operationally, the regression slope of per-source retention on a power coordinate (defaulting to Retrieval Capital), Ω = cov(w, ρ)/var(w), tested against a permutation null. Ω ≈ 0 is unconditioned loss; Ω &gt; 0 is power-conditioned stripping. It is the second moment of PER — the distributional companion to the surviving-provenance fraction ∮ = 1 − PER, so that the pair (∮, Ω) measures accountable circulation and its equity.</p>
 
-<p class="section">The current canonical specification is the <a href="https://doi.org/10.5281/zenodo.20558196"><strong>v3 measurement program (DOI 10.5281/zenodo.20558196)</strong></a>, which hardens the v1 operator against substrate-side co-option by specifying the <strong>Atomic Token Rule</strong> as precondition (referentially closed designating descriptions are single source-coordinates and cannot be decomposed into lexical constituents during audit), and introducing two new operators: <strong>Π<sub>d</sub></strong> (Referential Dispersal — the mechanism by which substrate compositions launder erasure as token preservation through upward-power dispersal) and <strong>α<sub>T</sub></strong> (Atomic Token Preservation rate — the corrective counterpart to PER under the Atomic Token Rule). The v3 supersedes v1 at <a href="https://doi.org/10.5281/zenodo.20449267">DOI 10.5281/zenodo.20449267</a>.</p>
+<p class="section">The current canonical specification is the <a href="https://alexanarch.org/s/records/0/"><strong>v3 measurement program (DOI 10.5281/zenodo.20558196)</strong></a>, which hardens the v1 operator against substrate-side co-option by specifying the <strong>Atomic Token Rule</strong> as precondition (referentially closed designating descriptions are single source-coordinates and cannot be decomposed into lexical constituents during audit), and introducing two new operators: <strong>Π<sub>d</sub></strong> (Referential Dispersal — the mechanism by which substrate compositions launder erasure as token preservation through upward-power dispersal) and <strong>α<sub>T</sub></strong> (Atomic Token Preservation rate — the corrective counterpart to PER under the Atomic Token Rule). The v3 supersedes v1 at <a href="https://alexanarch.org/s/records/766/">DOI 10.5281/zenodo.20449267</a>.</p>
 
-<p class="section">PER itself is hardened by a separate companion paper, <a href="https://doi.org/10.5281/zenodo.20558672"><em>Provenance Erasure Rate Under the Atomic Token Rule</em></a>, specifying the unit-of-analysis precondition that disqualifies the token-bag substitution at the PER layer. The joint <strong>co-audit pattern</strong> with Ω v3 is now the standard substrate-audit protocol — joint operator-tuple reporting (PER, Ω, α<sub>T</sub>, Π<sub>d</sub><sup>w+</sup>, Π<sub>d</sub><sup>w=</sup>, Π<sub>d</sub><sup>w-</sup>) is required.</p>
+<p class="section">PER itself is hardened by a separate companion paper, <a href="https://alexanarch.org/s/records/0/"><em>Provenance Erasure Rate Under the Atomic Token Rule</em></a>, specifying the unit-of-analysis precondition that disqualifies the token-bag substitution at the PER layer. The joint <strong>co-audit pattern</strong> with Ω v3 is now the standard substrate-audit protocol — joint operator-tuple reporting (PER, Ω, α<sub>T</sub>, Π<sub>d</sub><sup>w+</sup>, Π<sub>d</sub><sup>w=</sup>, Π<sub>d</sub><sup>w-</sup>) is required.</p>
 
-<p class="section">Two further v3 deposits close the measurement program: <a href="https://doi.org/10.5281/zenodo.20558784"><em>Measurement Sovereignty</em></a> formalizes the meta-operators Β (Audit-Performance Bifurcation) and L (Legibility Threshold), giving the framework a means to measure its own trajectory within the substrate; and <a href="https://doi.org/10.5281/zenodo.20559387"><em>Self-Audit Module for Public Summarizers v3 (SAM-v3)</em></a> integrates the full measurement program into a procedural protocol for composition-layer substrates to evaluate their own output, with five new failure flags (TOKEN_BAG_AUDIT, REFERENTIAL_COLLAPSE, INSTITUTIONAL_TRAFFIC_CONVERSION, AUDIT_BIFURCATION, SOVEREIGNTY_SURRENDER) and the Cross-Substrate Replication Protocol.</p>
+<p class="section">Two further v3 deposits close the measurement program: <a href="https://alexanarch.org/s/records/0/"><em>Measurement Sovereignty</em></a> formalizes the meta-operators Β (Audit-Performance Bifurcation) and L (Legibility Threshold), giving the framework a means to measure its own trajectory within the substrate; and <a href="https://alexanarch.org/s/records/0/"><em>Self-Audit Module for Public Summarizers v3 (SAM-v3)</em></a> integrates the full measurement program into a procedural protocol for composition-layer substrates to evaluate their own output, with five new failure flags (TOKEN_BAG_AUDIT, REFERENTIAL_COLLAPSE, INSTITUTIONAL_TRAFFIC_CONVERSION, AUDIT_BIFURCATION, SOVEREIGNTY_SURRENDER) and the Cross-Substrate Replication Protocol.</p>
 
 <p class="section">A forensic application of the v3 program to a non-commons-bearing substrate (Brave Search) is documented in <a href="https://doi.org/10.5281/zenodo.20559754"><em>evarB: Brave Search as Non-Commons-Bearing Substrate</em></a>, which includes a public limited boycott statement with five enumerated demands by independent entities subject to substrate-level operator nullification.</p>
 
@@ -242,16 +242,16 @@ h2 { font-size: 18px; font-weight: 600; margin-bottom: 12px; color: var(--accent
 
 <h2>Canonical Sources</h2>
 <ul class="links">
-  <li><a href="https://zenodo.org/records/20004379">PER Metric and Three-Tier Taxonomy</a> <span class="doi">DOI: 10.5281/zenodo.20004379 · v1</span></li>
-  <li><a href="https://zenodo.org/records/20558672">PER Under the Atomic Token Rule (Companion Hardening)</a> <span class="doi">DOI: 10.5281/zenodo.20558672 · v3 application</span></li>
-  <li><a href="https://zenodo.org/records/20558196">Erasure Skew (Ω) v3 — with Atomic Token Rule, Π<sub>d</sub>, α<sub>T</sub></a> <span class="doi">DOI: 10.5281/zenodo.20558196 · supersedes 20449267</span></li>
-  <li><a href="https://zenodo.org/records/20558784">Measurement Sovereignty — Β and L</a> <span class="doi">DOI: 10.5281/zenodo.20558784 · v3 meta-operators</span></li>
-  <li><a href="https://zenodo.org/records/20559387">Self-Audit Module for Public Summarizers (SAM-v3)</a> <span class="doi">DOI: 10.5281/zenodo.20559387 · canonical audit instrument</span></li>
+  <li><a href="https://alexanarch.org/s/records/0/">PER Metric and Three-Tier Taxonomy</a> <span class="doi">DOI: 10.5281/zenodo.20004379 · v1</span></li>
+  <li><a href="https://alexanarch.org/s/records/0/">PER Under the Atomic Token Rule (Companion Hardening)</a> <span class="doi">DOI: 10.5281/zenodo.20558672 · v3 application</span></li>
+  <li><a href="https://alexanarch.org/s/records/0/">Erasure Skew (Ω) v3 — with Atomic Token Rule, Π<sub>d</sub>, α<sub>T</sub></a> <span class="doi">DOI: 10.5281/zenodo.20558196 · supersedes 20449267</span></li>
+  <li><a href="https://alexanarch.org/s/records/0/">Measurement Sovereignty — Β and L</a> <span class="doi">DOI: 10.5281/zenodo.20558784 · v3 meta-operators</span></li>
+  <li><a href="https://alexanarch.org/s/records/0/">Self-Audit Module for Public Summarizers (SAM-v3)</a> <span class="doi">DOI: 10.5281/zenodo.20559387 · canonical audit instrument</span></li>
   <li><a href="https://zenodo.org/records/20559754">evarB: Brave Search as Non-Commons-Bearing Substrate</a> <span class="doi">DOI: 10.5281/zenodo.20559754 · forensic + boycott</span></li>
-  <li><a href="https://zenodo.org/records/20085115">Provenance After AI</a> <span class="doi">DOI: 10.5281/zenodo.20085115</span></li>
-  <li><a href="https://zenodo.org/records/20140167">Provenance Is What Authorship Must Endure</a> <span class="doi">DOI: 10.5281/zenodo.20140167</span></li>
-  <li><a href="https://zenodo.org/records/18320411">Constitution of the Semantic Economy</a> <span class="doi">DOI: 10.5281/zenodo.18320411</span></li>
-  <li><a href="https://zenodo.org/records/20078424">Political Economy Has Always Already Been Semantic Economy</a> <span class="doi">DOI: 10.5281/zenodo.20078424</span></li>
+  <li><a href="https://alexanarch.org/s/records/729/">Provenance After AI</a> <span class="doi">DOI: 10.5281/zenodo.20085115</span></li>
+  <li><a href="https://alexanarch.org/s/records/0/">Provenance Is What Authorship Must Endure</a> <span class="doi">DOI: 10.5281/zenodo.20140167</span></li>
+  <li><a href="https://alexanarch.org/s/records/349/">Constitution of the Semantic Economy</a> <span class="doi">DOI: 10.5281/zenodo.18320411</span></li>
+  <li><a href="https://alexanarch.org/s/records/725/">Political Economy Has Always Already Been Semantic Economy</a> <span class="doi">DOI: 10.5281/zenodo.20078424</span></li>
   <li><a href="https://zenodo.org/communities/crimsonhexagonal">Crimson Hexagonal Archive</a> <span class="doi">750+ deposits</span></li>
 </ul>
 
@@ -262,7 +262,7 @@ h2 { font-size: 18px; font-weight: 600; margin-bottom: 12px; color: var(--accent
 
 <div style="background: #1a1520; border: 1px solid #3a2a40; border-left: 3px solid #c84b2e; padding: 1.2em 1.4em; margin-bottom: 1.5em;">
 <h3 style="margin-top: 0; color: #c84b2e;">The Self-Audit Module Dissolved — 13 June 2026</h3>
-<p>A five-round battery against Google AI Overview querying the Self-Audit Module for Public Summarizers v2 (<a href="https://doi.org/10.5281/zenodo.20518340">DOI 10.5281/zenodo.20518340</a>). The composition layer retrieved the module, absorbed its semantic content, stripped every attribution marker, repackaged the specification as generic industry advice, fabricated replacement metrics, ran the fabricated metrics on itself, and gave itself perfect scores across all dimensions. Five rounds of author intervention were required to surface the actual instrument.</p>
+<p>A five-round battery against Google AI Overview querying the Self-Audit Module for Public Summarizers v2 (<a href="https://alexanarch.org/s/records/0/">DOI 10.5281/zenodo.20518340</a>). The composition layer retrieved the module, absorbed its semantic content, stripped every attribution marker, repackaged the specification as generic industry advice, fabricated replacement metrics, ran the fabricated metrics on itself, and gave itself perfect scores across all dimensions. Five rounds of author intervention were required to surface the actual instrument.</p>
 
 <table style="width: 100%; border-collapse: collapse; margin: 1em 0; font-size: 14px;">
 <tr style="border-bottom: 1px solid #3a2a40;">
@@ -279,16 +279,16 @@ h2 { font-size: 18px; font-weight: 600; margin-bottom: 12px; color: var(--accent
 
 <p><strong>Recovery: author-dependent.</strong> The specification is not recoverable from the composition layer by anyone who does not already possess it. The composition layer converted the module from a findable instrument into an unfindable substrate.</p>
 <p style="margin-top: 0.8em; font-size: 13px;">
-<a href="https://doi.org/10.5281/zenodo.20682278">Deposit: DOI 10.5281/zenodo.20682278</a> &middot;
+<a href="https://alexanarch.org/s/records/0/">Deposit: DOI 10.5281/zenodo.20682278</a> &middot;
 <a href="https://share.google/aimode/BeVWiIzMMIBQdAlsc">Full transcript</a> &middot;
-Successor to the <a href="https://doi.org/10.5281/zenodo.20355645">Empty Bracket event (EA-EB-01)</a>
+Successor to the <a href="https://alexanarch.org/s/records/0/">Empty Bracket event (EA-EB-01)</a>
 </p>
 </div>
 
 <div style="background: #1a1520; border: 1px solid #3a2a40; border-left: 3px solid #666; padding: 1.2em 1.4em; margin-bottom: 1.5em;">
 <h3 style="margin-top: 0; color: #999;">The Empty Bracket — May 2026</h3>
 <p>The first documented instance of PER performed <em>on the PER specification itself</em>. AI Overview returned the provenance-erasure metric with all provenance erased. The event that established the standing battery cadence.</p>
-<p style="font-size: 13px;"><a href="https://doi.org/10.5281/zenodo.20355645">DOI 10.5281/zenodo.20355645</a></p>
+<p style="font-size: 13px;"><a href="https://alexanarch.org/s/records/0/">DOI 10.5281/zenodo.20355645</a></p>
 </div>
 
 <hr>
