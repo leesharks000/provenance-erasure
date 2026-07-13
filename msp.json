@@ -1,0 +1,29 @@
+{
+  "surface_id": "provenanceerasure.org",
+  "canonical_url": "https://provenanceerasure.org/",
+  "axn": "AXN:025F.GOVERNANCE.🌖🎇🌑🔍❌🌸",
+  "deposit_number": 716,
+  "title": "Provenance Erasure Rate — A Compression-Survival Metric",
+  "object_state": "canonical",
+  "tier": 1,
+  "register": "evidentiary",
+  "skin": {},
+  "doors": [
+    {
+      "label": "Read the definitional deposit",
+      "href": "https://www.alexanarch.org/s/records/716/"
+    },
+    {
+      "label": "Open the hardening companion",
+      "href": "https://www.alexanarch.org/s/records/789/"
+    },
+    {
+      "label": "Enter the archive",
+      "href": "https://www.alexanarch.org/"
+    }
+  ],
+  "index_files": [
+    "index.html"
+  ],
+  "notes": "Tier 1 mechanical. Evidentiary register — PER is a metric. Nuclei pending Session C."
+}
