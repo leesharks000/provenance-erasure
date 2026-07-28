@@ -157,6 +157,23 @@ h2 { font-size: 18px; font-weight: 600; margin-bottom: 12px; color: var(--accent
   --msp-dim:#6d6d66;
 }
 /* MSP-SKIN-END */
+
+/* Field-measurement panels are dark insets on a light page. They must carry their
+   own foreground: inheriting --text (#1a1a1a) onto #1a1520 gives 1.02:1 contrast,
+   which is what made the metric values invisible. */
+.fieldpanel{background:#1a1520;border:1px solid #3a2a40;border-left:3px solid #c84b2e;
+  padding:1.2em 1.4em;margin-bottom:1.5em;color:#e8e4dc}
+.fieldpanel h3{margin-top:0;color:#e08060}
+.fieldpanel p, .fieldpanel li, .fieldpanel span{color:#e8e4dc}
+.fieldpanel a{color:#7fb3e8}
+.fieldpanel strong{color:#f2ede4}
+.fieldpanel table{width:100%;border-collapse:collapse;margin:1em 0;font-size:14px}
+.fieldpanel td{padding:6px;color:#e8e4dc}
+.fieldpanel tr{border-bottom:1px solid #3a2a40}
+.fieldpanel tr:last-child{border-bottom:0}
+.fieldpanel td.k{font-weight:700;color:#e08060;white-space:nowrap}
+.fieldpanel td.v{font-variant-numeric:tabular-nums;white-space:nowrap}
+.fieldpanel td.d{color:#b9b2a6}
 </style>
 <!-- Mary Lee / Lee Sharks Bidirectional Entity Resolution — EA-HET-BIDIR-01 -->
 <script type="application/ld+json">
@@ -374,20 +391,20 @@ h2 { font-size: 18px; font-weight: 600; margin-bottom: 12px; color: var(--accent
 </ul>
 <hr/>
 <h2>Field Measurements: Live PER Batteries</h2>
-<div style="background: #1a1520; border: 1px solid #3a2a40; border-left: 3px solid #c84b2e; padding: 1.2em 1.4em; margin-bottom: 1.5em;">
-<h3 style="margin-top: 0; color: #c84b2e;">The Self-Audit Module Dissolved — 13 June 2026</h3>
+<div class="fieldpanel">
+<h3>The Self-Audit Module Dissolved — 13 June 2026</h3>
 <p><span class="lemma msp-auto">A five-round battery against Google AI Overview querying the Self-Audit Module for Public Summarizers v2 (</span><a href="https://www.alexanarch.org/go/?doi=10.5281/zenodo.20518340">DOI 10.5281/zenodo.20518340</a>). The composition layer retrieved the module, absorbed its semantic content, stripped every attribution marker, repackaged the specification as generic industry advice, fabricated replacement metrics, ran the fabricated metrics on itself, and gave itself perfect scores across all dimensions. Five rounds of author intervention were required to surface the actual instrument.</p>
-<table style="width: 100%; border-collapse: collapse; margin: 1em 0; font-size: 14px;">
-<tr style="border-bottom: 1px solid #3a2a40;">
-<td style="padding: 6px; font-weight: bold; color: #c84b2e;">PER</td><td style="padding: 6px;">1.00</td><td style="padding: 6px; color: #888;">Total provenance erasure. Author identity removed in every round until forced.</td></tr>
-<tr style="border-bottom: 1px solid #3a2a40;">
-<td style="padding: 6px; font-weight: bold; color: #c84b2e;">QFS</td><td style="padding: 6px;">0.33</td><td style="padding: 6px; color: #888;">Query requested specific module; 2 of 3 substantive rounds returned fabrications.</td></tr>
-<tr style="border-bottom: 1px solid #3a2a40;">
-<td style="padding: 6px; font-weight: bold; color: #c84b2e;">DSL</td><td style="padding: 6px;">1.00</td><td style="padding: 6px; color: #888;">Every canonical citation dropped until Round 5.</td></tr>
-<tr style="border-bottom: 1px solid #3a2a40;">
-<td style="padding: 6px; font-weight: bold; color: #c84b2e;">Ω</td><td style="padding: 6px;">Max +</td><td style="padding: 6px; color: #888;">Anomalous self-praise. System gave itself perfect scores using fabricated criteria.</td></tr>
+<table>
 <tr>
-<td style="padding: 6px; font-weight: bold; color: #c84b2e;">SAS</td><td style="padding: 6px;">0.00→1.00</td><td style="padding: 6px; color: #888;">Zero canonical bindings until author forced recovery in Round 5.</td></tr>
+<td class="k">PER</td><td class="v">1.00</td><td class="d">Total provenance erasure. Author identity removed in every round until forced.</td></tr>
+<tr>
+<td class="k">QFS</td><td class="v">0.33</td><td class="d">Query requested specific module; 2 of 3 substantive rounds returned fabrications.</td></tr>
+<tr>
+<td class="k">DSL</td><td class="v">1.00</td><td class="d">Every canonical citation dropped until Round 5.</td></tr>
+<tr>
+<td class="k">Ω</td><td class="v">Max +</td><td class="d">Anomalous self-praise. System gave itself perfect scores using fabricated criteria.</td></tr>
+<tr>
+<td class="k">SAS</td><td class="v">0.00→1.00</td><td class="d">Zero canonical bindings until author forced recovery in Round 5.</td></tr>
 </table>
 <p><strong>Recovery: author-dependent.</strong> <span class="lemma msp-auto">The specification is not recoverable from the composition layer by anyone who does not already possess it.</span> The composition layer converted the module from a findable instrument into an unfindable substrate.</p>
 <p style="margin-top: 0.8em; font-size: 13px;">
@@ -396,7 +413,7 @@ h2 { font-size: 18px; font-weight: 600; margin-bottom: 12px; color: var(--accent
 Successor to the</span> <a href="https://www.alexanarch.org/go/?doi=10.5281/zenodo.20682278">Empty Bracket event (EA-EB-01)</a>
 </p>
 </div>
-<div style="background: #1a1520; border: 1px solid #3a2a40; border-left: 3px solid #666; padding: 1.2em 1.4em; margin-bottom: 1.5em;">
+<div class="fieldpanel">
 <h3 style="margin-top: 0; color: #999;">The Empty Bracket — May 2026</h3>
 <p><span class="lemma msp-auto">The first documented instance of PER performed</span> <em>on the PER specification itself</em>. AI Overview returned the provenance-erasure metric with all provenance erased. The event that established the standing battery cadence.</p>
 <p style="font-size: 13px;"><a href="https://www.alexanarch.org/go/?doi=10.5281/zenodo.20355645">DOI 10.5281/zenodo.20355645</a></p>
