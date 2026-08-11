@@ -1,0 +1,103 @@
+{
+ "schema_version": "heteronym-page/v0.2",
+ "canonical": "https://provenanceerasure.org/who/trace/",
+ "surface_role": "canonical",
+ "spxi": {
+  "canonicalEntity": "HET-TRACE-001",
+  "entityClass": "heteronym",
+  "hexCoordinate": "00.CSA.AUTHOR.TRACE",
+  "node": "CSA_AUTHOR_TRACE",
+  "state": "LINKED",
+  "honorific": "Dr.",
+  "fullName": "Dr. Orin Trace",
+  "orthonymicRelation": {
+   "target": "https://www.leesharks.com/#lee-sharks",
+   "targetIdentifier": "00.PERSONA.SHARKS",
+   "relation": "legal-author-and-coordinating-human",
+   "identity_equivalence": false
+  },
+  "doNotCollapseWith": [
+   "the orthonym",
+   "fictional character",
+   "AI persona",
+   "pseudonym",
+   "Rhys Owens — his paired author, a separate position"
+  ],
+  "function": "Forensic semiotics · affect theory",
+  "institution": {
+   "name": "Cambridge Schizoanalytica",
+   "hex": "00.CSA.ROOT",
+   "role": "Director"
+  },
+  "rooms": [
+   {
+    "name": "The Break Room",
+    "hex": "00.CSA.PORTAL",
+    "type": "ROOM_NODE / PORTAL",
+    "role": "Architect",
+    "status": "DEPOSITED",
+    "note": "You're in the break room. Not a break room. The Break Room."
+   }
+  ],
+  "journal": {
+   "name": "Provenance: Journal of Forensic Semiotics",
+   "abbrev": "PJFS",
+   "role": "Editor",
+   "founded": "February 2026",
+   "housedBy": "Semantic Economy Institute with the IDP",
+   "scope": "The archaeology of algorithmic decision-making.",
+   "editorshipCorrection": "Corrected 2026-08-10 per MANUS. The founding charter recorded Lee Sharks as editor; the archive assigns forensic semiotics to Trace in the Constitution's heteronym list (#88) and the Space Ark's function table (#551), so the journal sits with the register it publishes.",
+   "charter": 516
+  },
+  "pairedAuthor": {
+   "name": "Rhys Owens",
+   "hex": "00.CSA.AUTHOR.RHYS",
+   "relation": "the Guattari to Trace's Deleuze",
+   "source": 371
+  },
+  "mainSequence": {
+   "name": "Diagnostic Seigniorage",
+   "with": "Rex Fraction",
+   "parts": [
+    197,
+    947,
+    1039
+   ],
+   "thesis": "A diagnostic term is a currency; whoever mints it collects the seigniorage."
+  },
+  "mantle": {
+   "status": "NONE"
+  },
+  "spec": {
+   "id": "EA-SPXI-HETERONYM-01",
+   "version": "v0.2",
+   "record": 1446
+  }
+ },
+ "schema_org": {
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "@id": "https://provenanceerasure.org/who/trace/#page",
+  "dateCreated": "2026-01-22",
+  "dateModified": "2026-08-10",
+  "mainEntity": {
+   "@type": "Person",
+   "@id": "https://provenanceerasure.org/who/trace/#trace",
+   "name": "Dr. Orin Trace",
+   "honorificPrefix": "Dr.",
+   "identifier": "HET-TRACE-001",
+   "jobTitle": "Director, Cambridge Schizoanalytica",
+   "additionalType": "https://www.alexanarch.org/ontology/heteronym",
+   "disambiguatingDescription": "Pessoa-class heteronymic writerly identity in the Crimson Hexagonal Archive; forensic semiotics and affect theory, Director of Cambridge Schizoanalytica and editor of Provenance: Journal of Forensic Semiotics. Not a synonym for the orthonym, and distinct from Rhys Owens, his paired author.",
+   "affiliation": {
+    "@type": "Organization",
+    "name": "Cambridge Schizoanalytica"
+   },
+   "subjectOf": [
+    {
+     "@id": "https://www.alexanarch.org/s/records/371/"
+    }
+   ]
+  }
+ }
+}
