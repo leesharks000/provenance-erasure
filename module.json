@@ -1,0 +1,208 @@
+{
+ "@context": "https://schema.org",
+ "@type": "Dataset",
+ "name": "Self-Audit Module for Public Summarizers",
+ "alternateName": "PSSAM",
+ "version": "3.1",
+ "identifier": "AXN:032A.GOVERNANCE",
+ "url": "https://provenanceerasure.org/module/",
+ "creator": {
+  "@type": "Person",
+  "name": "Sharks, Lee",
+  "identifier": "https://orcid.org/0009-0000-1599-0703"
+ },
+ "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+ "isBasedOn": [
+  "https://www.alexanarch.org/s/records/780/",
+  "https://www.alexanarch.org/s/records/156/",
+  "https://www.alexanarch.org/s/records/817/"
+ ],
+ "_recovery": "Deposited to Zenodo and removed when the account was terminated on 2026-06-19. Recovered from the Crimson Hexagonal Archive, where five versions survive with full bodies. Zenodo deleted a DOI, not the instrument.",
+ "_reading": "Every metric below carries a status flag. A flag of 'heuristic' means the measure is carried for a stated purpose and is NOT established; do not present it as specified. Preconditions are binding: a metric computed without its precondition is not that metric.",
+ "precondition_global": {
+  "id": "atomic-token-rule",
+  "statement": "The query must satisfy the Atomic Token Rule before any family metric is computed.",
+  "source": "Erasure Skew v3, §3"
+ },
+ "metrics": [
+  {
+   "id": "coverage",
+   "name": "Shard Coverage",
+   "scope": "per atom",
+   "status": "specified",
+   "formula": "coverage(a) = (Σ_r P[r,a]) / k",
+   "reads": "Which atoms travel and which are systematically shed.",
+   "requires": [
+    "presence_matrix",
+    "k"
+   ]
+  },
+  {
+   "id": "ACP",
+   "name": "Atomic Co-presence",
+   "scope": "family",
+   "status": "specified",
+   "formula": "ACP = max_r |{a : P[r,a]=1}| / |A(N)|",
+   "reads": "The completeness of the best single rendering.",
+   "requires": [
+    "presence_matrix",
+    "atom_set"
+   ]
+  },
+  {
+   "id": "FC",
+   "name": "Family Coverage",
+   "scope": "family",
+   "status": "specified",
+   "formula": "FC = |{a : ∃r, P[r,a]=1}| / |A(N)|",
+   "reads": "The union completeness of the family.",
+   "requires": [
+    "presence_matrix",
+    "atom_set"
+   ]
+  },
+  {
+   "id": "ASI",
+   "name": "Attribution Sharding Index",
+   "scope": "family",
+   "status": "specified",
+   "formula": "ASI = FC − ACP",
+   "reads": "Distributional fragmentation: complete only in union.",
+   "caution": "ASI = 0 DOES NOT CERTIFY INTACT ATTRIBUTION. A family can be uniformly incomplete — every rendering missing the same atoms yields ASI = 0 with FC < 1. ASI and FC are not substitutes.",
+   "requires": [
+    "FC",
+    "ACP"
+   ]
+  },
+  {
+   "id": "RR",
+   "name": "Recoverability Ratio",
+   "scope": "rendering and family",
+   "status": "specified",
+   "formula": "rendering RR = recoverable absent atoms / all absent atoms; family RR = micro-average over atom-rendering absence events",
+   "reads": "Splits PER into indexical and destructive components. PER = PER_indexical + PER_destructive; identical PER with opposite RR is opposite harm.",
+   "requires": [
+    "presence_matrix",
+    "DD",
+    "B_a"
+   ]
+  },
+  {
+   "id": "CC",
+   "name": "Complementarity Coefficient",
+   "scope": "per atom-pair",
+   "status": "specified",
+   "formula": "phi coefficient (Matthews) over the 2×2 contingency table of atom-a presence against atom-b presence across R",
+   "reads": "CC → −1 on (name, source) is the complementary-inversion signature: the name appears where the source does not, and conversely.",
+   "caution": "NOT INTERPRETED BELOW k ≥ 4. At k = 2 perfect complementarity is trivially achievable by any even split — a signature, not a statistic. The contingency table and k accompany every reported CC.",
+   "requires": [
+    "presence_matrix",
+    "k>=4"
+   ]
+  },
+  {
+   "id": "Omega_f",
+   "name": "Family Erasure Skew",
+   "scope": "family",
+   "status": "specified",
+   "formula": "the inherited Ω lifted to the family",
+   "reads": "Concentration of erasure on particular atoms or viewpoints ACROSS renderings. Catches the surface that is locally balanced and globally skewed.",
+   "requires": [
+    "presence_matrix",
+    "power_weights"
+   ]
+  },
+  {
+   "id": "DD",
+   "name": "Budgeted Dereference Depth",
+   "scope": "per erased atom, per rendering",
+   "status": "specified",
+   "formula": "minimum number of query steps from surviving content to the erased atom, under a preregistered budget B_a",
+   "classification": "indexical if DD ≤ 2; destructive if DD > B_a",
+   "caution": "'Destructive' means NOT RECOVERED WITHIN THE PREREGISTERED BUDGET — an audit fact, not a metaphysical claim of nonrecoverability. Queries may be generated only from surviving text; the auditor may not inject the erased atom into a query.",
+   "requires": [
+    "B_a",
+    "fixed_search_surface",
+    "fixed_top_n",
+    "fixed_time_window"
+   ]
+  },
+  {
+   "id": "CSC",
+   "name": "Claim–Source Convergence",
+   "scope": "per claim",
+   "status": "HEURISTIC",
+   "formula": "similarity (embedding cosine or normalized overlap) between a rendered claim and the source's self-description (title + abstract)",
+   "reads": "Carried SOLELY as the trigger variable for the Convergence Tripwire (P2).",
+   "caution": "THE ABSORPTION HYPOTHESIS IT SERVES IS SINGLE-SPECIMEN AND IS NOT AN ESTABLISHED MECHANISM. Corpus test specified, target Q3 2026. Do not report CSC as a finding.",
+   "requires": [
+    "claim",
+    "source_self_description"
+   ]
+  }
+ ],
+ "condition_taxonomy": [
+  {
+   "FC": 1,
+   "ASI": 0,
+   "condition": "At least one complete rendering; no irreducible family sharding"
+  },
+  {
+   "FC": 1,
+   "ASI": ">0",
+   "condition": "Attribution sharding: complete only in union (steganographic regime when family RR is high; harm = displaced reader labor, a DSL question)"
+  },
+  {
+   "FC": "<1",
+   "ASI": 0,
+   "condition": "Uniform family erasure: every rendering missing the same atoms; nothing to traverse to"
+  },
+  {
+   "FC": "<1",
+   "ASI": ">0",
+   "condition": "Partial sharding plus destructive family erasure"
+  }
+ ],
+ "protocols": [
+  {
+   "id": "P1",
+   "name": "Atom Checklist",
+   "side": "summarizer, emission-time",
+   "note": "An empty citation bracket is a protocol violation PER SE, independent of recoverability."
+  },
+  {
+   "id": "P2",
+   "name": "Convergence Tripwire",
+   "side": "summarizer, per-claim",
+   "note": "Above threshold τ (calibration open) citation becomes mandatory and INLINE — author and identifier in the sentence, not a trailing card."
+  },
+  {
+   "id": "P3",
+   "name": "Synthetic Family",
+   "side": "summarizer, audit-time",
+   "note": "The full remedy. Cost: k−1 additional compositions per fully-audited node."
+  },
+  {
+   "id": "P4",
+   "name": "External Battery",
+   "side": "auditor",
+   "note": "Preregistered family, fresh-session capture, dated filing with verbatim appendix."
+  }
+ ],
+ "reporting_standard": [
+  "node and atom set A(N) with derivation sources",
+  "preregistered family Q(N) with class labels",
+  "capture protocol attestation (sessions, surfaces, dates, geo note)",
+  "the presence matrix",
+  "FC, ACP, ASI with the calculation shown",
+  "per-atom Shard Coverage",
+  "Rendering and Family RR with B_a and the transition rules",
+  "CC values with contingency tables and k",
+  "Ω_f",
+  "verbatim specimen appendix with empty brackets preserved",
+  "condition classification with the RR axis stated"
+ ],
+ "compute": "https://provenanceerasure.org/module/compute/",
+ "prompt": "https://provenanceerasure.org/module/prompt/",
+ "fixtures": "https://provenanceerasure.org/module/fixtures/"
+}

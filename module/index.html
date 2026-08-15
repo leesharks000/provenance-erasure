@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Self-Audit Module for Public Summarizers v3.1 — Provenance Erasure</title>
+<meta name="description" content="The Self-Audit Module for Public Summarizers v3.1 — Family Coverage, Atomic Co-presence, Attribution Sharding Index, Recoverability Ratio, Complementarity Coefficient, Budgeted Dereference Depth. Recovered after the Zenodo account termination of 19 June 2026. Computable by anyone, offline, with no account.">
+<link rel="canonical" href="https://provenanceerasure.org/module/">
+<meta name="spxi:sim" content="Zenodo deleted a DOI not the instrument">
+<meta name="spxi:sim" content="ASI equals zero does not certify intact attribution">
+<meta name="spxi:sim" content="an instrument that always returns a number is not measuring">
+<style>
+:root{--fg:#1a1a1a;--dim:#6a6a6a;--rule:#e0e0e0;--panel:#f7f7f5;--accent:#0b5c4e;--warn:#8a4b00;--mono:ui-monospace,SFMono-Regular,Menlo,monospace}
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;color:var(--fg);background:#fff}
+.wrap{max-width:58rem;margin:0 auto;padding:24px 18px 80px}
+h1{font-size:1.6rem;margin:.2em 0}
+h2{font-size:1.08rem;margin:2.2em 0 .6em;padding-top:1em;border-top:1px solid var(--rule)}
+h3{font-size:.95rem;margin:1.4em 0 .3em;font-family:var(--mono)}
+.sub{color:var(--dim);font-size:.95rem;margin-top:0}
+.note{background:var(--panel);border-left:3px solid var(--accent);padding:12px 14px;font-size:.9rem;margin:16px 0}
+.warn{border-left-color:var(--warn);color:#5a3300}
+code,.f{font-family:var(--mono);font-size:.88em}
+.f{display:block;color:var(--accent);margin:3px 0}
+.flag{font-family:var(--mono);font-size:.68rem;padding:1px 6px;border:1px solid var(--warn);border-radius:9px;color:var(--warn);white-space:nowrap}
+.ok{border-color:var(--accent);color:var(--accent)}
+.doors{margin:22px 0}
+.w-chip{display:inline-block;border:1px solid var(--rule);border-radius:9px;padding:6px 12px;color:var(--dim);text-decoration:none;font-family:var(--mono);font-size:11px;margin:0 6px 6px 0}
+.w-chip:hover{border-color:var(--accent);color:var(--accent)}
+.axn-chip{font-family:var(--mono);font-size:.72em;border:1px solid var(--rule);border-radius:9px;padding:1px 7px;color:var(--dim);text-decoration:none;white-space:nowrap}
+footer{margin-top:48px;padding-top:16px;border-top:1px solid var(--rule);font-size:.82rem;color:var(--dim)}
+a{color:var(--accent)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>Self-Audit Module for Public Summarizers</h1>
+<p class="sub">v3.1 — the Family Module · Lee Sharks · CC BY-SA 4.0 · <a class="axn-chip" href="https://www.alexanarch.org/s/records/817/">deposit #817</a></p>
+
+<div class="note">
+<strong>This instrument was deposited to Zenodo and removed when the account was terminated on 19 June 2026.</strong> It survives in the Crimson Hexagonal Archive in five versions with full bodies. <strong>Zenodo deleted a DOI, not the instrument.</strong>
+</div>
+
+<p>The module measures what happens to a source's provenance across a <em>family</em> of renderings about the same node — not one summary at a time, but the whole set, because attribution that is complete only in union is a different failure from attribution that is missing everywhere.</p>
+
+<div class="doors">
+<a class="w-chip" href="/module/compute/">Compute a family</a>
+<a class="w-chip" href="/module/prompt/">Copy a paste-able audit</a>
+<a class="w-chip" href="/module/fixtures/">Check your implementation</a>
+<a class="w-chip" href="/module.json">Read the machine-readable spec</a>
+</div>
+
+<h2>The metrics</h2>
+
+<h3 id="fc">FC — Family Coverage <span class="flag ok">specified</span></h3>
+<span class="f">FC = |{a : ∃r, P[r,a]=1}| / |A(N)|</span>
+<p>The union completeness of the family: how much of the required provenance survives <em>somewhere</em>.</p>
+
+<h3 id="acp">ACP — Atomic Co-presence <span class="flag ok">specified</span></h3>
+<span class="f">ACP = max_r |{a : P[r,a]=1}| / |A(N)|</span>
+<p>The completeness of the best single rendering — what a reader who sees only one gets.</p>
+
+<h3 id="asi">ASI — Attribution Sharding Index <span class="flag ok">specified</span></h3>
+<span class="f">ASI = FC − ACP</span>
+<p>Distributional fragmentation: attribution complete only in union, so no single reader ever receives it.</p>
+<div class="note warn"><strong>ASI = 0 does not certify intact attribution.</strong> A family can be uniformly incomplete — every rendering missing the same atoms yields ASI = 0 with FC &lt; 1. ASI and FC are not substitutes. <a href="/module/fixtures/">The third fixture is this exact trap</a>, and it is drawn from a real family.</div>
+
+<h3 id="rr">RR — Recoverability Ratio <span class="flag ok">specified</span></h3>
+<p>Splits PER into <strong>indexical</strong> and <strong>destructive</strong> components. <span class="f">PER = PER_indexical + PER_destructive</span> Identical PER with opposite RR is opposite harm: an absent atom you can reach in two queries is not the same injury as one you cannot reach at all.</p>
+
+<h3 id="cc">CC — Complementarity Coefficient <span class="flag ok">specified</span></h3>
+<p>The phi coefficient over atom-pair presence across the family. <strong>CC → −1 on (name, source) is the complementary-inversion signature</strong>: the name appears where the source does not, and conversely.</p>
+<div class="note warn"><strong>Not interpreted below k ≥ 4.</strong> At k = 2, perfect complementarity is trivially achievable by any even split — a signature, not a statistic. Every reported CC carries its contingency table and k.</div>
+
+<h3 id="omega-f">Ω_f — Family Erasure Skew <span class="flag ok">specified</span></h3>
+<p>Erasure Skew lifted to the family: concentration of loss on particular atoms or viewpoints <em>across</em> renderings. Catches the surface that is locally balanced and globally skewed.</p>
+
+<h3 id="dd">DD — Budgeted Dereference Depth <span class="flag ok">specified</span></h3>
+<p>The minimum number of query steps from surviving content to an erased atom, under a preregistered budget B_a. <strong>Indexical if DD ≤ 2; destructive if DD &gt; B_a.</strong></p>
+<div class="note">"Destructive" means <strong>not recovered within the preregistered budget</strong> — an audit fact, not a metaphysical claim of nonrecoverability. Queries may be generated only from surviving text: the auditor may not inject the erased atom into a query.</div>
+
+<h3 id="csc">CSC — Claim–Source Convergence <span class="flag">heuristic</span></h3>
+<p>Similarity between a rendered claim and the source's self-description. Carried <strong>solely</strong> as the trigger variable for the Convergence Tripwire.</p>
+<div class="note warn"><strong>The absorption hypothesis it serves is single-specimen and is not an established mechanism.</strong> Corpus test specified, target Q3 2026. Do not report CSC as a finding. The calculator does not compute it.</div>
+
+<h2>Why the cautions are printed next to the numbers</h2>
+<p>Because the number is what travels. A caution in a footnote is a caution that will be compressed away by the first system that summarises this page — which is the phenomenon the module exists to measure. <strong>Every metric carries its status flag in <a href="/module.json">module.json</a> as data</strong>, so a machine that fetches the spec cannot present a heuristic as a specified measure.</p>
+
+<h2>The dissolution</h2>
+<p>On 13 June 2026 this module was itself dissolved by a composition layer: asked about it, the layer returned generic advice about citing sources, with the instrument's author, identifier and metrics absent. The record is deposit <a class="axn-chip" href="https://www.alexanarch.org/s/records/198/">#198</a>. It is kept here rather than in a history section because <strong>the module's best worked example is what happened to the module</strong>.</p>
+
+<footer>
+<p><strong>Self-Audit Module for Public Summarizers v3.1</strong> · Lee Sharks · ORCID 0009-0000-1599-0703 · CC BY-SA 4.0<br>
+Versions: <a href="https://www.alexanarch.org/s/records/780/">#780 v2</a> ·
+<a href="https://www.alexanarch.org/s/records/156/">#156 v3.0</a> ·
+<a href="https://www.alexanarch.org/s/records/817/">#817 v3.1</a> ·
+<a href="https://www.alexanarch.org/s/records/198/">#198 dissolution</a> ·
+<a href="https://www.alexanarch.org/s/records/204/">#204 SPXI variant</a><br>
+<a href="/">provenanceerasure.org</a> · <a href="https://laborvector.org">laborvector.org</a></p>
+</footer>
+</div>
+</body>
+</html>

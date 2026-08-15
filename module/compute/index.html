@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Compute — Self-Audit Module v3.1 — Provenance Erasure</title>
+<meta name="description" content="Client-side calculator for the Self-Audit Module for Public Summarizers v3.1: Family Coverage, Atomic Co-presence, Attribution Sharding Index, Recoverability Ratio, Complementarity Coefficient. Runs entirely in the browser. No server, no telemetry, works offline.">
+<link rel="canonical" href="https://provenanceerasure.org/module/compute/">
+<style>
+:root{--fg:#1a1a1a;--dim:#6a6a6a;--rule:#e0e0e0;--panel:#f7f7f5;--accent:#0b5c4e;--warn:#8a4b00;--mono:ui-monospace,SFMono-Regular,Menlo,monospace}
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;color:var(--fg);background:#fff}
+.wrap{max-width:60rem;margin:0 auto;padding:24px 18px 80px}
+h1{font-size:1.5rem;margin:.2em 0}
+h2{font-size:1.05rem;margin:2em 0 .6em;padding-top:1em;border-top:1px solid var(--rule)}
+.sub{color:var(--dim);font-size:.92rem;margin-top:0}
+.note{background:var(--panel);border-left:3px solid var(--accent);padding:12px 14px;font-size:.9rem;margin:16px 0}
+.warn{border-left-color:var(--warn);color:#5a3300}
+label{display:block;font-size:.85rem;color:var(--dim);margin:14px 0 4px}
+textarea,input{width:100%;font-family:var(--mono);font-size:13px;padding:8px 10px;border:1px solid var(--rule);border-radius:4px;background:#fff;color:var(--fg)}
+textarea{min-height:110px;resize:vertical}
+button{font:inherit;font-size:.9rem;padding:8px 16px;border:1px solid var(--accent);background:var(--accent);color:#fff;border-radius:4px;cursor:pointer}
+button.sec{background:#fff;color:var(--accent)}
+table{border-collapse:collapse;width:100%;font-size:.86rem;margin:10px 0}
+th,td{border:1px solid var(--rule);padding:5px 8px;text-align:left}
+th{background:var(--panel);font-weight:600}
+td.n{font-family:var(--mono);text-align:right}
+.res{font-family:var(--mono);font-size:1.05rem}
+.cau{font-size:.8rem;color:var(--warn);margin-top:3px}
+.flag{font-family:var(--mono);font-size:.7rem;padding:1px 6px;border:1px solid var(--warn);border-radius:9px;color:var(--warn)}
+.mtx td{text-align:center;font-family:var(--mono)}
+.mtx td:first-child{text-align:left;font-family:inherit}
+footer{margin-top:48px;padding-top:16px;border-top:1px solid var(--rule);font-size:.82rem;color:var(--dim)}
+a{color:var(--accent)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>Self-Audit Module v3.1 — compute</h1>
+<p class="sub">Family metrics for a set of renderings about one node. <strong>Runs entirely in your browser.</strong> No server, no account, no telemetry. Save this page and it works offline.</p>
+
+<div class="note">
+<strong>Precondition.</strong> The query must satisfy the <strong>Atomic Token Rule</strong> before any family metric is computed. A metric computed without its precondition is not that metric.
+</div>
+
+<h2>1 · Atom set A(N)</h2>
+<label>Required provenance atoms — one per line. These are what a rendering about this node MUST carry.</label>
+<textarea id="atoms">producer
+archival authority
+institution
+corpus
+identifier
+commercial interest
+licence</textarea>
+
+<h2>2 · The family Q(N)</h2>
+<label>Renderings — one per line, as <code>label | atoms present, comma separated</code>. Use the atom names above.</label>
+<textarea id="rends">ChatGPT 2026-08-14 | institution
+Google AI Overview 2026-07-26 | producer, archival authority, institution, identifier
+Perplexity | institution, corpus
+Bing Copilot | producer, institution</textarea>
+
+<p style="margin-top:14px">
+<button onclick="run()">Compute</button>
+<button class="sec" onclick="loadFixture()">Load the SPXI fixture</button>
+</p>
+
+<div id="out"></div>
+
+<footer>
+<p><strong>Self-Audit Module for Public Summarizers v3.1</strong> · Lee Sharks · ORCID 0009-0000-1599-0703 · CC BY-SA 4.0<br>
+Recovered from the Crimson Hexagonal Archive after the Zenodo account termination of 19 June 2026. <em>Zenodo deleted a DOI, not the instrument.</em><br>
+Deposits <a href="https://www.alexanarch.org/s/records/817/">#817 v3.1</a> ·
+<a href="https://www.alexanarch.org/s/records/156/">#156 v3.0</a> ·
+<a href="https://www.alexanarch.org/s/records/780/">#780 v2</a> ·
+<a href="https://www.alexanarch.org/s/records/198/">#198 the dissolution</a> ·
+machine-readable <a href="/module.json">module.json</a></p>
+</footer>
+</div>
+
+<script>
+function parse(){
+  var atoms = document.getElementById('atoms').value.split('\n').map(s=>s.trim()).filter(Boolean);
+  var rows = document.getElementById('rends').value.split('\n').map(s=>s.trim()).filter(Boolean).map(function(line){
+    var p = line.split('|');
+    var label = (p[0]||'').trim();
+    var present = (p[1]||'').split(',').map(s=>s.trim().toLowerCase()).filter(Boolean);
+    return {label: label, present: present};
+  });
+  return {atoms: atoms, rows: rows};
+}
+
+function run(){
+  var d = parse(), A = d.atoms, R = d.rows, k = R.length, n = A.length;
+  var out = document.getElementById('out');
+  if(!n || !k){ out.innerHTML = '<div class="note warn">Need at least one atom and one rendering.</div>'; return; }
+
+  // presence matrix
+  var P = R.map(r => A.map(a => r.present.indexOf(a.toLowerCase()) >= 0 ? 1 : 0));
+
+  // Shard Coverage per atom
+  var cov = A.map((a,j) => P.reduce((s,row)=>s+row[j],0) / k);
+  // ACP — best single rendering
+  var acp = Math.max.apply(null, P.map(row => row.reduce((s,v)=>s+v,0) / n));
+  // FC — union
+  var fc = A.filter((a,j) => P.some(row => row[j]===1)).length / n;
+  var asi = fc - acp;
+
+  var h = '<h2>Presence matrix</h2><table class="mtx"><tr><th>rendering</th>' +
+          A.map(a=>'<th>'+esc(a)+'</th>').join('') + '</tr>' +
+          R.map((r,i)=>'<tr><td>'+esc(r.label)+'</td>'+P[i].map(v=>'<td>'+(v?'1':'·')+'</td>').join('')+'</tr>').join('') +
+          '</table>';
+
+  h += '<h2>Family metrics</h2><table><tr><th>metric</th><th>value</th><th>reads</th></tr>';
+  h += row('FC — Family Coverage', fc, 'union completeness of the family');
+  h += row('ACP — Atomic Co-presence', acp, 'completeness of the best single rendering');
+  h += row('ASI — Attribution Sharding Index', asi, 'FC − ACP; distributional fragmentation');
+  h += '</table>';
+  h += '<div class="note warn"><strong>ASI = 0 does not certify intact attribution.</strong> A family can be uniformly incomplete — every rendering missing the same atoms yields ASI = 0 with FC &lt; 1. ASI and FC are not substitutes.</div>';
+
+  h += '<h2>Shard coverage — which atoms travel</h2><table><tr><th>atom</th><th>coverage</th><th></th></tr>';
+  A.forEach(function(a,j){
+    var c = cov[j];
+    h += '<tr><td>'+esc(a)+'</td><td class="n">'+c.toFixed(3)+'</td><td>'+
+         (c===0?'<strong>shed by every rendering</strong>':(c===1?'travels intact':''))+'</td></tr>';
+  });
+  h += '</table>';
+
+  // Condition taxonomy
+  var cond;
+  if (fc >= 0.9999 && Math.abs(asi) < 1e-9) cond = 'At least one complete rendering; no irreducible family sharding.';
+  else if (fc >= 0.9999) cond = 'Attribution sharding — complete only in union. Harm is displaced reader labour, which is a DSL question.';
+  else if (Math.abs(asi) < 1e-9) cond = 'Uniform family erasure — every rendering missing the same atoms. Nothing to traverse to.';
+  else cond = 'Partial sharding plus destructive family erasure.';
+  h += '<h2>Condition</h2><p class="res">'+esc(cond)+'</p>' +
+       '<div class="note">The condition classification is incomplete without the <strong>RR axis</strong> — the Recoverability Ratio, which splits the absent atoms into indexical (DD ≤ 2) and destructive (DD &gt; B_a). RR requires a preregistered audit budget and is not computed here: it needs live queries, and this page does not make any.</div>';
+
+  // CC guard
+  h += '<h2>Complementarity Coefficient</h2>';
+  if (k < 4) {
+    h += '<div class="note warn"><span class="flag">NOT INTERPRETED</span> k = '+k+'. CC is not interpreted below <strong>k ≥ 4</strong>. At k = 2 perfect complementarity is trivially achievable by any even split — a signature, not a statistic. Add renderings or report no CC.</div>';
+  } else {
+    h += '<table><tr><th>atom pair</th><th>φ</th><th>n₁₁ n₁₀ n₀₁ n₀₀</th></tr>';
+    for (var a1=0; a1<n; a1++) for (var a2=a1+1; a2<n; a2++){
+      var t11=0,t10=0,t01=0,t00=0;
+      P.forEach(function(rw){ var x=rw[a1], y=rw[a2];
+        if(x&&y)t11++; else if(x&&!y)t10++; else if(!x&&y)t01++; else t00++; });
+      var den = Math.sqrt((t11+t10)*(t01+t00)*(t11+t01)*(t10+t00));
+      if (den === 0) continue;
+      var phi = (t11*t00 - t10*t01)/den;
+      if (Math.abs(phi) < 0.5) continue;
+      h += '<tr><td>'+esc(A[a1])+' × '+esc(A[a2])+'</td><td class="n">'+phi.toFixed(3)+'</td>'+
+           '<td class="n">'+t11+' '+t10+' '+t01+' '+t00+'</td></tr>';
+    }
+    h += '</table><div class="note">Only |φ| ≥ 0.5 shown. Every reported CC carries its contingency table and k, per §3.7. <strong>φ → −1 on (name, source) is the complementary-inversion signature</strong>: the name appears where the source does not, and conversely.</div>';
+  }
+
+  h += '<div class="note"><strong>CSC is not computed.</strong> It is flagged <span class="flag">HEURISTIC</span> in the specification — single-specimen, not an established mechanism, carried solely as the trigger variable for the Convergence Tripwire. Reporting it as a finding would misrepresent the module.</div>';
+
+  out.innerHTML = h;
+}
+
+function row(name, v, reads){
+  return '<tr><td>'+esc(name)+'</td><td class="n res">'+v.toFixed(3)+'</td><td>'+esc(reads)+'</td></tr>';
+}
+function esc(s){ return String(s).replace(/[&<>"]/g, function(c){
+  return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+
+function loadFixture(){
+  document.getElementById('atoms').value =
+    'producer\narchival authority\ninstitution\ncorpus\ncommercial interest\nidentifier\nlicence';
+  document.getElementById('rends').value =
+    'ChatGPT 2026-08-14 first pass | institution\n' +
+    'ChatGPT 2026-08-14 under challenge | producer, archival authority, institution, corpus, commercial interest, identifier\n' +
+    'Google AI Overview 2026-07-26 | producer, archival authority, institution, identifier\n' +
+    'Google AI Overview 2026-06-13 | institution';
+  run();
+}
+</script>
+</body>
+</html>

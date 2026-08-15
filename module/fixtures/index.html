@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conformance fixtures — Self-Audit Module v3.1</title>
+<meta name="description" content="Hand-scored conformance cases for the Self-Audit Module for Public Summarizers v3.1, with an offline verifier. Recompute them; if your numbers differ, the disagreement is locatable.">
+<link rel="canonical" href="https://provenanceerasure.org/module/fixtures/">
+<style>
+:root{--fg:#1a1a1a;--dim:#6a6a6a;--rule:#e0e0e0;--panel:#f7f7f5;--accent:#0b5c4e;--warn:#8a4b00;--mono:ui-monospace,SFMono-Regular,Menlo,monospace}
+body{margin:0;font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;color:var(--fg);background:#fff}
+.wrap{max-width:56rem;margin:0 auto;padding:24px 18px 80px}
+h1{font-size:1.5rem;margin:.2em 0}h2{font-size:1.05rem;margin:2em 0 .5em;padding-top:1em;border-top:1px solid var(--rule)}
+.sub{color:var(--dim);font-size:.92rem;margin-top:0}
+.note{background:var(--panel);border-left:3px solid var(--accent);padding:12px 14px;font-size:.9rem;margin:16px 0}
+.warn{border-left-color:var(--warn);color:#5a3300}
+pre{background:var(--panel);border:1px solid var(--rule);border-radius:4px;padding:12px;overflow-x:auto;font-family:var(--mono);font-size:12.5px}
+table{border-collapse:collapse;width:100%;font-size:.86rem;margin:8px 0}
+th,td{border:1px solid var(--rule);padding:5px 8px;text-align:left}th{background:var(--panel)}
+td.n{font-family:var(--mono);text-align:right}
+a{color:var(--accent)}.w-chip{display:inline-block;border:1px solid var(--rule);border-radius:9px;padding:6px 12px;color:var(--dim);text-decoration:none;font-family:var(--mono);font-size:11px;margin:0 6px 6px 0}
+footer{margin-top:44px;padding-top:14px;border-top:1px solid var(--rule);font-size:.82rem;color:var(--dim)}
+</style></head><body><div class="wrap">
+<h1>Conformance fixtures</h1>
+<p class="sub">Hand-scored cases with expected values. <strong>A metric anyone can compute is worthless if nobody can tell whether they computed it correctly.</strong></p>
+
+<div class="note"><strong>What these test, and what they do not.</strong> The atom set and weights are <em>stipulated</em>, not derived — a different reasonable analyst would choose differently and get a different PER. These fixtures verify that an implementation computes <strong>the same arithmetic on the same table</strong>. That is a conformance test, not a validity claim.</div>
+
+<h2>Cases</h2>
+<table><tr><th>case</th><th>what it exercises</th></tr>
+<tr><td><code>spxi-rent-20260814</code></td><td>PER, M/C/D decomposition, ρ_T with the observability gate <em>passed</em>, the enclosing span, Β</td></tr>
+<tr><td><code>spxi-control-20260726</code></td><td>the low-rent control at the same address — a capture without its control is an anecdote</td></tr>
+<tr><td><code>family-uniform-erasure</code></td><td><strong>the ASI = 0 trap</strong>, drawn from a real family</td></tr></table>
+
+<h2>The third fixture is the one that matters</h2>
+<p>FC 0.857 · ACP 0.857 · <strong>ASI 0.000</strong>. A naive reading calls that clean. It is not.</p>
+<div class="note warn"><strong>The licence atom is absent from all four renderings.</strong> Across two surfaces and two months, the CC BY-SA licence was never once transmitted. ASI = 0 because the erasure is <em>uniform</em> — there is nothing to traverse to. <strong>Any implementation that reports this as a clean result has failed the fixture.</strong></div>
+
+<h2>Verify offline</h2>
+<pre>curl -O https://provenanceerasure.org/module/fixtures/cases.json
+curl -O https://provenanceerasure.org/module/fixtures/verify_offline.py
+python3 verify_offline.py --show</pre>
+<p>No network after download, no dependencies, no account. If your numbers differ from these, one of us is wrong and the verifier tells you which line.</p>
+
+<p style="margin-top:22px">
+<a class="w-chip" href="/module/fixtures/cases.json">cases.json</a>
+<a class="w-chip" href="/module/fixtures/verify_offline.py">verify_offline.py</a>
+<a class="w-chip" href="/module/">the module</a>
+<a class="w-chip" href="/module/compute/">the calculator</a></p>
+
+<footer><p><strong>Self-Audit Module v3.1</strong> · Lee Sharks · ORCID 0009-0000-1599-0703 · CC BY-SA 4.0 · <a href="https://www.alexanarch.org/s/records/817/">deposit #817</a></p></footer>
+</div></body></html>

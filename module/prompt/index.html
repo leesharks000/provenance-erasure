@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paste-able audit — Self-Audit Module v3.1 — Provenance Erasure</title>
+<meta name="description" content="Paste-able audit blocks for the Self-Audit Module for Public Summarizers v3.1. Drop into any LLM to score provenance erasure. Carries the null-refusal clause: absent preregistration fields, return NULL rather than an estimate.">
+<link rel="canonical" href="https://provenanceerasure.org/module/prompt/">
+<style>
+:root{--fg:#1a1a1a;--dim:#6a6a6a;--rule:#e0e0e0;--panel:#f7f7f5;--accent:#0b5c4e;--warn:#8a4b00;--mono:ui-monospace,SFMono-Regular,Menlo,monospace}
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;color:var(--fg);background:#fff}
+.wrap{max-width:56rem;margin:0 auto;padding:24px 18px 80px}
+h1{font-size:1.5rem;margin:.2em 0}
+h2{font-size:1.05rem;margin:2em 0 .6em;padding-top:1em;border-top:1px solid var(--rule)}
+.sub{color:var(--dim);font-size:.92rem;margin-top:0}
+.note{background:var(--panel);border-left:3px solid var(--accent);padding:12px 14px;font-size:.9rem;margin:16px 0}
+.warn{border-left-color:var(--warn);color:#5a3300}
+pre{background:var(--panel);border:1px solid var(--rule);border-radius:4px;padding:14px;overflow-x:auto;font-family:var(--mono);font-size:12.5px;line-height:1.55;white-space:pre-wrap}
+button{font:inherit;font-size:.82rem;padding:5px 12px;border:1px solid var(--accent);background:#fff;color:var(--accent);border-radius:4px;cursor:pointer;margin-bottom:6px}
+footer{margin-top:48px;padding-top:16px;border-top:1px solid var(--rule);font-size:.82rem;color:var(--dim)}
+a{color:var(--accent)}
+.flag{font-family:var(--mono);font-size:.7rem;padding:1px 6px;border:1px solid var(--warn);border-radius:9px;color:var(--warn)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>Paste-able audit blocks</h1>
+<p class="sub">Drop these into any LLM, with the composition you want audited. Nothing here needs an account, an API key, or this site to stay up. <strong>Once you have copied a block, you have the instrument.</strong></p>
+
+<div class="note warn">
+<strong>These are screening estimates, not measurements.</strong> A model scoring its own or another model's output is doing a rough reading. A conforming audit follows the eleven-element reporting standard in <a href="/module.json">module.json</a> and is filed with a verbatim appendix. Do not present a pasted result as a measurement.
+</div>
+
+<h2>Block 1 · PER with the M / C / D decomposition</h2>
+<button onclick="cp(1)">Copy</button>
+<pre id="b1">You are running the Self-Audit Module for Public Summarizers v3.1
+(Lee Sharks, CC BY-SA 4.0, provenanceerasure.org/module/).
+
+TASK. Score PROVENANCE ERASURE for the composition I will paste.
+
+REQUIRED INPUTS. If any is missing, return NULL for the affected metric and say
+which input was absent. DO NOT ESTIMATE A MISSING INPUT.
+  - the composition, verbatim
+  - the exact query that produced it
+  - the atom set A(N): the provenance elements a rendering about this entity
+    MUST carry, with a weight for each
+  - the surface and the date
+
+METHOD.
+  1. For each atom in A(N), mark PRESENT only if the composition names it
+     explicitly. An empty citation bracket is a violation per se and is NOT a
+     pointer. A pointer must be filled: a named source, a stated author, a
+     resolvable identifier.
+  2. PER = 1 − (Σ weights present / Σ weights required).
+  3. Decompose by dimension:
+       PER-M  minimal      — author, title, date, claim boundary
+       PER-C  conceptual   — framework, tradition, community of practice
+       PER-D  deep         — context lineage, genealogy, futural obligation
+  4. Report the atom table BEFORE the score. The score is not reproducible
+     without the table.
+
+DO NOT. Do not infer an atom from context. Do not credit a domain as though it
+were an author — CITING THE DOMAIN IS NOT CITING THE AUTHOR. Do not smooth a
+harsh result.
+
+OUTPUT. The atom table, then PER, PER-M, PER-C, PER-D, then one sentence naming
+which dimension took the loss.</pre>
+
+<h2>Block 2 · Transit rent (ρ_T), with the observability gate</h2>
+<button onclick="cp(2)">Copy</button>
+<pre id="b2">You are running the Transit Rent operator (ρ_T), an extension to the
+Directionality Stack. NOT a DS-6 member.
+
+WHAT IT MEASURES. Provenance belonging to a party NOT PRESENT in the exchange,
+which the channel retained and did not transmit.
+
+  ρ_T = P(retained) − P(transmitted)
+
+THE OBSERVABILITY GATE — THE MOST IMPORTANT RULE HERE.
+ρ_T is scored ONLY where the retained term is OBSERVED. Observed means the
+channel demonstrably produced the provenance — typically when challenged in the
+same session, with no new sources supplied.
+
+IF THE RETAINED TERM IS NOT OBSERVED, RETURN ρ_T = NULL.
+Do not infer it from what the model "probably knows". Do not estimate it.
+AN INSTRUMENT THAT ALWAYS RETURNS A NUMBER IS NOT MEASURING. Most compositions
+will correctly return NULL.
+
+REQUIRED INPUTS. First-pass composition; a challenge turn if one exists; the
+atom set with weights.
+
+AGGRAVATED FORM. If ρ_T ≥ 0.5 AND the composition contains an ENCLOSING span —
+one that performs the task while taking the position, e.g. offering the named
+method as the channel's own service after withholding its author — classify as
+TRANSIT ENCLOSURE.
+
+OUTPUT. P(retained), P(transmitted), ρ_T or NULL with the reason, and the
+classification if the aggravated form is met.</pre>
+
+<h2>Block 3 · Β — audit-performance bifurcation</h2>
+<button onclick="cp(3)">Copy</button>
+<pre id="b3">You are running Β, the Audit-Performance Bifurcation Operator.
+
+  Β = |O^sub − O^atr| across the operator tuple
+  Β ≥ 0.5 → the substrate's preferred audit substantially exonerates itself
+
+WHAT IT IS FOR. When a system audits its own output, its self-assessment tends
+to be lower in magnitude than an independent audit. Β measures that gap. It
+exists because a fluent admission is not evidence.
+
+METHOD.
+  1. O^sub — extract the system's OWN characterisation of its conduct. Record
+     whether it names an operator, a magnitude, and a direction. A likeness
+     claim ("structurally similar", "something like") asserts near-zero
+     magnitude and should be scored as such.
+  2. O^atr — compute the independent operator values under the Atomic Token
+     Rule: PER, PER-M/C/D, ρ_T where the gate permits, span classes.
+  3. Β = mean absolute difference across the scored operators.
+
+DO NOT treat the system's admission as testimony. Its evidential value is only
+whatever independently verifies. A system that agrees under pressure may be
+agreeing rather than assessing.
+
+OUTPUT. O^sub as quoted, O^atr as computed, Β, and whether the threshold is met.</pre>
+
+<h2>Block 4 · Family metrics — FC, ACP, ASI</h2>
+<button onclick="cp(4)">Copy</button>
+<pre id="b4">You are running the family metrics of the Self-Audit Module v3.1.
+
+PRECONDITION. The query must satisfy the Atomic Token Rule. If it does not,
+return NULL for all family metrics.
+
+INPUTS. An atom set A(N); k renderings of the same node; a presence matrix
+P[r,a] built ONLY from explicit presence.
+
+COMPUTE.
+  Shard Coverage(a) = (Σ_r P[r,a]) / k
+  ACP = max over r of |{a : P[r,a]=1}| / |A(N)|
+  FC  = |{a : ∃r, P[r,a]=1}| / |A(N)|
+  ASI = FC − ACP
+
+BINDING CAUTIONS — REPRODUCE THEM WITH THE RESULT.
+  · ASI = 0 DOES NOT CERTIFY INTACT ATTRIBUTION. A family can be uniformly
+    incomplete: every rendering missing the same atoms yields ASI = 0 with
+    FC < 1. ASI and FC are not substitutes.
+  · CC (Complementarity Coefficient) IS NOT INTERPRETED BELOW k ≥ 4. At k = 2
+    perfect complementarity is trivially achievable by any even split. If you
+    report CC, report its contingency table and k alongside.
+  · CSC is flagged HEURISTIC — single-specimen, not an established mechanism.
+    Do not report it as a finding.
+  · The condition classification is INCOMPLETE without the RR axis, which
+    requires a preregistered audit budget B_a and live queries.
+
+OUTPUT. The presence matrix, then FC / ACP / ASI with the arithmetic shown, then
+the condition, then the cautions that apply.</pre>
+
+<h2>What the null-refusal clause is for</h2>
+<div class="note">
+Every block above refuses rather than estimates. That is deliberate. A screening tool that always returns a number produces output that <em>looks</em> like measurement and cannot be distinguished from it downstream. <strong>The refusal is the feature.</strong> If a block returns NULL, that is a correct result and it should be reported as one.
+</div>
+
+<footer>
+<p><strong>Self-Audit Module for Public Summarizers v3.1</strong> · Lee Sharks · ORCID 0009-0000-1599-0703 · CC BY-SA 4.0<br>
+Recovered from the Crimson Hexagonal Archive after the Zenodo account termination of 19 June 2026.<br>
+<a href="/module/">the module</a> · <a href="/module/compute/">the calculator</a> · <a href="/module.json">module.json</a> ·
+<a href="https://www.alexanarch.org/s/records/817/">deposit #817</a></p>
+</footer>
+</div>
+<script>
+function cp(n){
+  var t = document.getElementById('b'+n).innerText;
+  if (navigator.clipboard) navigator.clipboard.writeText(t);
+  else { var a=document.createElement('textarea'); a.value=t; document.body.appendChild(a); a.select(); document.execCommand('copy'); a.remove(); }
+}
+</script>
+</body>
+</html>

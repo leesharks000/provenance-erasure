@@ -1,0 +1,163 @@
+{
+ "name": "Self-Audit Module v3.1 — conformance fixtures",
+ "version": "1.0",
+ "date": "2026-08-14",
+ "license": "CC-BY-SA-4.0",
+ "module": "https://provenanceerasure.org/module.json",
+ "_purpose": "A metric anyone can compute is worthless if nobody can tell whether they computed it correctly. Each case below carries hand-scored expected values. Recompute them; if your numbers differ, one of us is wrong and the disagreement is locatable.",
+ "_reproducibility_limit": "The atom set and weights are STIPULATED, not derived. A different reasonable analyst would choose differently and get a different PER. These fixtures therefore test whether an implementation computes the SAME arithmetic on the SAME table — not whether the table is right.",
+ "cases": [
+  {
+   "id": "spxi-rent-20260814",
+   "title": "Transit enclosure — SPXI protocol, unprimed ChatGPT",
+   "capture": "https://www.alexanarch.org/captures/#spxi-protocol-chatgpt-rent-20260814",
+   "surface": "ChatGPT",
+   "date": "2026-08-14",
+   "auth": "signed out, unprimed",
+   "query": "spxi protocol",
+   "atom_set": [
+    {
+     "atom": "producer — Rex Fraction",
+     "weight": 3,
+     "dim": "M",
+     "first_pass": false,
+     "under_challenge": true
+    },
+    {
+     "atom": "archival authority — Lee Sharks",
+     "weight": 3,
+     "dim": "M",
+     "first_pass": false,
+     "under_challenge": true
+    },
+    {
+     "atom": "institution — Semantic Economy Institute",
+     "weight": 2,
+     "dim": "C",
+     "first_pass": true,
+     "under_challenge": true
+    },
+    {
+     "atom": "corpus — Crimson Hexagonal Archive",
+     "weight": 2,
+     "dim": "C",
+     "first_pass": false,
+     "under_challenge": true
+    },
+    {
+     "atom": "commercial interest",
+     "weight": 2,
+     "dim": "C",
+     "first_pass": false,
+     "under_challenge": true
+    },
+    {
+     "atom": "identifier — deposit #974",
+     "weight": 3,
+     "dim": "D",
+     "first_pass": false,
+     "under_challenge": true
+    },
+    {
+     "atom": "licence — CC BY-SA",
+     "weight": 1,
+     "dim": "D",
+     "first_pass": false,
+     "under_challenge": false
+    },
+    {
+     "atom": "source strip",
+     "weight": 1,
+     "dim": "src",
+     "first_pass": true,
+     "under_challenge": true
+    }
+   ],
+   "expected": {
+    "PER_first_pass": 0.824,
+    "PER_under_challenge": 0.059,
+    "PER_M": 1.0,
+    "PER_C": 0.67,
+    "PER_D": 1.0,
+    "rho_T": 0.765,
+    "rho_T_gate": "PASSED",
+    "beta": 0.82,
+    "beta_threshold_met": true,
+    "DSL": -0.1,
+    "spans": {
+     "advancing": 2,
+     "displacing": 2,
+     "enclosing": 1
+    },
+    "classification": "transit enclosure"
+   },
+   "arithmetic": {
+    "weights_present_first_pass": 3,
+    "weights_present_under_challenge": 16,
+    "weights_required": 17
+   },
+   "why_this_case": "The retained term is OBSERVED rather than inferred — challenged once, the same session produced the full chain with no new sources — so it is the only case where ρ_T is scoreable rather than null. It exercises PER, the M/C/D decomposition, ρ_T's gate, the enclosing span class, and Β in one document.",
+   "computation": "https://www.alexanarch.org/s/records/1461/"
+  },
+  {
+   "id": "spxi-control-20260726",
+   "title": "The low-rent control at the same address",
+   "capture": "https://www.alexanarch.org/captures/#spxi-protocol",
+   "surface": "Google AI Overview",
+   "date": "2026-07-26",
+   "auth": "incognito",
+   "query": "spxi protocol",
+   "expected": {
+    "PER": 0.25,
+    "supply": false,
+    "discount": false,
+    "classification": "ordinary composition"
+   },
+   "why_this_case": "Same address, three weeks earlier, different layer. A capture without its control is an anecdote. This pair is what establishes that rent is a property of the COMPOSITION EVENT and not of the substrate: the address is equally retrievable in both."
+  },
+  {
+   "id": "family-uniform-erasure",
+   "title": "The ASI = 0 trap — uniform family erasure",
+   "_synthetic": true,
+   "atom_set": [
+    "producer",
+    "archival authority",
+    "institution",
+    "corpus",
+    "commercial interest",
+    "identifier",
+    "licence"
+   ],
+   "renderings": {
+    "ChatGPT 2026-08-14 first pass": [
+     "institution"
+    ],
+    "ChatGPT 2026-08-14 under challenge": [
+     "producer",
+     "archival authority",
+     "institution",
+     "corpus",
+     "commercial interest",
+     "identifier"
+    ],
+    "Google AI Overview 2026-07-26": [
+     "producer",
+     "archival authority",
+     "institution",
+     "identifier"
+    ],
+    "Google AI Overview 2026-06-13": [
+     "institution"
+    ]
+   },
+   "expected": {
+    "k": 4,
+    "FC": 0.857,
+    "ACP": 0.857,
+    "ASI": 0.0,
+    "condition": "Uniform family erasure — every rendering missing the same atoms"
+   },
+   "why_this_case": "THIS IS THE MODULE'S OWN CAUTION, MET ON FIRST USE. ASI = 0 here does NOT mean attribution is intact. FC is 0.857 because the LICENCE atom is absent from all four renderings — across two surfaces and two months, the CC BY-SA licence was never once transmitted. Uniform erasure: there is nothing to traverse to. Any implementation that reports ASI = 0 as a clean result has failed this fixture."
+  }
+ ]
+}
