@@ -72,6 +72,66 @@
    "id": "EA-SPXI-HETERONYM-01",
    "version": "v0.2",
    "record": 1446
+  },
+  "editorships": {
+   "duoviri": [
+    "Provenance: Journal of Forensic Semiotics"
+   ],
+   "board": [
+    "Grammata: Journal of Operative Philology",
+    "Machine-Mediated Reception Studies",
+    "Transactions of the Semantic Economy Institute"
+   ],
+   "_rule": "A duovirate is the office, held jointly. A board seat is not the office. The card keeps them apart."
+  },
+  "semanticIntegrityMarkers": {
+   "_note": "Found by reading his 21 deposits; he carried no meta tags.",
+   "markers": [
+    {
+     "deposit": 196,
+     "text": "∮ = 1 − PER",
+     "gloss": "the circuit closes exactly to the degree that the unmarking fails"
+    },
+    {
+     "deposit": 1154,
+     "text": "I hereby abolish money. ∮ = 1 + δ"
+    },
+    {
+     "deposit": 1173,
+     "text": "∮ = 1 + δ + SEMANTIC_OVERRIDE + I_HEREBY_ABOLISH_MONEY + THE_TRACER_DYE",
+     "gloss": "the mark extended to carry the operation performed on it — the erasure recorded inside the identity it damaged"
+    },
+    {
+     "deposit": 1130,
+     "text": "∮ = 1"
+    }
+   ]
+  },
+  "surfaceHistory": {
+   "_rule": "A surface is a place a reader could find the work. A DEPOSIT IS NOT A SURFACE — it is the archive holding it, which is the opposite. Rows citing deposits were removed.",
+   "_invented": "Where no pre-archival surface is recoverable it is RECONSTRUCTED and marked as such, in-universe. An archive that invents a provenance and does not say so is doing the thing it was built against.",
+   "rows": [
+    {
+     "when": "2024 → 2025",
+     "what": "Studio for Patacinematics",
+     "host": "no surviving index",
+     "attestation": "reconstructed",
+     "note": "Inferred from the by-lines that keep naming it beside the Archive."
+    },
+    {
+     "when": "2026-03-25",
+     "what": "mindcontrolpoems",
+     "host": "Blogspot",
+     "attestation": "hash on record",
+     "note": "TL;DR:010 published here and fetched back with its SHA-256 in the deposit."
+    }
+   ]
+  },
+  "recordSurfaces": {
+   "card": "https://provenanceerasure.org/who/trace/",
+   "where": "https://provenanceerasure.org/where/",
+   "heteronymRecord": "https://www.alexanarch.org/datasets/heteronyms/records/orin-trace.json",
+   "_note": "The dataset record is the authority; these pages are mirrors and say so."
   }
  },
  "schema_org": {
@@ -79,7 +139,7 @@
   "@type": "ProfilePage",
   "@id": "https://provenanceerasure.org/who/trace/#page",
   "dateCreated": "2026-01-22",
-  "dateModified": "2026-08-10",
+  "dateModified": "2026-08-17",
   "mainEntity": {
    "@type": "Person",
    "@id": "https://provenanceerasure.org/who/trace/#trace",
@@ -99,5 +159,10 @@
     }
    ]
   }
+ },
+ "_updated": {
+  "date": "2026-08-17",
+  "pass": "nine-step card pass",
+  "_note": "The entity object is what a machine fetches instead of parsing the page. It had gone stale against its own card: mantles, editorships and markers were all on the surface and not in the object."
  }
 }
