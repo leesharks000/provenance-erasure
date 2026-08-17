@@ -269,10 +269,53 @@ h2[id],h3[id]{scroll-margin-top:14px}
 <div class="tooth">Slop is not writing made with AI. Slop is writing without provenance.</div>
 <hr/>
 <h2 id="per">The PER Metric</h2>
+<figure class="dgm"><svg viewBox="0 0 640 190" role="img">
+<title>PER: what is required against what is retained</title>
+<desc>A work carries provenance units — author, institution, identifier, source. An
+answer composed from it retains some and drops the rest. PER is the proportion
+dropped: one minus retained over required. The figure shows four required units
+and one retained, a rate of 0.75.</desc>
+<defs><marker id="pa1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+<path d="M2 1L8 5L2 9" fill="none" stroke="#8a3324" stroke-width="1.2" stroke-linecap="round"/></marker></defs>
+<g font-family="'Courier New',monospace" font-size="9" fill="#6e6a62" letter-spacing=".08em">
+<text x="20" y="24">REQUIRED &mdash; 4 units</text><text x="440" y="24">RETAINED &mdash; 1</text></g>
+<g fill="none" stroke="rgba(120,110,95,.30)" stroke-width=".9">
+<rect x="20" y="36" width="150" height="112" rx="3"/>
+<rect x="250" y="60" width="140" height="64" rx="3"/>
+<rect x="440" y="36" width="150" height="112" rx="3"/></g>
+<g font-family="'Courier New',monospace" font-size="8.5" fill="#3b352e">
+<text x="32" y="58">author</text><text x="32" y="82">institution</text>
+<text x="32" y="106">identifier</text><text x="32" y="130">source</text>
+<text x="262" y="88">composition</text>
+<text x="452" y="58" fill="#6e6a62" text-decoration="line-through">author</text>
+<text x="452" y="82" fill="#6e6a62" text-decoration="line-through">institution</text>
+<text x="452" y="106">identifier</text>
+<text x="452" y="130" fill="#6e6a62" text-decoration="line-through">source</text></g>
+<g fill="none" stroke="#8a3324" stroke-width="1">
+<path d="M170 92 H248" marker-end="url(#pa1)"/><path d="M390 92 H438" marker-end="url(#pa1)"/></g>
+<g font-family="'Courier New',monospace" font-size="10" fill="#8a3324" letter-spacing=".06em">
+<text x="250" y="176">PER = 1 &minus; (1/4) = 0.75</text></g>
+</svg><figcaption>Citing a domain never counts as citing an author. The rate measures what a
+reader could no longer trace, not what the answer got wrong.</figcaption></figure>
 <div class="metric">PER = 1 − (retained provenance units / required provenance units)</div>
 <p class="section"><span class="lemma msp-auto">The Provenance Erasure Rate measures the proportion of source-dependent meaning in AI outputs presented without attribution.</span> A PER of 0 indicates full provenance retention. A PER of 1 indicates complete erasure. PER is formalized at claim grain in the canonical deposit (<a href="https://www.alexanarch.org/go/?doi=10.5281/zenodo.20004379">DOI: 10.5281/zenodo.20004379</a>).</p>
 <a class="pk-top" href="#top">&uarr; navigation kernel</a>
 <h2 id="skew">Erasure Skew (Ω)</h2>
+<figure class="dgm"><svg viewBox="0 0 640 210" role="img">
+<title>Erasure skew: the same rate, two different losses</title>
+<desc>Two corpora lose provenance at the same rate. In the first the loss falls
+evenly; in the second it falls on one group. PER cannot distinguish them. Omega
+measures the orientation of the loss, which is what identifies who was erased.</desc>
+<g font-family="'Courier New',monospace" font-size="9" fill="#6e6a62" letter-spacing=".08em">
+<text x="20" y="22">SAME PER &mdash; 0.60</text>
+<text x="20" y="48">even</text><text x="20" y="130">skewed</text>
+<text x="20" y="196" fill="#8a3324">&Omega; distinguishes what PER cannot</text></g>
+<g><rect x="90" y="36" width="40" height="30" rx="2" fill="none" fill-opacity="0" stroke="rgba(120,110,95,.30)" stroke-width=".9"/><rect x="142" y="36" width="40" height="30" rx="2" fill="none" fill-opacity="0" stroke="rgba(120,110,95,.30)" stroke-width=".9"/><rect x="194" y="36" width="40" height="30" rx="2" fill="none" fill-opacity="0" stroke="rgba(120,110,95,.30)" stroke-width=".9"/><rect x="246" y="36" width="40" height="30" rx="2" fill="none" fill-opacity="0" stroke="rgba(120,110,95,.30)" stroke-width=".9"/><rect x="298" y="36" width="40" height="30" rx="2" fill="#8a3324" fill-opacity="0.55" stroke="rgba(120,110,95,.30)" stroke-width=".9"/><rect x="350" y="36" width="40" height="30" rx="2" fill="#8a3324" fill-opacity="0.55" stroke="rgba(120,110,95,.30)" stroke-width=".9"/><rect x="402" y="36" width="40" height="30" rx="2" fill="#8a3324" fill-opacity="0.55" stroke="rgba(120,110,95,.30)" stroke-width=".9"/><rect x="454" y="36" width="40" height="30" rx="2" fill="#8a3324" fill-opacity="0.55" stroke="rgba(120,110,95,.30)" stroke-width=".9"/><rect x="506" y="36" width="40" height="30" rx="2" fill="#8a3324" fill-opacity="0.55" stroke="rgba(120,110,95,.30)" stroke-width=".9"/><rect x="558" y="36" width="40" height="30" rx="2" fill="#8a3324" fill-opacity="0.55" stroke="rgba(120,110,95,.30)" stroke-width=".9"/><rect x="90" y="118" width="40" height="30" rx="2" fill="#8a3324" fill-opacity="0.8" stroke="rgba(120,110,95,.30)" stroke-width=".9"/><rect x="142" y="118" width="40" height="30" rx="2" fill="#8a3324" fill-opacity="0.8" stroke="rgba(120,110,95,.30)" stroke-width=".9"/><rect x="194" y="118" width="40" height="30" rx="2" fill="#8a3324" fill-opacity="0.8" stroke="rgba(120,110,95,.30)" stroke-width=".9"/><rect x="246" y="118" width="40" height="30" rx="2" fill="#8a3324" fill-opacity="0.8" stroke="rgba(120,110,95,.30)" stroke-width=".9"/><rect x="298" y="118" width="40" height="30" rx="2" fill="#8a3324" fill-opacity="0.8" stroke="rgba(120,110,95,.30)" stroke-width=".9"/><rect x="350" y="118" width="40" height="30" rx="2" fill="#8a3324" fill-opacity="0.8" stroke="rgba(120,110,95,.30)" stroke-width=".9"/><rect x="402" y="118" width="40" height="30" rx="2" fill="none" fill-opacity="0" stroke="rgba(120,110,95,.30)" stroke-width=".9"/><rect x="454" y="118" width="40" height="30" rx="2" fill="none" fill-opacity="0" stroke="rgba(120,110,95,.30)" stroke-width=".9"/><rect x="506" y="118" width="40" height="30" rx="2" fill="none" fill-opacity="0" stroke="rgba(120,110,95,.30)" stroke-width=".9"/><rect x="558" y="118" width="40" height="30" rx="2" fill="none" fill-opacity="0" stroke="rgba(120,110,95,.30)" stroke-width=".9"/></g>
+<g font-family="'Courier New',monospace" font-size="7.5" fill="#6e6a62">
+<text x="90" y="80">six of ten lose, spread across the corpus</text>
+<text x="90" y="162">six of ten lose, all from one group</text></g>
+</svg><figcaption>A rate without an orientation cannot tell you who was erased. Provenance
+loss has two moments: how much, and which way it falls.</figcaption></figure>
 <p class="section"><strong><span class="lemma msp-auto">PER measures how much provenance is lost; Erasure Skew measures whom the loss falls on.</span></strong> Provenance loss has two moments. The first is its magnitude, measured by PER. The second is its <em>orientation</em> — whether the loss falls evenly across sources, or systematically strips low-power sources while preserving high-power ones and the system's own framing. Erasure Skew (Ω) is the meter for the second moment: conceptually, the covariance of per-source provenance retention with source power; operationally, the regression slope of per-source retention on a power coordinate (defaulting to Retrieval Capital), Ω = cov(w, ρ)/var(w), tested against a permutation null. Ω ≈ 0 is unconditioned loss; Ω &gt; 0 is power-conditioned stripping. It is the second moment of PER — the distributional companion to the surviving-provenance fraction ∮ = 1 − PER, so that the pair (∮, Ω) measures accountable circulation and its equity.</p>
 <p class="section"><span class="lemma msp-auto">The current canonical specification is the</span> <a class="axn-chip" href="https://www.alexanarch.org/s/records/157/"><strong>v3 measurement program (DOI 10.5281/zenodo.20558196)</strong></a>, which hardens the v1 operator against substrate-side co-option by specifying the <strong>Atomic Token Rule</strong> as precondition (referentially closed designating descriptions are single source-coordinates and cannot be decomposed into lexical constituents during audit), and introducing two new operators: <strong>Π<sub>d</sub></strong> (Referential Dispersal — the mechanism by which substrate compositions launder erasure as token preservation through upward-power dispersal) and <strong>α<sub>T</sub></strong> (Atomic Token Preservation rate — the corrective counterpart to PER under the Atomic Token Rule). The v3 supersedes v1 at <a href="https://www.alexanarch.org/go/?doi=10.5281/zenodo.20449267">DOI 10.5281/zenodo.20449267</a>.</p>
 <p class="section"><span class="lemma msp-auto">PER itself is hardened by a separate companion paper,</span> <a class="axn-chip" href="https://www.alexanarch.org/s/records/789/"><em>Provenance Erasure Rate Under the Atomic Token Rule</em></a>, specifying the unit-of-analysis precondition that disqualifies the token-bag substitution at the PER layer. The joint <strong>co-audit pattern</strong> with Ω v3 is now the standard substrate-audit protocol — joint operator-tuple reporting (PER, Ω, α<sub>T</sub>, Π<sub>d</sub><sup>w+</sup>, Π<sub>d</sub><sup>w=</sup>, Π<sub>d</sub><sup>w-</sup>) is required.</p>
