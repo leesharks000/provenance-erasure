@@ -15,6 +15,11 @@ letter-spacing:.06em;border-bottom:1px solid var(--rule,#ccc);margin:0 0 1.6rem;
 .pnav a:first-child{border-left:0;padding-left:0}
 .pnav a:hover,.pnav a.current{color:var(--accent,#8b0000)}
 .pplate{border-top:1px solid var(--rule,#ccc);padding:1.8rem 0 .4rem;margin-top:2.2rem}
+/* The first plate follows the nav, which already carries 1.6rem of margin and the
+   wrap another 1rem of padding. Its own 2.2rem margin and 1.8rem padding stacked
+   on top of that, opening ~4.8rem of empty rule-to-title space. The separation
+   between plates is right; the separation from the nav is not the same distance. */
+.pplate:first-of-type{margin-top:0;padding-top:.6rem;border-top:0}
 .phead{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:6px}
 .pno{font-family:var(--mono);font-size:var(--fs-micro);letter-spacing:var(--tr-wide);
 text-transform:uppercase;color:var(--accent,#8b0000)}
