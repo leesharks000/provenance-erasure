@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Controller — Detection to Repair as a Closed Loop | provenanceerasure.org</title>
+<meta name="description" content="The recognition deficit made live: detect loss, publish the relation, expose the machine surface, measure reception, repair, measure again. First closed cycle: 2026-08-17, PER 0.25.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--text:#1a1a1a;--dim:#666;--accent:#8b0000;--bg:#fafaf7;--rule:#ccc;--ok:#1c6e4a}
+body{font-family:'EB Garamond',Georgia,serif;background:var(--bg);color:var(--text)}
+.container{max-width:680px;margin:0 auto;padding:60px 24px 80px}
+h1{font-size:32px;font-weight:600;letter-spacing:-.5px;margin-bottom:4px}
+.author{font-size:16px;color:var(--dim);margin-bottom:32px}
+.author a{color:var(--dim);text-decoration:underline}
+.definition{font-size:19px;line-height:1.7;margin-bottom:32px}
+hr{border:none;border-top:1px solid var(--rule);margin:28px 0}
+h2{font-size:18px;font-weight:600;margin-bottom:12px;color:var(--accent)}
+p{font-size:16.5px;line-height:1.7;margin-bottom:14px}
+.metric{font-family:'Courier New',monospace;font-size:15px;background:#f0ede6;padding:16px 20px;border-radius:4px;margin-bottom:24px;text-align:center;letter-spacing:.4px}
+.taxonomy dt{font-weight:600;font-size:16px;margin-top:12px}
+.taxonomy dd{font-size:16px;line-height:1.6;color:#333;margin-left:0;margin-bottom:4px}
+.cyc{margin:22px auto 6px;display:block;max-width:560px;width:100%}
+.note{font-size:14.5px;color:var(--dim);line-height:1.55;margin-bottom:20px}
+.cycle-card{border:1.5px solid var(--ok);border-radius:6px;padding:14px 18px;margin:18px 0;background:#fff}
+.cycle-card .k{font-family:'Courier New',monospace;font-size:11px;color:var(--ok);letter-spacing:.08em;margin-bottom:6px}
+.axn-chip{font-family:'Courier New',monospace;font-size:12px;color:var(--accent);text-decoration:none;border:1px solid var(--rule);border-radius:10px;padding:2px 9px;background:#fff;white-space:nowrap}
+.doors{display:flex;gap:10px;flex-wrap:wrap;margin:26px 0 8px}
+.doors a{font-family:'Courier New',monospace;font-size:12.5px;border:1.6px solid var(--accent);color:var(--accent);text-decoration:none;padding:8px 14px;border-radius:4px}
+.doors a:hover{background:var(--accent);color:#fff}
+.footer{margin-top:44px;padding-top:12px;border-top:1px solid var(--rule);font-size:12px;color:var(--dim);font-family:'Courier New',monospace;line-height:1.6}
+.back{font-family:'Courier New',monospace;font-size:12px;margin-bottom:26px}
+.back a{color:var(--dim);text-decoration:none}.back a:hover{color:var(--accent)}
+.tobuild{font-family:'Courier New',monospace;font-size:11px;color:#8a6a20;border:1px solid #8a6a20;border-radius:10px;padding:1px 8px}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="back"><a href="/">← provenanceerasure.org</a> &nbsp;·&nbsp; <a href="/deep-time/">deep time</a></div>
+<h1>The Controller</h1>
+<div class="author">The recognition deficit made live · <a href="https://www.alexanarch.org/s/records/1497/">deposit #1497 §6</a> · Lee Sharks</div>
+
+<p class="definition">An observatory watches loss happen. A controller closes the loop: it detects the loss, intervenes against it, and measures whether the intervention worked — then repairs and measures again. This page converts the site from the first kind of instrument into the second.</p>
+
+<div class="metric">detect loss → publish relation → expose machine surface → measure reception → repair → measure again</div>
+
+<svg class="cyc" viewBox="0 0 560 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The controller loop">
+<defs><marker id="ar" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#8b0000"/></marker></defs>
+<ellipse cx="280" cy="125" rx="240" ry="95" fill="none" stroke="#ccc" stroke-width="1"/>
+<g font-family="Courier New" font-size="11.5" text-anchor="middle">
+<g><rect x="215" y="12" width="130" height="30" rx="4" fill="#fff" stroke="#8b0000" stroke-width="1.5"/><text x="280" y="31" fill="#8b0000">DETECT · PER</text></g>
+<g><rect x="440" y="62" width="110" height="30" rx="4" fill="#fff" stroke="#1a1a1a"/><text x="495" y="81">PUBLISH</text></g>
+<g><rect x="450" y="158" width="100" height="30" rx="4" fill="#fff" stroke="#1a1a1a"/><text x="500" y="177">EXPOSE</text></g>
+<g><rect x="215" y="208" width="130" height="30" rx="4" fill="#fff" stroke="#8b0000" stroke-width="1.5"/><text x="280" y="227" fill="#8b0000">MEASURE · PER</text></g>
+<g><rect x="10" y="158" width="100" height="30" rx="4" fill="#fff" stroke="#1a1a1a"/><text x="60" y="177">REPAIR</text></g>
+<g><rect x="10" y="62" width="110" height="30" rx="4" fill="#fff" stroke="#1a1a1a"/><text x="65" y="81">RE-MEASURE</text></g>
+</g>
+<path d="M348 32 Q 470 40 492 60" fill="none" stroke="#8b0000" stroke-width="1.6" marker-end="url(#ar)"/>
+<path d="M500 94 Q 512 125 502 156" fill="none" stroke="#8b0000" stroke-width="1.6" marker-end="url(#ar)"/>
+<path d="M448 182 Q 380 220 348 224" fill="none" stroke="#8b0000" stroke-width="1.6" marker-end="url(#ar)"/>
+<path d="M213 224 Q 130 214 92 190" fill="none" stroke="#8b0000" stroke-width="1.6" marker-end="url(#ar)"/>
+<path d="M58 156 Q 48 125 60 94" fill="none" stroke="#8b0000" stroke-width="1.6" marker-end="url(#ar)"/>
+<path d="M122 62 Q 190 26 213 28" fill="none" stroke="#8b0000" stroke-width="1.6" marker-end="url(#ar)"/>
+</svg>
+<p class="note">The two red stations are the same instrument — the Capture Registry's PER batteries — read before and after the intervention. Everything between them is publication apparatus.</p>
+
+<hr>
+<h2>The loop, mapped to running apparatus</h2>
+<dl class="taxonomy">
+<dt>DETECT</dt><dd>The Capture Registry senses the deficit per answer, per channel — author, institution, identifier, source — across engines and time. 345 addresses, 489 observations and counting.</dd>
+<dt>PUBLISH</dt><dd>Deposits, the authored wiki corpus, the twelve who-surfaces, and — as of this program — typed reception edges: the relation stated where composition layers can find it.</dd>
+<dt>EXPOSE</dt><dd>The machine entries: OAI-PMH, ResourceSync, llms.txt, SPXI packets, per-deposit external-metadata sidecars. Ingestion engineered to carry provenance.</dd>
+<dt>MEASURE</dt><dd>The batteries re-run against the same addresses. Δ is a number, and numbers move or they don't.</dd>
+<dt>REPAIR</dt><dd>Reseat what drifted, author what was missing, extend the edge graph, fix the surface the measurement indicted — then measure again.</dd>
+</dl>
+
+<hr>
+<h2>The first closed cycle</h2>
+<div class="cycle-card">
+<div class="k">CYCLE 001 · CLOSED · 2026-08-17</div>
+<p style="margin-bottom:6px"><strong>Detect:</strong> attribution for the Semantic Economy and Operative Semiotics running at high erasure across engines. <strong>Publish/Expose:</strong> the 1,433-article authored wiki campaign; twelve heteronym who-surfaces across ten domains; machine entries validated. <strong>Measure:</strong> the 2026-08-17 observations — <em>who-developed-the-semantic-economy</em> and <em>who-developed-operative-semiotics</em> seated at <strong>PER 0.25</strong>, the lowest erasure recorded on the subject: theorist, archive, and source surviving the answer.</p>
+</div>
+<p>One closed cycle is an anecdote, and this page says so. The claim it supports is narrow: the loop can close — an intervention preceded a measured drop in erasure on the intervened addresses. Causality is not established by one point; engines move for their own reasons. The controller's job is to make the anecdote a curve: scheduled batteries, matched-pair drift tracking (Ω_t, <a class="axn-chip" href="https://www.alexanarch.org/s/records/1480/">#1480</a>), and per-intervention before/after reads. <span class="tobuild">SCHEDULED INSTRUMENT · TO BUILD</span></p>
+
+<hr>
+<h2>Why a controller and not a complaint</h2>
+<p>The Deep Time wing shows what unattended loss does across 2,600 years: the structure survives, the name dies at every channel-crossing, and each discipline files its fragment under a local heading. The counter-stack's wager is that loss attended to behaves differently — that a system which detects its own erasure, publishes against it, and measures the result converts suppression from fate into signal. Every future execution either carries the name, or becomes a dated record of not carrying it. Either way, the machine is seen.</p>
+
+<div class="doors">
+<a href="/deep-time/">Deep Time — the ancestry</a>
+<a href="/#per">The PER metric</a>
+<a href="https://www.alexanarch.org/s/records/1497/">The Counter-Stack</a>
+<a href="https://www.alexanarch.org/s/captures/">The Capture Registry</a>
+</div>
+
+<div class="footer">colophon · surface_id: provenanceerasure.org/controller · canonical_url: https://provenanceerasure.org/controller/ · object_state: canonical · source_object_ids: deposits #1497, #1480; cycle 001 observations 2026-08-17 · model_or_agent: drafted with Claude (TACHYON), governed by Lee Sharks · EA-OMEGA-BUILD-01 workstream 3</div>
+</div>
+</body>
+</html>

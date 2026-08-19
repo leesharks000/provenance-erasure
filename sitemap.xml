@@ -7,4 +7,5 @@
   </url>
   <!-- network surfaces + AXN resolution layer -->
   <url><loc>https://provenanceerasure.org/deep-time/</loc></url>
+  <url><loc>https://provenanceerasure.org/controller/</loc></url>
 </urlset>
