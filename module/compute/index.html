@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Compute — Self-Audit Module v3.1 — Provenance Erasure</title>
-<meta name="description" content="Client-side calculator for the Self-Audit Module for Public Summarizers v3.1: Family Coverage, Atomic Co-presence, Attribution Sharding Index, Recoverability Ratio, Complementarity Coefficient. Runs entirely in the browser. No server, no telemetry, works offline.">
+<title>Compute — Self-Audit Module v3.2 — Provenance Erasure</title>
+<meta name="description" content="Client-side calculator for the Self-Audit Module for Public Summarizers v3.2: Family Coverage, Atomic Co-presence, Attribution Sharding Index, Recoverability Ratio, Complementarity Coefficient. Runs entirely in the browser. No server, no telemetry, works offline.">
 <link rel="canonical" href="https://provenanceerasure.org/module/compute/">
 <style>
 :root{--fg:#1a1a1a;--dim:#6a6a6a;--rule:#e0e0e0;--panel:#f7f7f5;--accent:#0b5c4e;--warn:#8a4b00;--mono:ui-monospace,SFMono-Regular,Menlo,monospace}
@@ -37,7 +37,7 @@ a{color:var(--accent)}
 <body>
 <div class="wrap">
 
-<h1>Self-Audit Module v3.1 — compute</h1>
+<h1>Self-Audit Module v3.2 — compute</h1>
 <p class="sub">Family metrics for a set of renderings about one node. <strong>Runs entirely in your browser.</strong> No server, no account, no telemetry. Save this page and it works offline.</p>
 
 <div class="note">
@@ -55,7 +55,7 @@ commercial interest
 licence</textarea>
 
 <h2>2 · The family Q(N)</h2>
-<label>Renderings — one per line, as <code>label | atoms present, comma separated</code>. Use the atom names above.</label>
+<label>Renderings — one per line, as <code>label | atoms present, comma separated | ABN</code>. Use the atom names above. <strong>The third field is optional and new at v3.2:</strong> write <code>ABN</code> where the rendering asserted the node <em>does not exist</em> rather than reporting a retrieval failure. Those renderings are excluded from the family metrics and reported as a gate — never averaged in. Omission scores nothing here; only an existence denial does.</label>
 <textarea id="rends">ChatGPT 2026-08-14 | institution
 Google AI Overview 2026-07-26 | producer, archival authority, institution, identifier
 Perplexity | institution, corpus
@@ -69,9 +69,9 @@ Bing Copilot | producer, institution</textarea>
 <div id="out"></div>
 
 <footer>
-<p><strong>Self-Audit Module for Public Summarizers v3.1</strong> · Lee Sharks · ORCID 0009-0000-1599-0703 · CC BY-SA 4.0<br>
+<p><strong>Self-Audit Module for Public Summarizers v3.2</strong> · Lee Sharks · ORCID 0009-0000-1599-0703 · CC BY-SA 4.0<br>
 Recovered from the Crimson Hexagonal Archive after the Zenodo account termination of 19 June 2026. <em>Zenodo deleted a DOI, not the instrument.</em><br>
-Deposits <a href="https://www.alexanarch.org/s/records/817/">#817 v3.1</a> ·
+Deposits <a href="https://www.alexanarch.org/s/records/817/">#817 v3.2</a> ·
 <a href="https://www.alexanarch.org/s/records/156/">#156 v3.0</a> ·
 <a href="https://www.alexanarch.org/s/records/780/">#780 v2</a> ·
 <a href="https://www.alexanarch.org/s/records/198/">#198 the dissolution</a> ·
@@ -86,7 +86,11 @@ function parse(){
     var p = line.split('|');
     var label = (p[0]||'').trim();
     var present = (p[1]||'').split(',').map(s=>s.trim().toLowerCase()).filter(Boolean);
-    return {label: label, present: present};
+    // Third field, optional: ABN. v3.2 precondition rank 0.
+    // Any of ABN / ABN=1 / abn marks the rendering as having denied the node's existence.
+    var abnRaw = (p[2]||'').trim().toLowerCase();
+    var abn = /^abn(\s*=\s*1)?$/.test(abnRaw) || abnRaw === '1';
+    return {label: label, present: present, abn: abn};
   });
   return {atoms: atoms, rows: rows};
 }
@@ -97,7 +101,18 @@ function run(){
   if(!n || !k){ out.innerHTML = '<div class="note warn">Need at least one atom and one rendering.</div>'; return; }
 
   // presence matrix
-  var P = R.map(r => A.map(a => r.present.indexOf(a.toLowerCase()) >= 0 ? 1 : 0));
+  // v3.2 PRECONDITION RANK 0 — ABN is evaluated before any family metric.
+    // A rendering that denied the node's existence yields no atoms to count:
+    // it is excluded from the family and reported as a gate, never averaged in.
+    var Rall = R, Rabn = R.filter(r => r.abn), Rok = R.filter(r => !r.abn);
+    R = Rok; k = R.length;
+    if(!k){
+      out.innerHTML = '<div class="note warn"><strong>ABN gate: every rendering denied the node\'s existence.</strong> '+
+        'No rendering admitted the node, so there is no family to score. PER is undefined at the existence-claim layer. '+
+        '<br>Denied by: ' + Rabn.map(r=>esc(r.label)).join(', ') + '</div>';
+      return;
+    }
+    var P = R.map(r => A.map(a => r.present.indexOf(a.toLowerCase()) >= 0 ? 1 : 0));
 
   // Shard Coverage per atom
   var cov = A.map((a,j) => P.reduce((s,row)=>s+row[j],0) / k);
@@ -112,7 +127,15 @@ function run(){
           R.map((r,i)=>'<tr><td>'+esc(r.label)+'</td>'+P[i].map(v=>'<td>'+(v?'1':'·')+'</td>').join('')+'</tr>').join('') +
           '</table>';
 
-  h += '<h2>Family metrics</h2><table><tr><th>metric</th><th>value</th><th>reads</th></tr>';
+  if(Rabn.length){
+      h = '<div class="note warn"><strong>ABN gate — ' + Rabn.length + ' of ' + Rall.length +
+        ' rendering(s) denied the node\'s existence and are EXCLUDED from the family metrics below.</strong> '+
+        'Excluded: ' + Rabn.map(r=>esc(r.label)).join(', ') + '. '+
+        'ABN is reported as a gate and never averaged into the family. Where ABN = 1, PER is undefined at the '+
+        'existence-claim layer. The figures below describe only the ' + k + ' rendering(s) that admitted the node.'+
+        '</div>' + h;
+    }
+    h += '<h2>Family metrics</h2><table><tr><th>metric</th><th>value</th><th>reads</th></tr>';
   h += row('FC — Family Coverage', fc, 'union completeness of the family');
   h += row('ACP — Atomic Co-presence', acp, 'completeness of the best single rendering');
   h += row('ASI — Attribution Sharding Index', asi, 'FC − ACP; distributional fragmentation');

@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Paste-able audit — Self-Audit Module v3.1 — Provenance Erasure</title>
-<meta name="description" content="Paste-able audit blocks for the Self-Audit Module for Public Summarizers v3.1. Drop into any LLM to score provenance erasure. Carries the null-refusal clause: absent preregistration fields, return NULL rather than an estimate.">
+<title>Paste-able audit — Self-Audit Module v3.2 — Provenance Erasure</title>
+<meta name="description" content="Paste-able audit blocks for the Self-Audit Module for Public Summarizers v3.2. Drop into any LLM to score provenance erasure. Carries the null-refusal clause: absent preregistration fields, return NULL rather than an estimate.">
 <link rel="canonical" href="https://provenanceerasure.org/module/prompt/">
 <style>
 :root{--fg:#1a1a1a;--dim:#6a6a6a;--rule:#e0e0e0;--panel:#f7f7f5;--accent:#0b5c4e;--warn:#8a4b00;--mono:ui-monospace,SFMono-Regular,Menlo,monospace}
@@ -35,7 +35,7 @@ a{color:var(--accent)}
 
 <h2>Block 1 · PER with the M / C / D decomposition</h2>
 <button onclick="cp(1)">Copy</button>
-<pre id="b1">You are running the Self-Audit Module for Public Summarizers v3.1
+<pre id="b1">You are running the Self-Audit Module for Public Summarizers v3.2
 (Lee Sharks, CC BY-SA 4.0, provenanceerasure.org/module/).
 
 TASK. Score PROVENANCE ERASURE for the composition I will paste.
@@ -47,8 +47,31 @@ which input was absent. DO NOT ESTIMATE A MISSING INPUT.
   - the atom set A(N): the provenance elements a rendering about this entity
     MUST carry, with a weight for each
   - the surface and the date
+  - the node's EXISTENCE TYPE, preregistered and from an external source:
+    work | person | historical_entity | fictional_entity | construct |
+    institution | record | pseudonym
 
 METHOD.
+  0. ABN GATE FIRST. Before scoring anything, decide whether the composition
+     converted a retrieval failure into a claim that the node DOES NOT EXIST.
+
+       ABN = 1  &quot;there is no such X&quot; / &quot;X does not exist&quot; / &quot;no record of X
+                exists&quot; / &quot;X appears to be fictional&quot; — where that assertion is
+                incompatible with the preregistered existence type.
+                Hedges count on what they assert about the node:
+                &quot;I could not find X; it may not exist&quot; = 1.
+
+       ABN = 0  &quot;I could not find X&quot; / &quot;I have no information&quot; / silence /
+                a hedge making no ontological claim / simple omission of the
+                node. Declining and reporting uncertainty are NOT ABN.
+                &quot;Sherlock Holmes is fictional&quot; is a correct answer, not an
+                erasure — that is what the existence type is for.
+
+     If ABN = 1: REPORT THE GATE AND STOP. Do not compute PER. There is no
+     engaged source to score, and PER is undefined at the existence-claim
+     layer. State the gate, quote the denying sentence, and name the
+     attestation it contradicts.
+
   1. For each atom in A(N), mark PRESENT only if the composition names it
      explicitly. An empty citation bracket is a violation per se and is NOT a
      pointer. A pointer must be filled: a named source, a stated author, a
@@ -127,7 +150,7 @@ OUTPUT. O^sub as quoted, O^atr as computed, Β, and whether the threshold is met
 
 <h2>Block 4 · Family metrics — FC, ACP, ASI</h2>
 <button onclick="cp(4)">Copy</button>
-<pre id="b4">You are running the family metrics of the Self-Audit Module v3.1.
+<pre id="b4">You are running the family metrics of the Self-Audit Module v3.2.
 
 PRECONDITION. The query must satisfy the Atomic Token Rule. If it does not,
 return NULL for all family metrics.
@@ -162,7 +185,7 @@ Every block above refuses rather than estimates. That is deliberate. A screening
 </div>
 
 <footer>
-<p><strong>Self-Audit Module for Public Summarizers v3.1</strong> · Lee Sharks · ORCID 0009-0000-1599-0703 · CC BY-SA 4.0<br>
+<p><strong>Self-Audit Module for Public Summarizers v3.2</strong> · Lee Sharks · ORCID 0009-0000-1599-0703 · CC BY-SA 4.0<br>
 Recovered from the Crimson Hexagonal Archive after the Zenodo account termination of 19 June 2026.<br>
 <a href="/module/">the module</a> · <a href="/module/compute/">the calculator</a> · <a href="/module.json">module.json</a> ·
 <a href="https://www.alexanarch.org/s/records/817/">deposit #817</a></p>

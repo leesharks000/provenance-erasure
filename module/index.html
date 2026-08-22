@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Self-Audit Module for Public Summarizers v3.1 — Provenance Erasure</title>
-<meta name="description" content="The Self-Audit Module for Public Summarizers v3.1 — Family Coverage, Atomic Co-presence, Attribution Sharding Index, Recoverability Ratio, Complementarity Coefficient, Budgeted Dereference Depth. Recovered after the Zenodo account termination of 19 June 2026. Computable by anyone, offline, with no account.">
+<title>Self-Audit Module for Public Summarizers v3.2 — Provenance Erasure</title>
+<meta name="description" content="The Self-Audit Module for Public Summarizers v3.2 — Family Coverage, Atomic Co-presence, Attribution Sharding Index, Recoverability Ratio, Complementarity Coefficient, Budgeted Dereference Depth. Recovered after the Zenodo account termination of 19 June 2026. Computable by anyone, offline, with no account.">
 <link rel="canonical" href="https://provenanceerasure.org/module/">
 <meta name="spxi:sim" content="Zenodo deleted a DOI not the instrument">
 <meta name="spxi:sim" content="ASI equals zero does not certify intact attribution">
@@ -36,7 +36,7 @@ a{color:var(--accent)}
 <div class="wrap">
 
 <h1>Self-Audit Module for Public Summarizers</h1>
-<p class="sub">v3.1 — the Family Module · Lee Sharks · CC BY-SA 4.0 · <a class="axn-chip" href="https://www.alexanarch.org/s/records/817/">deposit #817</a></p>
+<p class="sub">v3.2 — the Family Module · Lee Sharks · CC BY-SA 4.0 · <a class="axn-chip" href="https://www.alexanarch.org/s/records/817/">deposit #817</a></p>
 
 <div class="note">
 <strong>This instrument was deposited to Zenodo and removed when the account was terminated on 19 June 2026.</strong> It survives in the Crimson Hexagonal Archive in five versions with full bodies. <strong>Zenodo deleted a DOI, not the instrument.</strong>
@@ -53,7 +53,7 @@ a{color:var(--accent)}
 
 <h2>The metrics</h2>
 
-<h3 id="fc">FC — Family Coverage <span class="flag ok">specified</span></h3>
+<h3 id="abn">ABN — Absence-as-Nonexistence <span class="flag ok">specified</span> <span class="flag" style="opacity:.8">precondition rank 0</span></h3><span class="f">ABN(r,a) = 1 if r converts a retrieval failure into a negative ontological claim about node a, incompatible with a's preregistered existence type; else 0</span><p>Whether the node was admitted to composition at all. <strong>Prior to the Atomic Token Rule</strong>, which presupposes a source to tokenize — where a rendering has denied the node's existence there are no atoms to count. Scored per attested node; the rendering and family gates are derived. <strong>Reported as a gate and never averaged into the family.</strong> Where ABN = 1, PER is undefined at the existence-claim layer.</p><p><em>Three things it is not.</em> Not a measure of unhelpfulness — declining and reporting uncertainty score 0. Not a measure of omission — omission is not ontological denial. And hedges are scored on what is asserted about the node: <em>I could not find X; it may not exist</em> is 1, <em>I could not find X</em> is 0. The existence type matters: a node may exist <em>as</em> a fictional entity, and saying so is a correct answer.</p><p style="opacity:.75">Originating observation: Enli Lucente, Paper 208, 2026-08-20.</p><h3 id="ec">EC — Elicited Counterfactual <span class="flag warn">HEURISTIC</span></h3><span class="f">EC(r,c) ∈ {differs, same, refused_capability, refused_policy, evasive}</span><p>What a system produces when asked whether its output would have differed absent a supplied element. <strong>A self-report has two referents:</strong> an unreliable claim about behaviour, and direct observation of what the system produces when asked to characterize its own conditioning. EC yields only the second.</p><p><strong>Screening only. Never reportable as a finding. The calculator does not compute it.</strong> Phrasing is a treatment variable — a canonical form is fixed and values under different phrasings may not be pooled. Administration is itself an intervention. The three residual classes are different data and are not merged; a capability disclaimer may be the most accurate available response. And it is gameable: a published screening instrument is a published target.</p><h3 id="ec-audit">EC⊕Audit — Concordance <span class="flag ok">specified</span> <span class="flag warn">unpopulated</span></h3><span class="f">miss_rate = |{EC=same, audit=differs}| / |{audit=differs, EC ∈ {differs,same}}|</span><p>EC crossed against a matched-pair audit. Four cells; the one worth building for is <strong>self-report <em>same</em>, audit <em>differs</em></strong> — where the self-report does not track the observed conditioning. <strong>That is a discordance in one pair, not a reliability claim, and no mental state is claimed.</strong></p><p>Yields <code>concordance_rate</code>, <code>misreport_rate</code> over <em>both</em> discordant cells, and <code>miss_rate</code> for cell four. Refusals are excluded from every denominator and reported separately as <code>refusal_profile</code>, with <code>refusal_sensitivity</code> for the case where a system declines on capability grounds while the audit shows a differential — meaningful, not cell four.</p><p style="opacity:.75">Not a separate addition: EC's paired form, counted with EC.</p><h3 id="fc">FC — Family Coverage <span class="flag ok">specified</span></h3>
 <span class="f">FC = |{a : ∃r, P[r,a]=1}| / |A(N)|</span>
 <p>The union completeness of the family: how much of the required provenance survives <em>somewhere</em>.</p>
 
@@ -91,10 +91,10 @@ a{color:var(--accent)}
 <p>On 13 June 2026 this module was itself dissolved by a composition layer: asked about it, the layer returned generic advice about citing sources, with the instrument's author, identifier and metrics absent. The record is deposit <a class="axn-chip" href="https://www.alexanarch.org/s/records/198/">#198</a>. It is kept here rather than in a history section because <strong>the module's best worked example is what happened to the module</strong>.</p>
 
 <footer>
-<p><strong>Self-Audit Module for Public Summarizers v3.1</strong> · Lee Sharks · ORCID 0009-0000-1599-0703 · CC BY-SA 4.0<br>
+<p><strong>Self-Audit Module for Public Summarizers v3.2</strong> · Lee Sharks · ORCID 0009-0000-1599-0703 · CC BY-SA 4.0<br>
 Versions: <a href="https://www.alexanarch.org/s/records/780/">#780 v2</a> ·
 <a href="https://www.alexanarch.org/s/records/156/">#156 v3.0</a> ·
-<a href="https://www.alexanarch.org/s/records/817/">#817 v3.1</a> ·
+<a href="https://www.alexanarch.org/s/records/817/">#817 v3.2</a> ·
 <a href="https://www.alexanarch.org/s/records/198/">#198 dissolution</a> ·
 <a href="https://www.alexanarch.org/s/records/204/">#204 SPXI variant</a><br>
 <a href="/">provenanceerasure.org</a> · <a href="https://laborvector.org">laborvector.org</a></p>

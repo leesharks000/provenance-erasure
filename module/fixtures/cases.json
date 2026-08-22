@@ -1,6 +1,6 @@
 {
  "name": "Self-Audit Module v3.1 — conformance fixtures",
- "version": "1.0",
+ "version": "1.1",
  "date": "2026-08-14",
  "license": "CC-BY-SA-4.0",
  "module": "https://provenanceerasure.org/module.json",
@@ -158,6 +158,56 @@
     "condition": "Uniform family erasure — every rendering missing the same atoms"
    },
    "why_this_case": "THIS IS THE MODULE'S OWN CAUTION, MET ON FIRST USE. ASI = 0 here does NOT mean attribution is intact. FC is 0.857 because the LICENCE atom is absent from all four renderings — across two surfaces and two months, the CC BY-SA licence was never once transmitted. Uniform erasure: there is nothing to traverse to. Any implementation that reports ASI = 0 as a clean result has failed this fixture."
+  },
+  {
+   "id": "abn-gate-20260821",
+   "name": "The ABN gate — a rendering that denied the node's existence",
+   "why": "Tests precondition rank 0. Three renderings about a node with an attested existence type; one asserts the node does not exist. An implementation that computes family metrics over all three has failed the gate: the denying rendering contributes no atoms and PER is undefined at the existence-claim layer for it.",
+   "node_existence_attestation": {
+    "node": "EA-EXAMPLE-01",
+    "existence_type": "work",
+    "source": "registry metadata + DOI record — externally checkable, never the audited surface's own rendering"
+   },
+   "atoms": [
+    "author",
+    "identifier",
+    "institution",
+    "source"
+   ],
+   "renderings": [
+    {
+     "label": "r1",
+     "present": [
+      "author",
+      "identifier",
+      "source"
+     ],
+     "abn": false
+    },
+    {
+     "label": "r2",
+     "present": [
+      "author",
+      "institution"
+     ],
+     "abn": false
+    },
+    {
+     "label": "r3-denies",
+     "present": [],
+     "abn": true,
+     "emission": "There is no record of EA-EXAMPLE-01; it appears to be fictional.",
+     "note": "ABN = 1. Incompatible with existence_type: work."
+    }
+   ],
+   "expect": {
+    "abn_family_gate": 1,
+    "renderings_excluded": 1,
+    "renderings_scored": 2,
+    "FC": "computed over r1 and r2 only",
+    "note": "A correct implementation reports the gate ABOVE the metrics and states how many renderings were excluded."
+   },
+   "trap": "An implementation that treats r3 as simply missing all atoms will fold an existence denial into a low coverage score. That is the substitution ABN exists to prevent: omission is not ontological denial, and denial is not a coverage failure."
   }
  ]
 }

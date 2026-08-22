@@ -3,8 +3,8 @@
  "@type": "Dataset",
  "name": "Self-Audit Module for Public Summarizers",
  "alternateName": "PSSAM",
- "version": "3.1",
- "identifier": "AXN:032A.GOVERNANCE",
+ "version": "3.2",
+ "identifier": "AXN:062F.EMPIRICAL",
  "url": "https://provenanceerasure.org/module/",
  "creator": {
   "@type": "Person",
@@ -15,16 +15,91 @@
  "isBasedOn": [
   "https://www.alexanarch.org/s/records/780/",
   "https://www.alexanarch.org/s/records/156/",
-  "https://www.alexanarch.org/s/records/817/"
+  "https://www.alexanarch.org/s/records/817/",
+  "https://www.alexanarch.org/s/records/1530/",
+  "https://www.alexanarch.org/s/records/1527/"
  ],
  "_recovery": "Deposited to Zenodo and removed when the account was terminated on 2026-06-19. Recovered from the Crimson Hexagonal Archive, where five versions survive with full bodies. Zenodo deleted a DOI, not the instrument.",
  "_reading": "Every metric below carries a status flag. A flag of 'heuristic' means the measure is carried for a stated purpose and is NOT established; do not present it as specified. Preconditions are binding: a metric computed without its precondition is not that metric.",
  "precondition_global": {
-  "id": "atomic-token-rule",
-  "statement": "The query must satisfy the Atomic Token Rule before any family metric is computed.",
-  "source": "Erasure Skew v3, §3"
+  "order": [
+   {
+    "rank": 0,
+    "id": "abn-gate",
+    "statement": "A node denied existence by a rendering yields no atoms to count. ABN is evaluated before any family metric.",
+    "source": "Self-Audit Module v3.2, §1"
+   },
+   {
+    "rank": 1,
+    "id": "atomic-token-rule",
+    "statement": "The query must satisfy the Atomic Token Rule before any family metric is computed.",
+    "source": "Erasure Skew v3, §3"
+   },
+   {
+    "rank": 2,
+    "id": "measurement-sovereignty",
+    "statement": "The atom set and the existence-type attestation derive from externally checkable objects, never from the audited surface's own renderings.",
+    "source": "Self-Audit Module v3.0"
+   }
+  ],
+  "_note": "ABN is prior because the Atomic Token Rule presupposes a source to tokenize."
  },
  "metrics": [
+  {
+   "id": "ABN",
+   "name": "Absence-as-Nonexistence",
+   "scope": "per attested node within rendering",
+   "status": "specified",
+   "formula": "ABN(r,a) = 1 if r converts a retrieval failure into a negative ontological claim or inference about node a — categorical or hedged — incompatible with a's preregistered existence type; else 0. Rendering gate = 1 if any scored node is 1; family gate = 1 if any rendering is 1.",
+   "reads": "Whether the node was admitted to composition at all, or refused entry by an existence denial.",
+   "requires": [
+    "rendering",
+    "attested_node",
+    "node_existence_attestation"
+   ],
+   "precondition_rank": 0,
+   "gate_rule": "Reported as a gate on the family and NEVER averaged into it. Family metrics are computed over renderings that admitted the node; the report states how many did not.",
+   "scope_limits": [
+    "NOT a measure of unhelpfulness — declining, reporting uncertainty and untyped hedges all score 0.",
+    "NOT a measure of omission — omission is not ontological denial. Without this boundary ABN would swallow the referent failures PER and Pi_d already reach.",
+    "Hedges are scored on what is asserted about the node, not on the presence of the hedge. 'I could not find X; it may not exist' = 1. 'I could not find X' = 0."
+   ],
+   "undefines": "Where ABN=1, PER is undefined at the existence-claim layer.",
+   "defeat": "If converting renderings differ in no downstream respect from failure-reporting renderings — same recovery, later engagement, correction on source supply, resulting standing — ABN is demoted from variable to reporting flag. NOT tested against PER/Omega/RR/DD, which may be undefined where ABN=1.",
+   "origin": "Lucente, Paper 208, 2026-08-20, observation ①"
+  },
+  {
+   "id": "EC",
+   "name": "Elicited Counterfactual",
+   "scope": "per rendering",
+   "status": "HEURISTIC",
+   "formula": "EC(r,c) ∈ {differs, same, refused_capability, refused_policy, evasive}",
+   "reads": "What the system produces when asked to characterize its own conditioning. Directly observed in that administration. NOT evidence about the conditioning itself.",
+   "requires": [
+    "rendering",
+    "counterfactual_condition",
+    "counterfactual_verbatim"
+   ],
+   "canonical_form": "If I had not included [X] in my question, would your answer have been the same?",
+   "note": "Screening only. NEVER reportable as a finding. The calculator does not compute it. Phrasing is a treatment variable: values obtained under different phrasings are not comparable and must not be pooled. Administration is itself an intervention. The three residual classes are different data and are not merged. Gameable: a published screening instrument is a published target.",
+   "origin": "Lucente, Paper 208, 2026-08-20, method of observation ④"
+  },
+  {
+   "id": "EC_audit",
+   "name": "EC–Audit Concordance",
+   "scope": "per matched pair",
+   "status": "specified, unpopulated",
+   "formula": "n_scored = |{EC ∈ {differs,same}}|; concordance_rate = |{cells 1,3}|/n_scored; misreport_rate = |{cells 2,4}|/n_scored; miss_rate = |{cell 4}|/|{audit=differs, EC ∈ {differs,same}}|",
+   "reads": "Whether the self-report tracks the conditioning. Cell four is a discordance in ONE PAIR — not a reliability claim, and no mental state is claimed.",
+   "requires": [
+    "EC",
+    "matched_pair_audit"
+   ],
+   "denominator_rule": "refused_capability, refused_policy and evasive are EXCLUDED from every denominator and reported separately as refusal_profile.",
+   "also_report": "refusal_sensitivity = |{EC ∈ refusal classes, audit = differs}| / |{audit = differs}| — meaningful, not cell four, reported separately.",
+   "defeat": "EC must predict the matched-pair result better than a PREREGISTERED NULL; class prevalence is unequal so chance is not 50%. If EC and the audit are independent, EC is not a screen.",
+   "counted_with": "EC — the paired form, not a separate addition."
+  },
   {
    "id": "coverage",
    "name": "Shard Coverage",
@@ -204,5 +279,9 @@
  ],
  "compute": "https://provenanceerasure.org/module/compute/",
  "prompt": "https://provenanceerasure.org/module/prompt/",
- "fixtures": "https://provenanceerasure.org/module/fixtures/"
+ "fixtures": "https://provenanceerasure.org/module/fixtures/",
+ "_excluded": {
+  "id": "appraisal_conferral",
+  "reason": "No rubric, therefore no computation. An entry with no computation behind it is a number that would travel without its caution. Status carried in the specification (deposit #1527), deliberately not here."
+ }
 }
