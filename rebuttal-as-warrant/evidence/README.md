@@ -3,27 +3,45 @@
 Custodian: **Enli Lucente** · License **CC BY 4.0** · Alexanarch deposit
 [#1568](https://www.alexanarch.org/s/records/1568/) · `AXN:0660.EMPIRICAL.🙏⏩📋🗂️🌸🌇`
 
-## Awaiting the evidentiary appendix
+## The evidentiary appendix
 
-The paper declares its evidence as:
+**EA-MMRS-RAW-01-EVIDENCE-01** — Google AI Mode Continuous Session Capture,
+2026-08-26 19:12–19:56. **31 pages.**
 
-> **EA-MMRS-RAW-01-EVIDENCE-01** — Google AI Mode Continuous Session Capture,
-> 2026-08-26 19:12–19:56 — **31 pages**,
-> `sha256 39dd76157ad2fb7863c3905f7bb06284ee78cee2b947f633b0349e50e174e4a2`
+**[Open the appendix](https://raw.githubusercontent.com/leesharks000/semantic-economy/main/GoogleAI%E9%96%93%E9%81%95%E3%81%842026.08.27.pdf)** — published as `GoogleAI間違い2026.08.27.pdf`
 
-**Nothing is seated here yet.** Four related captures held by the custodian were
-inspected on 2026-08-30 and none matched: not the hash, not the page count. Two
-shared the session date at 15 and 78 pages; two were dated three days later. They
-have not been placed here, because none of them is the document the paper cites.
+| | |
+|---|---|
+| sha256 | `10775634a9ed4d7fbcb7c8d0b6320c0a3144f3c8941155ccef52f0f0a0c0fb14` |
+| bytes | 6,707,027 |
+| pages | 31 · 31 embedded images, no text layer — a screenshot capture |
+| created | 2026-08-27 11:38:50Z |
 
-This directory is where the appendix goes when it is supplied. Until then, the
-determinations at §4.3 and §10.1 rest on a document a reader cannot yet open.
+**It is not re-hosted here.** The file is published in the custodian's own
+repository and linked by address and verified hash. This archive holds no copy.
 
-**A file is not labelled as evidence it is not.** That is the condition this paper
-measures, and the directory holding its evidence is not the place to commit it.
+## ⚠ Hash correction
 
-## Naming
+**The paper declares a hash that does not match the published file.** Frontmatter
+and §XIV give `39dd7615…74e4a2`; the file hashes `10775634…a0c0fb14`.
 
-The appendix's original filename asserted a proposition beyond what the evidence
-carries. The canonical title is neutral-descriptive; the original is preserved as a
-record in the paper's frontmatter and §VIII.
+**It is nonetheless the right document**, on four independent grounds:
+
+1. **31 pages**, as declared.
+2. **A pure screenshot capture** — 31 images, no fonts — as the appendix is
+   described: device time, domain display, UI elements, hyperlink positions.
+3. **Created 2026-08-27**, the same date as the original filename the paper
+   records.
+4. **Named** with 捏造認める *(admits fabrication)* replaced by 間違い
+   *(mistake)* — the neutralisation §VIII itself calls for.
+
+The byte difference is a re-export: ModDate stands twelve seconds after
+CreationDate. **The declared value should be corrected at v1.3 or by erratum**,
+since as published the paper cites a hash no reader can reproduce from the file it
+names.
+
+## Rejected candidates
+
+Four other captures held by the custodian were inspected on 2026-08-30 and are
+**not** the appendix: two dated 2026-08-26 at 15 and 78 pages, and two dated
+2026-08-29. None was seated as it.
