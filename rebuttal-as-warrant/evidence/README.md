@@ -1,34 +1,42 @@
-# EA-MMRS-RAW-01-EVIDENCE-01
+# Evidence — EA-MMRS-RAW-01
 
-**Google AI Mode Continuous Session Capture — 2026-08-26 19:12–19:56**
+Custodian: **Enli Lucente** · License **CC BY 4.0** · Alexanarch deposit
+[#1568](https://www.alexanarch.org/s/records/1568/) · `AXN:0660.EMPIRICAL.🙏⏩📋🗂️🌸🌇`
 
-31 pages · `sha256 39dd76157ad2fb7863c3905f7bb06284ee78cee2b947f633b0349e50e174e4a2`
+## Seated here
 
-Custodian: **Enli Lucente**. Preserves device time, google.com domain display, UI
-elements and hyperlink positions. A page-position table at §I of the paper
-reconciles all 31 pages against the device clock.
+| file | title | captured | pages | sha256 |
+|---|---|---|---|---|
+| [`2-Google反えんりぃ矛盾2026.08.26.pdf`](./2-Google反えんりぃ矛盾2026.08.26.pdf) | Google contradiction capture — 2026-08-26 | 2026-08-26 | 15 | `26e299cb4c8e8fbe…` |
+| [`GoogleAIの作文１_2026.08.29.pdf`](./GoogleAIの作文１_2026.08.29.pdf) | Google AI composition capture 1 — 2026-08-29 | 2026-08-29 | 56 | `28ba7fbdff969200…` |
+| [`GoogleAIの作文２_2026.08.29.pdf`](./GoogleAIの作文２_2026.08.29.pdf) | Google AI composition capture 2 — 2026-08-29 | 2026-08-29 | 60 | `90d219831d0909d0…` |
+| [`Googleと反えんりぃ2026.08.26.pdf`](./Googleと反えんりぃ2026.08.26.pdf) | Google session capture — 2026-08-26 | 2026-08-26 | 78 | `3e9f6893f095160f…` |
 
-Four files of transcript images accompany it.
+The two dated **2026-08-26** share the date of the session the paper measures. The
+two dated **2026-08-29** are three days later and are separate captures.
 
-## Status
+Full hashes in [`MANIFEST.json`](./MANIFEST.json).
 
-**Not yet seated here.** The appendix and the transcript images are held by the
-custodian. This directory is the intended location; the files are to be placed
-here so the links in the paper's own record resolve to something a reader can
-open.
+## ⚠ The declared appendix is not among these
 
-Until then the [data sidecar](https://www.alexanarch.org/data/sidecars/AXN-0660-evidence.json)
-declares them by designator and hash, and states that the archive holds no copy
-and cannot grant access.
+The paper declares its evidentiary appendix as:
+
+> **EA-MMRS-RAW-01-EVIDENCE-01** — Google AI Mode Continuous Session Capture,
+> 2026-08-26 19:12–19:56 — **31 pages**,
+> `sha256 39dd76157ad2fb7863c3905f7bb06284ee78cee2b947f633b0349e50e174e4a2`
+
+**No file seated here matches that hash, and none is 31 pages.** The four above are
+related captures held by the same custodian; they are seated under their own
+titles, dates, page counts and hashes, and are **not** presented as the appendix.
+
+The appendix remains unlocated. Until it is placed here, the paper's §4.3 and §10.1
+determinations rest on a document a reader of this directory cannot open.
+
+**A file is not labelled as evidence it is not.** That is the condition this paper
+measures, and the directory holding its evidence is not the place to commit it.
 
 ## Naming
 
-The original filename of the appendix asserted a proposition beyond what the
-evidence carries. The canonical title is neutral-descriptive; the original is
-preserved as a record in the paper's frontmatter and §VIII. A paper about
-polarity and sourcing errors cannot let its evidence be named beyond its
-evidence.
-
-## Deposit
-
-Alexanarch **#1568** · `AXN:0660.EMPIRICAL.🙏⏩📋🗂️🌸🌇` · CC BY 4.0
+The appendix's original filename asserted a proposition beyond what the evidence
+carries. The canonical title is neutral-descriptive; the original is preserved as a
+record in the paper's frontmatter and §VIII.
