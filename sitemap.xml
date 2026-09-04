@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemapindex.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://provenanceerasure.org/</loc>
-    <lastmod>2026-08-15</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <!-- network surfaces + AXN resolution layer -->
-  <url><loc>https://provenanceerasure.org/deep-time/</loc></url>
-  <url><loc>https://provenanceerasure.org/controller/</loc></url>
-<url><loc>https://www.provenanceerasure.org/rebuttal-as-warrant/</loc><lastmod>2026-08-30</lastmod></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://www.provenanceerasure.org/</loc><lastmod>2026-09-01</lastmod><priority>1.0</priority></url>
+  <url><loc>https://www.provenanceerasure.org/controller</loc><lastmod>2026-08-19</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.provenanceerasure.org/deep-time</loc><lastmod>2026-08-19</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.provenanceerasure.org/module/compute</loc><lastmod>2026-08-22</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.provenanceerasure.org/module/fixtures</loc><lastmod>2026-08-22</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.provenanceerasure.org/module/prompt</loc><lastmod>2026-08-22</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.provenanceerasure.org/where</loc><lastmod>2026-08-17</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.provenanceerasure.org/who/trace</loc><lastmod>2026-08-17</lastmod><priority>0.7</priority></url>
 </urlset>
