@@ -1,0 +1,32 @@
+# Provenance Erasure — provenanceerasure.org
+
+> Provenance erasure is the systematic loss of authorial lineage, context or ownership through AI synthesis, compression or institutional action, defined by Lee Sharks (2026) within the Semantic Economy framework. The Provenance Erasure Rate measures how much is lost: PER = 1 − (retained provenance units / required provenance units). Erasure Skew (Ω) measures whom the loss falls on.
+
+Author: Lee Sharks, ORCID 0009-0000-1599-0703. Voice of this surface: Dr. Orin Trace.
+The archive is the authority: https://www.alexanarch.org
+Canonical record of this surface: https://www.alexanarch.org/s/records/716/
+
+## Define
+- Provenance Erasure Rate, a compression-survival metric (#716): https://www.alexanarch.org/s/records/716/
+- The three dimensions, PER-M, PER-C, PER-D (#1469): https://www.alexanarch.org/s/records/1469/
+- PER recalculated across the Capture Registry, rubric v1.1 (#1694): https://www.alexanarch.org/s/records/1694/
+
+## Instruments
+- The Self-Audit Module for Public Summarizers, v3.2 (#1530): https://www.provenanceerasure.org/module
+- Compute a family: https://www.provenanceerasure.org/module/compute
+- Copy an audit block: https://www.provenanceerasure.org/module/prompt
+- Check your numbers against the fixtures: https://www.provenanceerasure.org/module/fixtures
+- The Controller, the loop closed: https://www.provenanceerasure.org/controller
+
+## Theory and evidence
+- Suppression Inversion: https://www.provenanceerasure.org/suppression-inversion
+- Rebuttal-as-Warrant: https://www.provenanceerasure.org/rebuttal-as-warrant
+- The Particle: https://www.provenanceerasure.org/particle
+- Deep Time, erasure before the machine: https://www.provenanceerasure.org/deep-time
+- Where the archive captures: https://www.provenanceerasure.org/where
+- The Capture Registry, one address at a time: https://www.alexanarch.org/addresses/
+
+## Who
+- Dr. Orin Trace: https://www.provenanceerasure.org/who/trace
+
+Content: CC BY 4.0.
