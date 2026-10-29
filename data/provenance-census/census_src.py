@@ -397,6 +397,20 @@ row(slug="olmotrace", name="OLMoTrace", aka=[], url="https://playground.allenai.
     relations=[{"rel": "neighbour", "target": "data-provenance-initiative"}],
     unchecked=["the Playground itself", "infini-gram as a separate record"])
 
+# ---------------------------------------------------------------- the archive's records of each entity (2026-10-29)
+# its capture (the composition layer's account, seated in the Capture Registry) and its /non row, linked both ways
+CAPTURE = {"iptc-photo-metadata-tests": "iptc-photo-metadata", "iptc-metawatch": "iptc-metawatch", "nanopublications": "nanopublications",
+           "c2pa-conformance": "c2pa-conformance-program", "data-provenance-initiative": "data-provenance-initiative", "attributionbench": "attributionbench",
+           "attribench": "attribench", "provstore": "provstore", "wikiwho": "wikiwho", "mapping-manuscript-migrations": "mapping-manuscript-migrations",
+           "schoenberg-database": "schoenberg-database-of-manuscripts", "vroniplag-wiki": "vroniplag-wiki", "getty-provenance-index": "getty-provenance-index", "olmotrace": "olmotrace"}
+for r in ROWS:
+    q = CAPTURE[r["slug"]]
+    r.setdefault("relations", []).extend([
+        {"rel": "capture", "url": f"https://www.alexanarch.org/captures/{q}-aio-20261029/", "label": f"«{r['name'] if q != 'iptc-photo-metadata' else 'IPTC photo metadata'}» on Google AI Overview, 2026-10-29",
+         "note": "the composition layer's account of the entity at its bare name, signed out, seated in the Capture Registry", "dates": {"observed": "2026-10-29"}},
+        {"rel": "non_row", "url": f"https://www.alexanarch.org/non/{r['slug']}/", "label": "its /non row (EA-NEGONT-02 v0.9, equal case)",
+         "note": "composed 2026-10-29 against its own pages, its Wikipedia article or its absence, the capture's cards and the archive"}])
+
 # ---------------------------------------------------------------- write
 def norm(s): return re.sub(r"\s+", " ", s).strip()
 problems = []

@@ -14,7 +14,7 @@ LINEAGE = {"media": "Media and images", "scholarly record": "The scholarly recor
            "computational lineage": "Computational lineage", "authorship and reuse": "Authorship and reuse", "manuscripts and books": "Manuscripts and books",
            "objects and art": "Objects and art"}
 CAPS = ["expresses", "records", "tests"]
-REL = {"part_of": "Part of", "has_part": "Has part", "neighbour": "Neighbours", "sibling": "Sibling record"}
+REL = {"part_of": "Part of", "has_part": "Has part", "neighbour": "Neighbours", "sibling": "Sibling record", "capture": "Captures: the composition layer's account", "non_row": "The /non row"}
 FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
          '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">')
 HEAD = FONTS + '<link rel="stylesheet" href="/assets/pe.css">'
@@ -146,7 +146,7 @@ def page(r):
 <meta name="citation_title" content="{e(r["name"])} — provenance meta-aggregator record"><meta name="citation_editor" content="Lee Sharks"><meta name="citation_date" content="{D["compiled"]}"><meta name="citation_public_url" content="{BASE}{r["slug"]}">
 <script type="application/ld+json">{jsonld(r)}</script>{HEAD}</head><body>{topbar("Aggregators")}<div class="wrap">
 <div class="crumb"><a href="/aggregators/">Provenance meta-aggregator</a> / {e(LINEAGE.get(r["lineage"], r["lineage"]))}</div><h1>{e(r["name"])}</h1>{chips(r)}<div class="kernel">{e(kernel(r))}</div>
-<div class="act"><a class="btn" href="{e(r["url"])}">{("Its landing page ↗ (" + e(r["lifecycle"]["state"]) + ")") if (r.get("lifecycle") or {}).get("state") == "ended" else ("Visit " + e(r["name"]) + " ↗")}</a><a class="btn ghost" href="/module/">Run an erasure audit</a><button class="btn ghost" type="button" data-copy="cite">Copy citation</button></div>
+<div class="act"><a class="btn" href="{e(r["url"])}">{("Its landing page ↗ (" + e(r["lifecycle"]["state"]) + ")") if (r.get("lifecycle") or {}).get("state") == "ended" else ("Visit " + e(r["name"]) + " ↗")}</a>{''.join(f'<a class="btn ghost" href="{e(x["url"])}">The /non row</a>' for x in r.get("relations", []) if x["rel"] == "non_row")}<a class="btn ghost" href="/module/">Run an erasure audit</a><button class="btn ghost" type="button" data-copy="cite">Copy citation</button></div>
 {ownq}
 <h2>What it carries</h2><table>{tbl(CARRY)}</table><p class="legend">op the operator's own statement · 3p a third-party account · obs our observation · rd our reading. Hover a tag for its quote; each opens below with its source.</p>
 <h2>Entity</h2><table>{tbl(ENT)}</table>

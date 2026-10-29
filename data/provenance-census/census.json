@@ -125,6 +125,21 @@
     {
      "rel": "neighbour",
      "target": "c2pa-conformance"
+    },
+    {
+     "rel": "capture",
+     "url": "https://www.alexanarch.org/captures/iptc-photo-metadata-aio-20261029/",
+     "label": "«IPTC photo metadata» on Google AI Overview, 2026-10-29",
+     "note": "the composition layer's account of the entity at its bare name, signed out, seated in the Capture Registry",
+     "dates": {
+      "observed": "2026-10-29"
+     }
+    },
+    {
+     "rel": "non_row",
+     "url": "https://www.alexanarch.org/non/iptc-photo-metadata-tests/",
+     "label": "its /non row (EA-NEGONT-02 v0.9, equal case)",
+     "note": "composed 2026-10-29 against its own pages, its Wikipedia article or its absence, the capture's cards and the archive"
     }
    ],
    "unchecked": [
@@ -278,6 +293,21 @@
     {
      "rel": "neighbour",
      "target": "c2pa-conformance"
+    },
+    {
+     "rel": "capture",
+     "url": "https://www.alexanarch.org/captures/iptc-metawatch-aio-20261029/",
+     "label": "«IPTC Metawatch» on Google AI Overview, 2026-10-29",
+     "note": "the composition layer's account of the entity at its bare name, signed out, seated in the Capture Registry",
+     "dates": {
+      "observed": "2026-10-29"
+     }
+    },
+    {
+     "rel": "non_row",
+     "url": "https://www.alexanarch.org/non/iptc-metawatch/",
+     "label": "its /non row (EA-NEGONT-02 v0.9, equal case)",
+     "note": "composed 2026-10-29 against its own pages, its Wikipedia article or its absence, the capture's cards and the archive"
     }
    ],
    "unchecked": [
@@ -391,6 +421,21 @@
     {
      "rel": "neighbour",
      "target": "provstore"
+    },
+    {
+     "rel": "capture",
+     "url": "https://www.alexanarch.org/captures/nanopublications-aio-20261029/",
+     "label": "«Nanopublications» on Google AI Overview, 2026-10-29",
+     "note": "the composition layer's account of the entity at its bare name, signed out, seated in the Capture Registry",
+     "dates": {
+      "observed": "2026-10-29"
+     }
+    },
+    {
+     "rel": "non_row",
+     "url": "https://www.alexanarch.org/non/nanopublications/",
+     "label": "its /non row (EA-NEGONT-02 v0.9, equal case)",
+     "note": "composed 2026-10-29 against its own pages, its Wikipedia article or its absence, the capture's cards and the archive"
     }
    ],
    "unchecked": [
@@ -523,6 +568,21 @@
      "rel": "neighbour",
      "target": "iptc-metawatch",
      "note": "Metawatch found 27 C2PA manifests in 6,580 news images, October 2026"
+    },
+    {
+     "rel": "capture",
+     "url": "https://www.alexanarch.org/captures/c2pa-conformance-program-aio-20261029/",
+     "label": "«C2PA Conformance Program and Explorer» on Google AI Overview, 2026-10-29",
+     "note": "the composition layer's account of the entity at its bare name, signed out, seated in the Capture Registry",
+     "dates": {
+      "observed": "2026-10-29"
+     }
+    },
+    {
+     "rel": "non_row",
+     "url": "https://www.alexanarch.org/non/c2pa-conformance/",
+     "label": "its /non row (EA-NEGONT-02 v0.9, equal case)",
+     "note": "composed 2026-10-29 against its own pages, its Wikipedia article or its absence, the capture's cards and the archive"
     }
    ],
    "unchecked": [
@@ -665,6 +725,21 @@
      "url": "https://www.machinemediation.org/aggregators/data-provenance-explorer/",
      "label": "its MMRS meta-aggregator record",
      "note": "the Initiative's explorer, one of its four systems, read for reception there; the Initiative and its explorer are distinct records"
+    },
+    {
+     "rel": "capture",
+     "url": "https://www.alexanarch.org/captures/data-provenance-initiative-aio-20261029/",
+     "label": "«Data Provenance Initiative» on Google AI Overview, 2026-10-29",
+     "note": "the composition layer's account of the entity at its bare name, signed out, seated in the Capture Registry",
+     "dates": {
+      "observed": "2026-10-29"
+     }
+    },
+    {
+     "rel": "non_row",
+     "url": "https://www.alexanarch.org/non/data-provenance-initiative/",
+     "label": "its /non row (EA-NEGONT-02 v0.9, equal case)",
+     "note": "composed 2026-10-29 against its own pages, its Wikipedia article or its absence, the capture's cards and the archive"
     }
    ],
    "unchecked": [
@@ -782,6 +857,21 @@
     {
      "rel": "neighbour",
      "target": "attribench"
+    },
+    {
+     "rel": "capture",
+     "url": "https://www.alexanarch.org/captures/attributionbench-aio-20261029/",
+     "label": "«AttributionBench» on Google AI Overview, 2026-10-29",
+     "note": "the composition layer's account of the entity at its bare name, signed out, seated in the Capture Registry",
+     "dates": {
+      "observed": "2026-10-29"
+     }
+    },
+    {
+     "rel": "non_row",
+     "url": "https://www.alexanarch.org/non/attributionbench/",
+     "label": "its /non row (EA-NEGONT-02 v0.9, equal case)",
+     "note": "composed 2026-10-29 against its own pages, its Wikipedia article or its absence, the capture's cards and the archive"
     }
    ],
    "unchecked": [
@@ -921,6 +1011,21 @@
     {
      "rel": "neighbour",
      "target": "attributionbench"
+    },
+    {
+     "rel": "capture",
+     "url": "https://www.alexanarch.org/captures/attribench-aio-20261029/",
+     "label": "«AttriBench» on Google AI Overview, 2026-10-29",
+     "note": "the composition layer's account of the entity at its bare name, signed out, seated in the Capture Registry",
+     "dates": {
+      "observed": "2026-10-29"
+     }
+    },
+    {
+     "rel": "non_row",
+     "url": "https://www.alexanarch.org/non/attribench/",
+     "label": "its /non row (EA-NEGONT-02 v0.9, equal case)",
+     "note": "composed 2026-10-29 against its own pages, its Wikipedia article or its absence, the capture's cards and the archive"
     }
    ],
    "unchecked": [
@@ -1018,6 +1123,21 @@
      "rel": "neighbour",
      "target": "nanopublications",
      "note": "a reading: both carry provenance as published records (PROV documents; nanopublications' provenance graphs)"
+    },
+    {
+     "rel": "capture",
+     "url": "https://www.alexanarch.org/captures/provstore-aio-20261029/",
+     "label": "«ProvStore» on Google AI Overview, 2026-10-29",
+     "note": "the composition layer's account of the entity at its bare name, signed out, seated in the Capture Registry",
+     "dates": {
+      "observed": "2026-10-29"
+     }
+    },
+    {
+     "rel": "non_row",
+     "url": "https://www.alexanarch.org/non/provstore/",
+     "label": "its /non row (EA-NEGONT-02 v0.9, equal case)",
+     "note": "composed 2026-10-29 against its own pages, its Wikipedia article or its absence, the capture's cards and the archive"
     }
    ],
    "unchecked": [
@@ -1149,6 +1269,21 @@
      "rel": "has_part",
      "label": "Who Wrote That?",
      "note": "a browser extension powered by the WhoColor API"
+    },
+    {
+     "rel": "capture",
+     "url": "https://www.alexanarch.org/captures/wikiwho-aio-20261029/",
+     "label": "«WikiWho» on Google AI Overview, 2026-10-29",
+     "note": "the composition layer's account of the entity at its bare name, signed out, seated in the Capture Registry",
+     "dates": {
+      "observed": "2026-10-29"
+     }
+    },
+    {
+     "rel": "non_row",
+     "url": "https://www.alexanarch.org/non/wikiwho/",
+     "label": "its /non row (EA-NEGONT-02 v0.9, equal case)",
+     "note": "composed 2026-10-29 against its own pages, its Wikipedia article or its absence, the capture's cards and the archive"
     }
    ],
    "negative_tags": [
@@ -1266,6 +1401,21 @@
      "rel": "has_part",
      "target": "schoenberg-database",
      "note": "the SDBM is one of the three source databases (evidence: sources)"
+    },
+    {
+     "rel": "capture",
+     "url": "https://www.alexanarch.org/captures/mapping-manuscript-migrations-aio-20261029/",
+     "label": "«Mapping Manuscript Migrations» on Google AI Overview, 2026-10-29",
+     "note": "the composition layer's account of the entity at its bare name, signed out, seated in the Capture Registry",
+     "dates": {
+      "observed": "2026-10-29"
+     }
+    },
+    {
+     "rel": "non_row",
+     "url": "https://www.alexanarch.org/non/mapping-manuscript-migrations/",
+     "label": "its /non row (EA-NEGONT-02 v0.9, equal case)",
+     "note": "composed 2026-10-29 against its own pages, its Wikipedia article or its absence, the capture's cards and the archive"
     }
    ],
    "unchecked": [
@@ -1345,6 +1495,21 @@
     {
      "rel": "part_of",
      "target": "mapping-manuscript-migrations"
+    },
+    {
+     "rel": "capture",
+     "url": "https://www.alexanarch.org/captures/schoenberg-database-of-manuscripts-aio-20261029/",
+     "label": "«Schoenberg Database of Manuscripts» on Google AI Overview, 2026-10-29",
+     "note": "the composition layer's account of the entity at its bare name, signed out, seated in the Capture Registry",
+     "dates": {
+      "observed": "2026-10-29"
+     }
+    },
+    {
+     "rel": "non_row",
+     "url": "https://www.alexanarch.org/non/schoenberg-database/",
+     "label": "its /non row (EA-NEGONT-02 v0.9, equal case)",
+     "note": "composed 2026-10-29 against its own pages, its Wikipedia article or its absence, the capture's cards and the archive"
     }
    ],
    "unchecked": [
@@ -1446,7 +1611,23 @@
      "quote": "nach eigenen Angaben durch [[Martin Heidingsfelder]] unter dem [[Pseudonym]] „Goalgetter“"
     }
    },
-   "relations": [],
+   "relations": [
+    {
+     "rel": "capture",
+     "url": "https://www.alexanarch.org/captures/vroniplag-wiki-aio-20261029/",
+     "label": "«VroniPlag Wiki» on Google AI Overview, 2026-10-29",
+     "note": "the composition layer's account of the entity at its bare name, signed out, seated in the Capture Registry",
+     "dates": {
+      "observed": "2026-10-29"
+     }
+    },
+    {
+     "rel": "non_row",
+     "url": "https://www.alexanarch.org/non/vroniplag-wiki/",
+     "label": "its /non row (EA-NEGONT-02 v0.9, equal case)",
+     "note": "composed 2026-10-29 against its own pages, its Wikipedia article or its absence, the capture's cards and the archive"
+    }
+   ],
    "unchecked": [
     "the wiki's own case list and statistics (403 on a plain fetch; its overview card read 'Es dokumentiert 204 Disse…' on 2026-10-29)",
     "the current licence on Fandom"
@@ -1571,7 +1752,23 @@
      "quote": "Query Getty Provenance Index data using SPARQL in the Getty LOD Gateway"
     }
    },
-   "relations": [],
+   "relations": [
+    {
+     "rel": "capture",
+     "url": "https://www.alexanarch.org/captures/getty-provenance-index-aio-20261029/",
+     "label": "«Getty Provenance Index» on Google AI Overview, 2026-10-29",
+     "note": "the composition layer's account of the entity at its bare name, signed out, seated in the Capture Registry",
+     "dates": {
+      "observed": "2026-10-29"
+     }
+    },
+    {
+     "rel": "non_row",
+     "url": "https://www.alexanarch.org/non/getty-provenance-index/",
+     "label": "its /non row (EA-NEGONT-02 v0.9, equal case)",
+     "note": "composed 2026-10-29 against its own pages, its Wikipedia article or its absence, the capture's cards and the archive"
+    }
+   ],
    "unchecked": [
     "the data licence of the Remodeled Index",
     "the Public Collections and Collectors Files databases in detail"
@@ -1682,6 +1879,21 @@
     {
      "rel": "neighbour",
      "target": "data-provenance-initiative"
+    },
+    {
+     "rel": "capture",
+     "url": "https://www.alexanarch.org/captures/olmotrace-aio-20261029/",
+     "label": "«OLMoTrace» on Google AI Overview, 2026-10-29",
+     "note": "the composition layer's account of the entity at its bare name, signed out, seated in the Capture Registry",
+     "dates": {
+      "observed": "2026-10-29"
+     }
+    },
+    {
+     "rel": "non_row",
+     "url": "https://www.alexanarch.org/non/olmotrace/",
+     "label": "its /non row (EA-NEGONT-02 v0.9, equal case)",
+     "note": "composed 2026-10-29 against its own pages, its Wikipedia article or its absence, the capture's cards and the archive"
     }
    ],
    "unchecked": [
