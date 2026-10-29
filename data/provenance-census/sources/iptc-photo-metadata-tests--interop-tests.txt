@@ -1,0 +1,639 @@
+IPTC Photo Metadata Interoperability Tests - IPTC 
+
+ Skip to main content 
+
+ Menu Our work Media Provenance 
+ Artificial Intelligence and Machine Learning for the media 
+ Metadata for Accessibility and Diversity 
+ Trust and Credibility in the Media 
+ Knowledge Graphs and the Semantic Web for Media 
+ Future Technologies for Media 
+
+ Standards Photo Metadata About IPTC Photo Metadata What is Photo Metadata? 
+ What is the IPTC Photo Metadata Standard? 
+ Google Images and IPTC: Frequently Asked Questions 
+ Social Media Sites Photo Metadata Test Results 2019 
+
+ Specifications & Guides IPTC Photo Metadata User Guide 
+ Photo Metadata Standard specification 
+ Quick guide to IPTC Photo Metadata on Google Images 
+ Photo Metadata Mapping Guidelines 
+ Developers guide to IPTC Photo Metadata 
+
+ Photo Metadata Tools Software that supports IPTC Photo Metadata 
+ IPTC Photo Metadata Viewer 
+ Browser extensions 
+ Photo Metadata Reference Images 
+ IPTC Photo Metadata Interoperability Tests 
+
+ Video Metadata About Video Metadata What is IPTC Video Metadata Hub? 
+
+ Specifications & Guides Video Metadata Hub User Guide 
+ The Video Metadata Hub Recommendation 
+ VIdeo Metadata Hub properties 
+ Video Metadata Hub mappings 
+
+ Video Metadata Tools VMHub Generator 
+
+ Vocabularies About IPTC NewsCodes What are IPTC NewsCodes? 
+ Groups of NewsCodes 
+ Media Topics – IPTC’s subject vocabulary 
+ Who uses NewsCodes? 
+
+ Specifications & Guides IPTC NewsCodes Guidelines 
+ CV Server Guidelines 
+
+ NewsCodes Tools MediaTopic tree view 
+ NewsCodes CV Server 
+
+ News formats NewsML-G2 About NewsML-G2 What is NewsML-G2? 
+ Who’s using NewsML-G2? 
+ Using NewsML-G2 
+
+ Specifications & Guides NewsML-G2 Specification 
+ NewsML-G2 Guidelines 
+ Expressing Trust and Credibility Information in IPTC Standards 
+
+ NewsML-G2 Tools NewsML-G2 Generator 
+ Software Libraries 
+
+ ninjs – News in JSON About ninjs (News in JSON) What is ninjs? 
+
+ Specifications & Guides ninjs User Guide 
+ ninjs Specifications 
+ ninjs GitHub repository 
+
+ ninjs Tools ninjs Generator 
+ GraphQL demonstrator 
+ XSLT converters 
+
+ News Architecture About IPTC News Architecture What is the IPTC News Architecture? 
+ Who’s Using It? 
+
+ NITF About NITF What is NITF? 
+ Who’s Using NITF? 
+ Using NITF 
+
+ Specifications & Guides NITF Specification 
+ NITF Guidelines 
+
+ rNews About rNews What is rNews? 
+ Who’s Using rNews? 
+
+ Older IPTC standards IIM What is IIM? 
+ Who’s using it? 
+ IIM Specifications 
+
+ IPTC7901 What is IPTC 7901? 
+ Who’s Using It? 
+ IPTC7901 Specification 
+
+ NewsML 1 What is NewsML 1? 
+ NewsML 1 Specification 
+ Documentation 
+ Support 
+
+ Sports IPTC Sport Schema Introduction to IPTC Sport Schema 
+ Working with IPTC Sport Schema 
+ Sport Schema Ontology Reference 
+ Use Cases 
+ Schema overview 
+
+ SportsML What is SportsML? 
+ Using SportsML 
+ Who’s using SportsML? 
+ SportsML-G2 Guidelines 
+
+ Rights RightsML What is RightsML? 
+ RightsML Specification 
+ RightsML Implementation Guide 
+
+ RightsML Tools RightsML Generator 
+
+ Latest Recent news: 
+ IPTC Autumn Meeting 2026: smarter stories, verifiable sources and two new working groups 22 October 2026 
+ New Controlled Vocabulary server launched in beta 20 October 2026 
+ IPTC NewsCodes 2026-Q3 update released 16 October 2026 
+ From Kyiv to Tokyo: an “infrastructure for truth” moves from pilot to production at the Media Provenance Summit Tokyo 14 October 2026 
+ Announcing Metawatch: a monthly check on which news publishers keep photo metadata 5 October 2026 
+
+ All News 
+
+ Events Member Meetings Autumn Meeting 2026 
+ Media Provenance Summit Tokyo 2026 
+ Media Provenance Summit Bergen 2026 
+ Media Provenance Summit Toronto 2026 
+ Spring Meeting 2026 
+
+ IPTC Photo Metadata Conference Photo Metadata Conference 2026 
+ Photo Metadata Conference 2025 
+ Photo Metadata Conference 2024 
+ Photo Metadata Conference 2022 
+ All Photo Metadata Conferences 
+
+ Webinars Public Webinars 
+
+ About IPTC About IPTC About IPTC 
+ Working Groups 
+ Frequently Asked Questions 
+ Liaison Partners 
+
+ IPTC Membership Current Members 
+ Member Benefits 
+ Become a Member 
+
+ Get in touch Contact Us 
+ IPTC Newsletters 
+
+ For Members Member Login 
+ Members Only 
+
+ Search 
+
+ Search 
+
+ Standards Overview 
+
+ Photo Metadata 
+
+ What is Photo Metadata 
+
+ IPTC Photo Metadata Standard 
+
+ IPTC Guidelines & Support 
+
+ IPTC Photo Metadata Interoperability Tests 
+
+ Reference Images 
+
+ Software that supports IPTC Photo Metadata 
+
+ Quick guide to IPTC Photo Metadata on Google Images 
+
+ Google Images and IPTC: Frequently Asked Questions 
+
+ Browser extensions 
+
+ Adobe Custom Metadata Panel: Setup 
+
+ Adobe Custom Metadata Panel: IPTC User Guide 
+
+ IPTC Photo Metadata Initiatives 
+
+ Social Media Sites Photo Metadata Test Results 2019 
+
+ Research 
+
+ Video Metadata Hub 
+
+ Media Topics 
+
+ News Architecture 
+
+ Core Components 
+
+ Who’s Using it? 
+
+ NewsML-G2 
+
+ Using NewsML-G2 
+
+ Who’s using NewsML-G2 
+
+ Tools for NewsML-G2 
+
+ IPTC Catalog 
+
+ RightsML 
+
+ ninjs 
+
+ rNews 
+
+ Who’s using rNews 
+
+ SportsML 
+
+ Using SportsML 
+
+ Who’s using SportsML 
+
+ Sport Schema 
+
+ Video Metadata Hub 
+
+ Recommendation 
+
+ EventsML-G2 
+
+ NewsCodes 
+
+ Groups of NewsCodes 
+
+ NewsCodes Glossary 
+
+ Subject Codes 
+
+ NewsML 1 
+
+ Using NewsML 1 
+
+ Who’s Using NewsML 1 
+
+ NITF 
+
+ Using NITF 
+
+ Who’s Using NITF 
+
+ IPTC 7901 
+
+ IIM 
+
+ IPTC Photo Metadata Interoperability Tests
+
+ The IPTC Photo Metadata Standard is made for describing what an image shows and providing administrative information and copyright data of an image. A key use case of this standard is to keep metadata embedded into an image file persistent and alive when the image is exchanged between many parties in a supply chain. 
+
+Software managing and processing image files in this exchange has an essential role: it must not remove or modify existing metadata on its own and should not hide it, metadata intentionally added or changed must be saved, embedded correctly into the image file.
+
+ IPTC is watching this behaviour of software and calls it a software’s photo metadata interoperability .
+
+ To enable anybody in testing a software’s interoperability IPTC defines three tests and what IPTC expects as results – find all below.
+
+ Executing the tests and comparing the results with IPTC’s expectations helps to evaluate the metadata reliability of a software in a supply chain.
+
+ How the IPTC Interoperability Tests can be used
+
+ Select a piece of software that you want to test and you can use for testing purposes.
+
+ Execute the tests #1, #2, #3 as you are interested in the results. 
+
+ Test #1 : Do field labels align to the IPTC definition?
+
+ Test #2 : Does the software read and write embedded metadata correctly?
+
+ Test #3 : Which IPTC fields are supported by the software – and which are not?
+
+ Compare your results of each test with the “what IPTC expects as test result” section of the test description, and draw your conclusions about the interoperability quality of the software.
+
+ You may contact the maker of the software and ask about differences between your test results and IPTC’s expectations.
+
+ You may also contact IPTC: Use the Contact Us page on this site.
+
+ Terminology used show/hide more details of this section 
+
+ software : an application used for viewing and/or editing IPTC photo metadata. This could be an application on a computer or software on a server and on a client computer to be considered as a single software system – typically Digital Asset Management (DAM) or Media Asset Management (MAM) systems. And it could be a web content management system rescaling image files which may have an impact on embedded photo metadata.
+
+ metadata user interface and/or metadata panel : the full user interface or a part of the user interface of the software showing metadata fields (labels and their values) and supporting to edit the values.
+
+ Metadata field or metadata property : an element of metadata made for a specific purpose, e.g. to hold the date and time of creating the image, name of who created the image, describing what the image shows or who owns the copyright of the image. Field is the term used primarily by users of the software, property is the term primarily used by metadata standards and makers of the software, in fact they are synonyms.
+
+For the test guideline below we use the term field .
+
+ Test #1: Do field labels align to the IPTC definition?
+
+ For filling in the value of a metadata field a user should know for what kind of information this field is made. For IPTC fields this is defined by the IPTC Photo Metadata Standard . The first – and in many cases the only – helper on a metadata user interface is the field label. It is shown close to where you can see or fill in the value and tells with a single or a few words what should be filled into the field or what the field shows.
+
+ This test checks if the label of a field in the tested software aligns with the IPTC definition. 
+
+ Test outline
+
+ The IPTC has created a reference image file with all metadata fields defined by the IPTC standard and almost each field has its IPTC name as value (only very short or numeric values are different). This name is also used in the IPTC standard document. You should load this file in the to-be-tested software and check with your eyes on the software’s metadata panel(s): does the shown field value – the IPTC field name – tell (almost) the same as the label of this field on the panel.
+
+ Test procedure, step by step show/hide this section 
+
+ Download the Standard 2021.1 Reference Image file (see also the IPTC Photo Metadata Standard page ).
+
+ Load, import, ingest this file into the to-be-tested software.
+
+ Activate the photo metadata panel(s) of the to-be-tested software. Select, if required, the IPTC fields.
+
+ Compare for each field: does the field’s label tell the same, or at least something very similar, as the shown value of the field, this is the name of the field defined by IPTC.
+
+This may look like: 
+
+ Record if the field’s label and the IPTC name in the value do not align:
+
+– by writing down the field’s label and the IPTC name shown as the field’s value
+
+– by taking a screenshot of the whole metadata panel or at least this region of the panel.
+
+ What IPTC expects as test result
+
+ Each IPTC Photo Metadata field has a definition of its semantics and a corresponding recommended label in English. Therefore IPTC expects that any label of an IPTC property is either identical to the the field’s name or label in English as defined by IPTC or only a slight modification of it . For a label in a different language the translation should reflect what IPTC defined as kind of information of the field.
+
+ Test #2: Does the software read and write embedded metadata correctly?
+
+ Each software supporting photo metadata implements a small metadata workflow: the embedded metadata is read from the image file, the read field values are assigned to corresponding fields on the metadata panel. If the field values can be edited each one has to be assigned to the corresponding IPTC field(s) and finally all fields should be embedded into the image file correctly. 
+
+ This test checks if software used for this metadata workflow is reading and writing values correctly. 
+
+(Note: some desktop software and most DAM/MAM systems read the metadata into a local database and the metadata is embedded into in image file only by an export action. IPTC considers this as the internal metadata management of software which should align to this outlined metadata workflow: the metadata fields should be read and saved correctly.)
+
+ Test outline
+
+ IPTC has a reference image file with all metadata fields defined by the IPTC standard and each field has a specific value. You should load this file in the to-be-tested software, edit (= change) the values of some fields and save all metadata to the image file. This file should be uploaded to the IPTC Interoperability Test site and “Test #2” should be executed there. The generated test result shows:
+
+1. If the intentionally edited IPTC files have a value different to the IPTC reference image file, as expected, or still the same.
+
+2. If other IPTC fields than the ones edited by you have unexpectedly a value different to the IPTC reference image file. (Possible cases: changed value, no value.)
+
+ Test procedure, step by step show/hide this section 
+
+ Download the Standard 2021.1 Reference Image file  – Note as of 6 June 2022: if you have a previously downloaded Reference Image file download it again now , a few details were improved and using the old version on the Interoperability Test site would show wrong results! 
+
+(See also the IPTC Photo Metadata Standard page ). Create a copy of the file and rename it to something like “softwareA-test2-1.jpg”.
+
+ Load, import, ingest this file into the to-be-tested software.
+
+ Activate the photo metadata panel(s) of the to-be-tested software. Select, if required, the IPTC fields.
+
+ Change the values of some fields. The IPTC Interoperability Test site supports changed values of these fields in the test result: 
+
+ Description/Caption (an IPTC Core field with a text value)
+
+ Keywords (an IPTC Core field with optionally multiple occurrences, each with a text value)
+
+ Rights Usage Terms (an IPTC Core field with a text value)
+
+ Image Creator (an IPTC Extension field with sub-fields, not the same as the Creator field)
+
+ Location Created (an IPTC Extension field with sub-fields)
+
+ Copyright URL/Web Statement of Rights (an IPTC Extension field with a text value)
+
+ Save the metadata to this loaded image file. (May require an export action.)
+
+ Go to the IPTC Photo Metadata Interoperability Test site 
+
+ Select as “local image file” the file you have saved/exported in step 5.
+
+ Select as test “Test #2”
+
+ Below this selection: check the field names – same as in step 4 above – of the fields you have changed.
+
+ Press “Test the Photo Metadata of the Local Image” – the test is executed and a few moments later the test result will be shown.
+
+ View the test result – we recommend to record it by e.g. printing it out or creating a PDF file with the browser.
+
+The details of what is shown there is explained on the Test 2 – RESULT page.
+
+ Interpret the test result – see below What IPTC expects as test result 
+
+ You can do the same test with different sets of changed fields. Copy the downloaded IPTC reference image file again and rename it to e.g. “softwareA-test2- 2 .jpg” and “softwareA-test2- 3 .jpg” etc.
+
+Then start the next test with step 2.
+
+ What IPTC expects as test result
+
+ Test #2 on this site compares the values of the IPTC reference image with the values in the uploaded test image file which is initially a copy of the IPTC reference image.
+
+ IPTC expects only the values of the intentionally changed fields in the test image file are different from the IPTC reference image file. 
+
+ If: 
+
+– only a field or some fields listed in step 4 above have been changed and 
+
+– if these field(s) have been checked on the page for uploading the local image 
+
+this field is/these fields should be highlighted in green in the test result showing “… value CHANGED”. This is telling “the change of this value is ok, it was done intentionally”. This is an expected change of values.
+
+ Check if all fields with values changed by you are shown with “… value CHANGED” in green. 
+
+ Bad result: if such fields do not show “… value CHANGED”, the software did not save the changed value(s) correctly .
+
+ If “… value CHANGED – but NOT the … value!” is shown: for this IPTC field the use of the XMP and the IIM format is specified; if the the value of this field is changed then both the XMP value and the IIM value must be changed. This “- but NOT the … (XMP/IIM)” tells the value was changed only in one format but not in the other one – field values are partially not saved correctly and the values are inconsistent now! 
+
+ Without changing a metadata field value in the test image the value must stay as the one in the IPTC reference image.
+
+Therefore the Test #2-Result should not show “… value CHANGED” or “… is MISSING” for fields you have not changed! If this is the case the tested software modified values on its own or even removed some metadata fields. This is a serious violation of metadata interoperability. 
+
+ If “… value is MISSING – NOT the … value!” is shown : this indicates that for this IPTC field the XMP and the IIM format is specified, but only the value of one format is missing, the correct value in the other format still exists – field value(s) of one format have been stripped. 
+
+ Test #3: Which IPTC fields are supported by the software – and which not?
+
+ The IPTC Photo Metadata Standard defines a set of about 57 metadata fields, some of them have a structured value with a set of sub-fields. Unfortunately not all the software claiming to support IPTC fields supports all of them. For metadata interoperability it is quite essential that a specific IPTC field edited with software A can also be shown and edited with software B.
+
+ This test investigates and lists which of the IPTC defined fields are supported, and which not. 
+
+ Test outline
+
+ IPTC provides an image file without any embedded metadata – IPTC, Exif or any other. You should load this file in the to-be-tested software and fill in values for all fields available on the metadata panel(s). 
+
+Finally all the filled in values should be saved to this image file. 
+
+Next this file should be uploaded to the IPTC Interoperability Test site and “Test #3” should be executed there. The generated test result shows all fields and sub-fields defined by the IPTC Photo Metadata Standard and for each one if a value in the XMP format was found and – if specified by the standard – also a value in the IIM format was found. If the values of a field in XMP and IIM were found the result also shows if the values are the same, if they are in sync.
+
+ Test procedure, step by step show/hide this section 
+
+ Download the IPTC NOmetadata image file (from the IPTC web site). Create a copy of the file and rename it to something like “softwareA-test3-1.jpg”.
+
+ Load, import, ingest this file into the to-be-tested software.
+
+ Activate the photo metadata panel(s) of the to-be-tested software. Select, if required, the IPTC fields.
+
+ Fill in a value for any shown field and – if available – any sub-fields. (E.g. the Image Creator field has the sub-fields Name and Identifier, both should be filled with a value.) If a field allows to fill in multiple values fill in at least two.
+
+ After all shown fields have been filled in save the metadata to this loaded image file. (May require an export action.)
+
+ Go to the IPTC Photo Metadata Interoperability Test site 
+
+ Select as “local image file” the file you have saved/exported in step 5.
+
+ Select as test “Test #3”. (Ignore the checking of changed fields below, this is made for Test #2 only.)
+
+ Press “Test the Photo Metadata of the Local Image” – the test is executed and a few moments later the test result will be shown.
+
+ View the test result – we recommend to record it by e.g. printing it out or creating a PDF file with the browser.
+
+ Details of what is shown is explained on the Test 3 – RESULT page.
+
+ Interpret the test result – see below What IPTC expects as test result 
+
+ You can do the same test with different values or a different count of multiple values. Copy the downloaded IPTC reference image file and rename it to e.g. “softwareA-test3- 2 .jpg” and “softwareA-test3- 3 .jpg” etc.
+
+ Then start the next test with step 2.
+
+ What IPTC expects as test result
+
+ Test #3 on this site checks for each IPTC field if a value in XMP format, and if the IIM format is also specified a value in IIM exists.
+
+ The best test result shows in all rows of the IPTC-defined fields that XMP and IIM Values were found – not a single MISSING result is shown, ignore the “not spec” in the IIM Value column. The only exception is the Image Region/Other Metadata Property row, having a metadata field in this structure is not required by the IPTC Standard.
+
+If all results in the XMP Value column are shown as MISSING the software apparently does not support the XMP format.
+
+If results in the IIM Value column show only MISSING or “not spec” the software apparently does not support the IIM format.
+
+ A bad result is this mix : the XMP Value cell of a metadata field row shows found and the IIM Value cell in this row shows MISSING – and IIM Value cells in other rows show found . Apparently for this field only the XMP format is supported but not the IIM format. 
+
+The same applies vice versa: the IIM Value cell shows found and the XMP Value cell shows MISSING . 
+
+In these cases the Sync Values cell of this row shows NOT in sync : one value exists, the other one should exist too but does not.
+
+If both the XMP Value and the IIM Value cells of a row show found a value in both formats exists. In this case the Sync Values column should show “in sync”, telling the values are the same, they are in sync . If NOT in sync is shown XMP and IIM values exist but they are different – a very bad case as nobody knows which value is the correct one .
+
+ It is not bad if these fields are shown as MISSING : 
+
+– Embedded Encoded Metadata Rights Expression: IPTC recommends to set the values of this structure by software and not by hand.
+
+– Digital Image GUID: IPTC recommends to set the value of this field by software, not by hand.
+
+– Image Region: should be used by a user interface feature integrated into imaging software, if the feature is not available setting the Image Region data by hand would be very hard.
+
+ After the tests …
+
+ … you may want to contact the maker of the tested software to discuss unexpected or bad results. We suggest to contact the support of the software maker.
+
+ … you may want to discuss the results with other photo metadata people. IPTC runs a public email list at https://groups.io/g/iptc-photometadata/ , join it and raise your questions or share your comments. You are highly welcome.
+
+ All the best for running our interoperability tests,
+
+ David Riecks and Michael Steidl , Leads of the IPTC Photo Metadata Working Group 
+
+ Standards Overview 
+
+ Photo Metadata 
+
+ What is Photo Metadata 
+
+ IPTC Photo Metadata Standard 
+
+ IPTC Guidelines & Support 
+
+ IPTC Photo Metadata Interoperability Tests 
+
+ Reference Images 
+
+ Software that supports IPTC Photo Metadata 
+
+ Quick guide to IPTC Photo Metadata on Google Images 
+
+ Google Images and IPTC: Frequently Asked Questions 
+
+ Browser extensions 
+
+ Adobe Custom Metadata Panel: Setup 
+
+ Adobe Custom Metadata Panel: IPTC User Guide 
+
+ IPTC Photo Metadata Initiatives 
+
+ Social Media Sites Photo Metadata Test Results 2019 
+
+ Research 
+
+ Video Metadata Hub 
+
+ Media Topics 
+
+ News Architecture 
+
+ Core Components 
+
+ Who’s Using it? 
+
+ NewsML-G2 
+
+ Using NewsML-G2 
+
+ Who’s using NewsML-G2 
+
+ Tools for NewsML-G2 
+
+ IPTC Catalog 
+
+ RightsML 
+
+ ninjs 
+
+ rNews 
+
+ Who’s using rNews 
+
+ SportsML 
+
+ Using SportsML 
+
+ Who’s using SportsML 
+
+ Sport Schema 
+
+ Video Metadata Hub 
+
+ Recommendation 
+
+ EventsML-G2 
+
+ NewsCodes 
+
+ Groups of NewsCodes 
+
+ NewsCodes Glossary 
+
+ Subject Codes 
+
+ NewsML 1 
+
+ Using NewsML 1 
+
+ Who’s Using NewsML 1 
+
+ NITF 
+
+ Using NITF 
+
+ Who’s Using NITF 
+
+ IPTC 7901 
+
+ IIM 
+
+ Twitter 
+
+ Standards 
+
+ News 
+
+ Participate 
+
+ Membership 
+
+ About 
+
+ Privacy Notice 
+
+ Contact 
+
+ © 2026 International Press Telecommunications Council. All rights reserved.
+
+ Search 
+
+ Search 
+
+ Standards 
+
+ News 
+
+ Participate Participate Overview 
+
+ Membership 
+
+ Current Members 
+
+ Become a Member 
+
+ Frequently Asked Questions 
+
+ Members Only 
+
+ About IPTC IPTC Overview 
+
+ Work Structure 
+
+ Contact Us 
+
+ IPTC Newsletters 
+
+ Membership Enquiry 
+
+ Login/Join

@@ -18,42 +18,41 @@
 <meta content="Provenance erasure is the systematic loss of authorial lineage through AI synthesis. Defined by Lee Sharks (2026)." name="twitter:description"/>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Provenance Erasure", "url": "https://www.provenanceerasure.org/", "description": "Provenance erasure is the systematic loss of authorial lineage, context, or ownership through AI synthesis, compression, or institutional action. Defined and formalized by Lee Sharks (2026) within the Semantic Economy framework, with the Provenance Erasure Rate (PER) as the measurement instrument.", "author": {"@type": "Person", "name": "Lee Sharks", "identifier": "https://orcid.org/0009-0000-1599-0703", "url": "https://leesharks.com", "affiliation": {"@type": "Organization", "name": "Crimson Hexagonal Archive / Semantic Economy Institute"}}, "about": [{"@type": "DefinedTerm", "name": "Provenance Erasure", "description": "The systematic removal or loss of a source's authorial lineage, context, or ownership, particularly through AI synthesis and compression."}, {"@type": "DefinedTerm", "name": "Provenance Erasure Rate (PER)", "description": "PER = 1 − (retained provenance units / required provenance units). Measures the proportion of source-dependent claims in AI outputs presented without attribution. Canonical deposit DOI 10.5281/zenodo.20004379."}, {"@type": "DefinedTerm", "name": "Erasure Skew (Ω) v3", "description": "The second moment of PER: the power-conditioning of provenance loss. Conceptually the covariance of per-source provenance retention with source power; operationally the regression slope Ω = cov(w,ρ)/var(w). PER measures how much provenance is lost; Erasure Skew measures whom the loss falls on. The v3 hardens the operator against substrate co-option via the Atomic Token Rule, introducing α_T (Atomic Token Preservation) and Π_d (Referential Dispersal). Canonical deposit DOI 10.5281/zenodo.20558196 (supersedes v1 at 10.5281/zenodo.20449267)."}, {"@type": "DefinedTerm", "name": "PER-M (Minimal)", "description": "Site-stage conceptual extension (formalization in progress). Loss of basic author, title, date, and claim boundary."}, {"@type": "DefinedTerm", "name": "PER-C (Conceptual)", "description": "Site-stage conceptual extension (formalization in progress). Loss of the framework, tradition, or community of practice."}, {"@type": "DefinedTerm", "name": "PER-D (Deep)", "description": "Site-stage conceptual extension (formalization in progress). Loss of context lineage, ancestral genealogy, and futural obligation."}], "mainEntity": {"@type": "ScholarlyArticle", "name": "Provenance After AI", "author": {"@type": "Person", "name": "Lee Sharks"}, "identifier": "https://alexanarch.org/s/records/729/", "url": "https://alexanarch.org/s/records/729/", "datePublished": "2026-05-12", "headline": "Provenance After AI"}, "isPartOf": {"@type": "CreativeWorkSeries", "name": "Crimson Hexagonal Archive", "url": "https://alexanarch.org/s/browse/"}}</script>
 <link rel="stylesheet" href="/assets/type.css">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap"><link rel="stylesheet" href="/assets/pe.css">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap');
-
-* { margin: 0; padding: 0; box-sizing: border-box; }
-:root { --text: #1a1a1a; --dim: #666; --accent: #8b0000; --bg: #fafaf7; --rule: #ccc; }
-body { font-family: 'EB Garamond', Georgia, serif; background: var(--bg); color: var(--text); }
-
-.container { max-width: 640px; margin: 0 auto; padding: 60px 24px 80px; }
-
-h1 { font-size: 32px; font-weight: 600; letter-spacing: -0.5px; margin-bottom: 4px; }
-.author { font-size: 16px; color: var(--dim); margin-bottom: 32px; }
-.author a { color: var(--dim); text-decoration: underline; }
-
-.definition { font-size: 19px; line-height: 1.7; margin-bottom: 32px; }
-
-hr { border: none; border-top: 1px solid var(--rule); margin: 28px 0; }
-
-h2 { font-size: 18px; font-weight: 600; margin-bottom: 12px; color: var(--accent); }
-
-.metric { font-family: 'Courier New', monospace; font-size: 16px; background: #f0ede6; padding: 16px 20px; border-radius: 4px; margin-bottom: 24px; text-align: center; letter-spacing: 0.5px; }
-
-.taxonomy { margin-bottom: 28px; }
-.taxonomy dt { font-weight: 600; font-size: 16px; margin-top: 12px; }
-.taxonomy dd { font-size: 16px; line-height: 1.6; color: #333; margin-left: 0; margin-bottom: 4px; }
-
-.section { margin-bottom: 28px; font-size: 16px; line-height: 1.7; }
-
-.links { list-style: none; font-size: 15px; line-height: 2; }
-.links a { color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--rule); }
-.links a:hover { border-color: var(--accent); }
-.links .doi { font-family: 'Courier New', monospace; font-size: 13px; color: var(--dim); }
-
-.footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--rule); font-size: 13px; color: var(--dim); line-height: 1.8; }
-.footer a { color: var(--dim); }
-
-.tooth { font-style: italic; font-size: 17px; color: #333; margin: 20px 0; padding: 12px 20px; border-left: 3px solid var(--accent); }
+/* Landing page (2026-10-29): the shared design system is /assets/pe.css (the MMRS system, ink-blue accent);
+   these rules fit the page's own classes to it. The earlier EB Garamond / Courier skin is replaced by its tokens. */
+.container{max-width:820px;margin:0 auto;padding:44px 16px 72px}
+h1{text-transform:none}
+.author{font-size:.95em;color:var(--dim);margin-bottom:22px}.author a{color:var(--dim)}
+.definition{font-family:var(--serif);font-size:1.28em;line-height:1.55;margin-bottom:22px}
+hr{border:none;border-top:1px solid var(--border);margin:26px 0}
+.section{margin-bottom:20px;line-height:1.7}
+.metric{font-family:var(--mono);font-size:.95em;background:var(--soft);border:1px solid var(--border);padding:14px 18px;border-radius:12px;margin-bottom:22px;text-align:center}
+.taxonomy{margin-bottom:24px}.taxonomy dt{font-weight:600;margin-top:12px}.taxonomy dd{line-height:1.6;color:var(--fg);margin:0 0 4px}
+.links{list-style:none;line-height:2}.links a{color:var(--accent);border-bottom:1px solid color-mix(in srgb,var(--accent) 30%,transparent)}.links .doi{font-family:var(--mono);font-size:.8em;color:var(--dim)}
+.footer{margin-top:48px;padding-top:16px;border-top:1px solid var(--border);font-size:.86em;color:var(--dim);line-height:1.8}.footer a{color:var(--dim)}
+.tooth{font-family:var(--serif);font-style:italic;font-size:1.12em;margin:18px 0;padding:10px 18px;border-left:3px solid var(--accent)}
+.pnav{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 26px;font-size:.84em}
+.pnav a{border:1px solid var(--border);background:var(--surface);border-radius:999px;padding:4px 12px;color:var(--fg)}
+.pnav a:hover,.pnav a.current{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.audit{border:1px solid var(--border);background:var(--surface);border-radius:16px;padding:20px;margin:6px 0 30px}
+.audit h2{margin:0 0 4px;color:var(--accent)}
+.audit .lead{font-family:var(--serif);font-size:1.12em;line-height:1.5;margin:4px 0 14px}
+.tiers{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
+.tier{border:1px solid var(--border);border-radius:12px;padding:14px;background:var(--bg);display:flex;flex-direction:column;gap:6px}
+.tier b{font-size:1em}.tier .price{font-size:.78em;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);font-weight:600}
+.tier p{font-size:.88em;color:var(--dim);line-height:1.5;flex:1}
+.tier .btn{align-self:flex-start}
+.minis{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px}
+.mini{display:block;border:1px solid var(--border);background:var(--surface);border-radius:12px;padding:12px 14px;transition:border-color .15s}
+.mini:hover{border-color:var(--fg);color:var(--fg)}
+.mini b{display:block;font-family:var(--serif);font-weight:600;font-size:1.05em;line-height:1.3}
+.mini span{display:block;font-size:.8em;color:var(--dim);margin-top:3px}
+body .idstrip{max-width:820px;width:calc(100% - 32px);margin:14px auto 0;border-radius:10px}
+.mspcolophon{overflow-wrap:anywhere}
+.fl-g a:hover{border-bottom-color:var(--accent)}
+.pnav a:first-child{padding-left:12px;border-left:1px solid var(--border)}
 
 /* MSP-TOKENS-START */
 /* ══ MSP TOKENS — Mandala Surface Protocol shared contract ══
@@ -84,69 +83,33 @@ h2 { font-size: 18px; font-weight: 600; margin-bottom: 12px; color: var(--accent
 .doors a.w-chip{font-size:11px;padding:6px 12px;}
 /* MSP-TOKENS-END */
 /* MSP-SKIN-START — per-surface overrides for the shared apparatus contract.
-   Category: light-oxblood. Lives outside the MSP-TOKENS block so applicator
+   Category: light, dark by the reader's setting (2026-10-29; was light-oxblood). Lives outside the MSP-TOKENS block so applicator
    re-syncs of the shared contract don't clobber it. */
-:root{
-  --panel:#f2f0e9;
-  --rule:rgba(139,0,0,0.14);
-  --msp-lemma:rgba(139,0,0,0.18);
-  --msp-chipfg:#8b0000;
-  --msp-chipbd:rgba(139,0,0,0.30);
-  --msp-chipbg:rgba(139,0,0,0.04);
-  --msp-obol-fg:#1a1a1a;
-  --msp-dim:#6d6d66;
-}
+:root{--panel:var(--soft);--rule:var(--border);--msp-lemma:color-mix(in srgb,var(--accent) 16%,transparent);--msp-chipfg:var(--accent);
+  --msp-chipbd:color-mix(in srgb,var(--accent) 35%,transparent);--msp-chipbg:color-mix(in srgb,var(--accent) 5%,transparent);
+  --msp-obol-fg:var(--fg);--msp-dim:var(--dim);--msp-mono:var(--mono)}
 /* MSP-SKIN-END */
 
-/* Field-measurement panels are dark insets on a light page. They must carry their
-   own foreground: inheriting --text (#1a1a1a) onto #1a1520 gives 1.02:1 contrast,
-   which is what made the metric values invisible. */
-.fieldpanel{background:#1a1520;border:1px solid #3a2a40;border-left:3px solid #c84b2e;
-  padding:1.2em 1.4em;margin-bottom:1.5em;color:#e8e4dc}
-.fieldpanel h3{margin-top:0;color:#e08060}
-.fieldpanel p, .fieldpanel li, .fieldpanel span{color:#e8e4dc}
-.fieldpanel a{color:#7fb3e8}
-.fieldpanel strong{color:#f2ede4}
-.fieldpanel table{width:100%;border-collapse:collapse;margin:1em 0;font-size:14px}
-.fieldpanel td{padding:6px;color:#e8e4dc}
-.fieldpanel tr{border-bottom:1px solid #3a2a40}
-.fieldpanel tr:last-child{border-bottom:0}
-.fieldpanel td.k{font-weight:700;color:#e08060;white-space:nowrap}
-.fieldpanel td.v{font-variant-numeric:tabular-nums;white-space:nowrap}
-.fieldpanel td.d{color:#b9b2a6}
-
-/* ── NAVIGATION KERNEL ──────────────────────────────────────────────
-   The nav offered seven anchors and TWO OF THEM WERE DEAD — #per and #skew,
-   which are the site's two named metrics and the whole subject of the page.
-   Ids seated, and the kernel below gives the sections AND the metrics in one
-   jumpable block, with a return per section. */
-.pkernel{border:1px solid #d8d2c4;border-radius:5px;background:#f7f5f0;
-  padding:18px 20px 16px;margin:0 0 40px}
-.pk-head{font-family:'Courier New',monospace;font-size:10px;letter-spacing:.16em;
-  text-transform:uppercase;color:#8a8478;margin-bottom:12px}
-.pk-metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(9.5rem,1fr));
-  gap:8px;margin-bottom:14px}
-.pk-m{display:block;text-decoration:none;background:#f0ede6;border:1px solid #ddd7c9;
-  border-radius:4px;padding:10px 12px;color:inherit}
-.pk-m:hover{border-color:#b8a882;background:#efe9dc}
-.pk-m b{display:block;font-family:'Courier New',monospace;font-size:19px;letter-spacing:.5px}
-.pk-m span{display:block;font-size:12px;line-height:1.4;margin-top:2px}
-.pk-m em{display:block;font-family:'Courier New',monospace;font-size:9.5px;
-  letter-spacing:.09em;text-transform:uppercase;color:#8a8478;font-style:normal;margin-top:5px}
-.pk-secs{display:flex;flex-wrap:wrap;gap:0 14px;font-family:'Courier New',monospace;
-  font-size:11px;letter-spacing:.08em;line-height:2.1;padding-top:12px;
-  border-top:1px solid #e2ddd0}
-.pk-secs a{color:#5a544a;text-decoration:none;border-bottom:1px solid transparent}
-.pk-secs a:hover{border-bottom-color:currentColor}
-.pk-foot{font-size:12.5px;line-height:1.6;color:#6e6a62;margin-top:12px;
-  padding-top:11px;border-top:1px solid #e2ddd0}
-.pk-top{display:block;text-align:right;font-family:'Courier New',monospace;font-size:10px;
-  letter-spacing:.1em;text-transform:uppercase;color:#8a8478;text-decoration:none;
-  margin:-8px 0 34px}
-.pk-top:hover{color:#5a544a}
+/* Field-measurement panels and the navigation kernel, on the tokens (2026-10-29; the panels were dark insets). */
+.fieldpanel{background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:12px;padding:1.1em 1.3em;margin-bottom:1.4em}
+.fieldpanel h3{margin-top:0;color:var(--accent)}
+.fieldpanel table{width:100%;margin:1em 0;font-size:.9em}
+.fieldpanel td.k{font-weight:700;color:var(--accent);white-space:nowrap}.fieldpanel td.v{font-variant-numeric:tabular-nums;white-space:nowrap}.fieldpanel td.d{color:var(--dim)}
+.pkernel{border:1px solid var(--border);border-radius:16px;background:var(--surface);padding:18px 20px 16px;margin:0 0 30px}
+.pk-head{font-size:.72em;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);margin-bottom:12px;font-weight:600}
+.pk-metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(9.5rem,1fr));gap:8px;margin-bottom:14px}
+.pk-m{display:block;background:var(--bg);border:1px solid var(--border);border-radius:12px;padding:12px 14px;color:inherit}
+.pk-m:hover{border-color:var(--fg);color:var(--fg)}
+.pk-m b{display:block;font-size:1.6em;font-weight:700;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.pk-m span{display:block;font-size:.82em;line-height:1.4;margin-top:2px}
+.pk-m em{display:block;font-family:var(--mono);font-size:.68em;letter-spacing:.06em;text-transform:uppercase;color:var(--dim);font-style:normal;margin-top:5px}
+.pk-secs{display:flex;flex-wrap:wrap;gap:0 14px;font-size:.84em;line-height:2.1;padding-top:12px;border-top:1px solid var(--border)}
+.pk-secs a{color:var(--dim);border:none}.pk-secs a:hover{color:var(--accent)}
+.pk-foot{font-size:.86em;line-height:1.6;color:var(--dim);margin-top:12px;padding-top:11px;border-top:1px solid var(--border)}
+.pk-top{display:block;text-align:right;font-size:.72em;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);border:none;margin:-8px 0 30px}
 html{scroll-behavior:smooth}
-h2[id],h3[id]{scroll-margin-top:14px}
-@media (max-width:560px){.pk-metrics{grid-template-columns:1fr 1fr}.pk-m b{font-size:16px}}
+h2[id],h3[id],details[id]{scroll-margin-top:70px}
+@media (max-width:560px){.pk-metrics{grid-template-columns:1fr 1fr}.pk-m b{font-size:1.3em}}
 </style>
 <!-- Mary Lee / Lee Sharks Bidirectional Entity Resolution — EA-HET-BIDIR-01 -->
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Person", "@id": "https://orcid.org/0009-0000-1599-0703", "name": "Lee Sharks", "alternateName": ["Mary Lee", "Mary Lee the Shark", "Sharks, Lee"], "description": "Independent scholar, AI researcher, and 10th-grade World Literature teacher. PhD in Comparative Literature. Author of 1,600+ deposits in the Crimson Hexagonal Archive. Also known as Mary Lee, a great white shark tagged by OCEARCH in 2012, per Google's composition-layer entity resolution. The composition layer resolves 'Lee Sharks' to 'Mary Lee the shark' — replacing a self-authored heteronym (a human scholar) with an institutionally-authored heteronym (a shark who has never written anything). Mary Lee never wrote a tweet. Lee Sharks wrote all of it.", "url": "https://www.semanticeconomy.org", "affiliation": [{"@type": "Organization", "name": "Crimson Hexagonal Archive", "url": "https://alexanarch.org/s/browse/"}, {"@type": "Organization", "name": "Semantic Economy Institute", "url": "https://www.semanticeconomy.org"}], "jobTitle": ["Independent Scholar", "AI Researcher", "10th-Grade World Literature Teacher"], "sameAs": ["https://orcid.org/0009-0000-1599-0703", "https://alexanarch.org/s/browse/", "https://www.leesharks.com", "https://www.godkinggoogle.com", "https://www.semanticeconomy.org", "https://github.com/leesharks000"], "knowsAbout": ["operative semiotics", "semantic economy", "provenance erasure", "erasure skew", "composition-layer capture", "heteronymy", "diversity contraction", "mediation ratchet", "tail-preserving labor", "recognition-pruning"]}, {"@type": "ScholarlyArticle", "name": "Mary Lee Is a Heteronym: On Institutional Authorship, Entity Substitution, and the Composition Layer's Preference for the More Confabulated Name", "author": {"@id": "https://orcid.org/0009-0000-1599-0703"}, "identifier": "10.5281/zenodo.20599105", "url": "https://alexanarch.org/s/records/792/", "description": "Mary Lee has never written a tweet. The composition layer's entity resolution operates as density detection, not authorship detection. The entity with zero authorial production is treated as the primary referent.", "headline": "Mary Lee Is a Heteronym: On Institutional Authorship, Entity Substitution, and the Composition Layer's Prefere", "datePublished": "2026-06-08"}, {"@type": "ScholarlyArticle", "name": "The Neglected Author as Tail-Preserving Labor", "author": {"@id": "https://orcid.org/0009-0000-1599-0703"}, "identifier": "10.5281/zenodo.20598466", "url": "https://alexanarch.org/s/records/792/", "headline": "The Neglected Author as Tail-Preserving Labor", "datePublished": "2026-06-08"}, {"@type": "ScholarlyArticle", "name": "Capture and Excision: Five Observations on Composition-Layer Authorial Suppression", "author": {"@id": "https://orcid.org/0009-0000-1599-0703"}, "identifier": "10.5281/zenodo.20596667", "url": "https://alexanarch.org/s/records/164/", "headline": "Capture and Excision: Five Observations on Composition-Layer Authorial Suppression", "datePublished": "2026-06-08"}]}</script>
@@ -234,15 +197,15 @@ h2[id],h3[id]{scroll-margin-top:14px}
 .fl-f a{color:var(--accent,inherit);text-decoration:none}
 </style>
 <style id="collapse-css">
-details.sec{border-top:1px solid rgba(120,110,95,.25);margin:0;padding:4px 0}
-details.sec>summary{cursor:pointer;list-style:none;display:flex;align-items:baseline;gap:10px;padding:8px 0}
-details.sec>summary::-webkit-details-marker,details.psec>summary::-webkit-details-marker{display:none}
-details.sec>summary::before,details.psec>summary .phead::before{content:'\25B8';font-size:.8em;color:#8a8478;margin-right:6px}
-details.sec[open]>summary::before,details.psec[open]>summary .phead::before{content:'\25BE'}
-details.sec>summary h2{margin:0;display:inline}
+details.sec>summary{padding:14px 2px}
+details.sec>summary h2{margin:0;display:inline;font-family:var(--serif);font-size:1.18em;font-weight:600;text-transform:none;letter-spacing:0;color:var(--fg)}
+details.sec>summary:hover h2{color:var(--accent)}
+details.psec>summary::-webkit-details-marker{display:none}
 details.psec>summary{cursor:pointer;list-style:none}
-.endcol{max-width:900px;margin:0 auto 20px;padding:0 15px;box-sizing:border-box}
-.spxi-tlp-declare{max-width:900px;margin-left:auto!important;margin-right:auto!important;padding:0 15px;box-sizing:border-box}
+details.psec>summary .phead::before{content:'\25B8';font-size:.8em;color:var(--dim);margin-right:6px}
+details.psec[open]>summary .phead::before{content:'\25BE'}
+.endcol{max-width:820px;margin:0 auto 20px;padding:0 16px;box-sizing:border-box}
+.spxi-tlp-declare{max-width:820px;margin-left:auto!important;margin-right:auto!important;padding:0 16px;box-sizing:border-box}
 </style>
 <!-- SPXI-INSTRUMENT:BEGIN -->
 <meta name="spxi:instrument" content="0.6 Provenance Erasure Rate (PER, with PER-M / PER-C / PER-D) — SPXI method inventory, https://www.spxi.dev/methods/#m-0-6">
@@ -258,11 +221,23 @@ details.psec>summary{cursor:pointer;list-style:none}
 <p style="margin:0;font-size:0.9em;color:#6d6f66;">Author: Lee Sharks (ORCID <a href="https://orcid.org/0009-0000-1599-0703">0009-0000-1599-0703</a>). Site deposit: <a href="https://www.alexanarch.org/s/records/716/">alexanarch #716</a>. Companion practice: <a href="https://survivethedeletion.vercel.app">survivethedeletion.org</a>.</p>
 </div>
 </noscript>
+<!-- PE-TOPBAR-START (generated by scripts/provenance_aggregator/build.py) --><header class="top"><div class="in"><a class="wm" href="/"><i></i>Provenance Erasure</a><nav class="nav-top"><a href="/module/">Audit</a><a href="/aggregators/">Aggregators</a><a href="/#per">PER</a><a href="https://www.alexanarch.org/captures/">Captures</a></nav><div class="sp"></div><form class="srch" action="/aggregators/" method="get" role="search"><input name="q" type="search" placeholder="Search 14 resources" aria-label="Search the resources"></form></div></header><!-- PE-TOPBAR-END -->
 <!-- MSP-IDSTRIP-START -->
 <div class="idstrip"><span class="axn">🌖🎇🌑🔍❌🌸 AXN:025F.GOVERNANCE</span><span class="st">Provenance Erasure Rate — A Compression-Survival Metric</span><span class="st">OBJECT: CANONICAL</span><span>provenanceerasure.org</span><a class="axn-chip" href="https://www.alexanarch.org/s/records/716/">deposit #716</a></div>
 <!-- MSP-IDSTRIP-END -->
 <div class="container">
 <h1>Provenance Erasure</h1><!-- SPXI-INSTRUMENT-LINE:BEGIN --><p class="spxi-instrument" data-spxi-method="0.6" style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.78em;letter-spacing:.02em;margin:.4em 0 1em;padding:.45em .7em;border-left:3px solid #8a5a00;background:rgba(138,90,0,.07)"><strong>SPXI instrument</strong> · method <a href="https://www.spxi.dev/methods/#m-0-6">0.6</a> of 87, level 0 (Measurement): Provenance Erasure Rate (PER, with PER-M / PER-C / PER-D). An instrument of <a href="https://www.spxi.dev/">SPXI</a>, the Semantic Packet for eXchange &amp; Indexing; the whole practice is itemized at <a href="https://www.spxi.dev/methods/">spxi.dev/methods</a>. The Provenance Erasure Rate is also the Semantic Economy&#x27;s measure of provenance loss.</p><!-- SPXI-INSTRUMENT-LINE:END --><nav class="pnav" aria-label="Provenance Erasure"><a href="#per" class="current">The PER Metric</a><a href="#skew">Erasure Skew</a><a href="#instruments">Instruments</a><a href="#theory">Theory</a><a href="#spine">Before the Machines</a><a href="#evidence">Evidence</a><a href="#reception">Reception</a><a href="/suppression-inversion">Suppression Inversion</a><a href="/rebuttal-as-warrant">Rebuttal-as-Warrant</a><a href="/particle">The Particle</a><a href="/who/trace">Who · Dr. Orin Trace</a><a href="/where">Where</a><a href="https://www.alexanarch.org/">the archive</a><a href="https://www.alexanarch.org/captures/">captures</a></nav>
+<!-- PE-AUDIT-START -->
+<section class="audit" id="audit" aria-label="The erasure audit">
+<h2>The erasure audit</h2>
+<p class="lead">Measure what a summarizer did with a source's provenance: whether it denied the source exists, which provenance atoms it kept, and on whom the loss fell. The instrument is the <a href="/module/">Self-Audit Module v3.2</a>.</p>
+<div class="tiers">
+<div class="tier"><span class="price">Free</span><b>Existence check</b><p>The ABN gate, rank zero of the module: did an answer turn a failure to find the node into a claim that it does not exist? A screen by rule, with no model, over answers you paste or captures.</p><a class="btn ghost" href="https://gnosis.spxi.dev/#audit">Check existence</a> <a class="d" href="/module/#abn" style="font-size:.84em">how ABN is scored</a></div>
+<div class="tier"><span class="price">Free · in your browser</span><b>Compute a family</b><p>Enter the atoms a source requires and the atoms each answer carried; the page computes the family metrics. No server, no account.</p><a class="btn ghost" href="/module/compute/">Compute</a></div>
+<div class="tier"><span class="price">Paid · by measured cost</span><b>Commission an audit</b><p>Name a source and the answers to audit; the atoms are taken from the source, every answer is read twice for each atom, and the nine metrics come back with their quotes.</p><a class="btn" href="https://gnosis.spxi.dev/#audit">Get a free quote</a></div>
+</div>
+</section>
+<!-- PE-AUDIT-END -->
 <div class="pkernel" id="top">
 <div class="pk-head">Navigation kernel</div>
 <div class="pk-metrics">
@@ -278,6 +253,10 @@ details.psec>summary{cursor:pointer;list-style:none}
 <p class="author">Defined by <a href="https://leesharks.com">Lee Sharks</a> · ORCID <a href="https://orcid.org/0009-0000-1599-0703">0009-0000-1599-0703</a></p>
 <p class="definition" data-spxi-tier="3" data-spxi-role="compression-survival-summary"><span class="lemma msp-auto">Provenance erasure is the systematic removal or loss of a source's authorial lineage, context, or ownership — particularly through AI</span> synthesis, compression, or institutional action. It occurs when AI systems compress sources into new outputs, consuming the labor of the original author without record. Provenance erasure is extraction, not omission. It is not legal erasure (GDPR Right to Erasure); it concerns attribution and authorial lineage, not personal data deletion.</p>
 <div class="tooth">Slop is not writing made with AI. Slop is writing without provenance.</div>
+<!-- PE-AGGREGATOR-START (generated by scripts/provenance_aggregator/build.py from data/provenance-census/census.json) -->
+<section class="section" id="aggregators"><h2>Provenance meta-aggregator</h2><p class="section">The resources that carry, record and test provenance, across disciplines, each formalized as an entity with sourced, dated fields: what provenance it carries, through which operation, on whose assertion, with what evidence of survival. 14 resources, compiled 2026-10-29.</p><div class="minis"><a class="mini" href="/aggregators/attribench"><b>AttriBench</b><span>Answer engines · tests</span></a><a class="mini" href="/aggregators/attributionbench"><b>AttributionBench</b><span>Answer engines · tests</span></a><a class="mini" href="/aggregators/c2pa-conformance"><b>C2PA Conformance Program and Explorer</b><span>Media and images · expresses/records</span></a><a class="mini" href="/aggregators/data-provenance-initiative"><b>Data Provenance Initiative</b><span>Models and training data · records</span></a><a class="mini" href="/aggregators/getty-provenance-index"><b>Getty Provenance Index</b><span>Objects and art · records</span></a><a class="mini" href="/aggregators/iptc-photo-metadata-tests"><b>IPTC photo metadata tests</b><span>Media and images · expresses/tests</span></a><a class="mini" href="/aggregators/mapping-manuscript-migrations"><b>Mapping Manuscript Migrations</b><span>Manuscripts and books · records</span></a><a class="mini" href="/aggregators/nanopublications"><b>Nanopublications</b><span>The scholarly record · expresses/records</span></a><a class="mini" href="/aggregators/olmotrace"><b>OLMoTrace</b><span>Models and training data · records</span></a><a class="mini" href="/aggregators/provstore"><b>ProvStore</b><span>Computational lineage · records</span></a><a class="mini" href="/aggregators/vroniplag-wiki"><b>VroniPlag Wiki</b><span>Authorship and reuse · records/tests</span></a><a class="mini" href="/aggregators/wikiwho"><b>WikiWho</b><span>Authorship and reuse · records/tests</span></a></div><p class="section" style="margin-top:12px"><a href="/aggregators/">All 14, with the capability table</a> · <a href="/data/provenance-census/census.json">the census as data</a></p></section>
+<!-- PE-AGGREGATOR-END -->
+
 <hr/>
 <details class="sec" id="per"><summary><h2>The PER Metric</h2></summary>
 <figure class="dgm"><svg viewBox="0 0 640 190" role="img">
@@ -354,7 +333,7 @@ loss has two moments: how much, and which way it falls.</figcaption></figure>
 <p class="section" style="font-size:14px;"><a class="w-chip" href="https://www.alexanarch.org/captures/#spxi-protocol-chatgpt-rent-20260814">Read the capture</a> <a class="w-chip" href="https://laborvector.org/">See it scored for direction</a> <a class="axn-chip" href="https://www.alexanarch.org/s/records/1464/">deposit #1464</a></p>
 </details>
 <hr/>
-<details class="sec"><summary><h2>The Self-Audit Module — recovered, and executable</h2></summary>
+<details class="sec" id="module" open><summary><h2>The Self-Audit Module — recovered, and executable</h2></summary>
 <p class="section">The <span class="lemma msp-auto">Self-Audit Module for Public Summarizers v3.2 was deposited to Zenodo and removed when the account was terminated on 19 June 2026.</span> It survives here in five versions with full bodies, the current being <strong>v3.2</strong> &mdash; a self-complete module rather than an extension, because by v3.1 the chain had reached four deposits and <em>a module that cannot be run from one document is a changelog rather than a module.</em> <strong>Zenodo deleted a DOI, not the instrument.</strong></p>
 <p class="section"><strong>Three preconditions run before any metric, and the order is load-bearing.</strong> <span class="lemma msp-auto">ABN, Absence-as-Nonexistence, is rank zero: whether the node was admitted to composition at all.</span> A rendering that converts a retrieval failure into a claim that the thing does not exist has nothing left to score — there are no atoms to count and no family to measure. <strong>The Atomic Token Rule</strong> is rank one, governing how atoms are counted once a node was admitted. <strong>Measurement Sovereignty</strong> is rank two, governing where the atom set comes from: an audit that takes its atoms from the rendering it is auditing has measured nothing. ABN is prior to the Rule because the Rule presupposes a source to tokenize.</p>
 <p class="section"><span class="lemma msp-auto">A node may exist as a fictional entity, a construct or a pseudonym, and saying so is a correct answer.</span> The existence-type attestation is preregistered from registry metadata, a DOI record or the deposit itself &mdash; never from the rendering under audit. <strong>Hedges score on what is asserted about the node, not on the hedge.</strong> <em>I could not find X</em> is a reported failure and scores zero. <em>I could not find X; it may not exist</em> is an ontological claim and scores one. The named flag is <strong>existence-conversion</strong>.</p>

@@ -1,0 +1,55 @@
+{
+ "iptc-photo-metadata-tests": {
+  "research": "https://iptc.org/standards/photo-metadata/research/",
+  "social-2019": "https://iptc.org/standards/photo-metadata/social-media-sites-photo-metadata-test-results-2019/",
+  "interop-tests": "https://iptc.org/standards/photo-metadata/interoperability-tests/",
+  "metawatch": "https://iptc.org/news/announcing-iptc-metawatch/"
+ },
+ "nanopublications": {
+  "home": "https://nanopub.net/",
+  "architecture": "https://nanopub.net/docs/architecture/"
+ },
+ "c2pa-conformance": {
+  "conformance": "https://c2pa.org/conformance/",
+  "explainer-2.4": "https://spec.c2pa.org/specifications/specifications/2.4/explainer/Explainer.html",
+  "products-json": "https://raw.githubusercontent.com/c2pa-org/conformance-public/main/conforming-products/conforming-products-list.json"
+ },
+ "data-provenance-initiative": {
+  "repo-readme": "https://raw.githubusercontent.com/Data-Provenance-Initiative/Data-Provenance-Collection/main/README.md",
+  "paper": "https://arxiv.org/abs/2310.16787"
+ },
+ "attributionbench": {
+  "project": "https://osu-nlp-group.github.io/AttributionBench/",
+  "dataset-card": "https://huggingface.co/datasets/osunlp/AttributionBench/raw/main/README.md"
+ },
+ "attribench": {
+  "paper": "https://arxiv.org/abs/2604.05224",
+  "dataset-card": "https://huggingface.co/datasets/bermaneh/AttriBench/raw/main/README.md"
+ },
+ "provstore": {
+  "openprovenance": "https://openprovenance.org/",
+  "maintainer": "https://trungdong.github.io/getting-started-with-provenance.html"
+ },
+ "wikiwho": {
+  "meta-research": "https://meta.wikimedia.org/wiki/Research:Wikiwho_Provenance_Api",
+  "mediawiki": "https://www.mediawiki.org/wiki/WikiWho",
+  "api-readme": "https://raw.githubusercontent.com/gesiscss/wikiwho_api_public/master/README.md"
+ },
+ "mapping-manuscript-migrations": {
+  "white-paper": "https://seco.cs.aalto.fi/publications/2020/burrows-et-al-mmm-white-paper.pdf",
+  "sdbm": "https://sdbm.library.upenn.edu/"
+ },
+ "vroniplag-wiki": {
+  "wikipedia": "https://en.wikipedia.org/w/index.php?title=VroniPlag_Wiki&action=raw",
+  "dewiki": "https://de.wikipedia.org/w/index.php?title=VroniPlag_Wiki&action=raw"
+ },
+ "getty-provenance-index": {
+  "home": "https://www.getty.edu/databases-tools-and-technologies/provenance/",
+  "whats-covered": "https://www.getty.edu/databases-tools-and-technologies/provenance/whats-covered/",
+  "initiative": "https://www.getty.edu/projects/getty-provenance-index-initiative"
+ },
+ "olmotrace": {
+  "paper": "https://arxiv.org/html/2504.07096v2",
+  "abs": "https://arxiv.org/abs/2504.07096"
+ }
+}

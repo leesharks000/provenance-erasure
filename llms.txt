@@ -30,3 +30,24 @@ Canonical record of this surface: https://www.alexanarch.org/s/records/716/
 - Dr. Orin Trace: https://www.provenanceerasure.org/who/trace
 
 Content: CC BY 4.0.
+
+<!-- PROVENANCE-AGGREGATOR-START -->
+## Provenance meta-aggregator
+
+The resources that carry, record and test provenance, each formalized as an entity with sourced, dated fields: https://www.provenanceerasure.org/aggregators (census as data: https://www.provenanceerasure.org/data/provenance-census/census.json)
+
+- AttriBench (benchmark; Answer engines; tests): https://www.provenanceerasure.org/aggregators/attribench
+- AttributionBench (benchmark; Answer engines; tests): https://www.provenanceerasure.org/aggregators/attributionbench
+- C2PA Conformance Program and Explorer (registry; Media and images; expresses/records): https://www.provenanceerasure.org/aggregators/c2pa-conformance
+- Data Provenance Initiative (audit collection and explorer; Models and training data; records): https://www.provenanceerasure.org/aggregators/data-provenance-initiative
+- Getty Provenance Index (database (linked open data); Objects and art; records): https://www.provenanceerasure.org/aggregators/getty-provenance-index
+- IPTC Metawatch (monitor; Media and images; tests): https://www.provenanceerasure.org/aggregators/iptc-metawatch
+- IPTC photo metadata tests (test series; Media and images; expresses/tests): https://www.provenanceerasure.org/aggregators/iptc-photo-metadata-tests
+- Mapping Manuscript Migrations (aggregator (linked open data); Manuscripts and books; records): https://www.provenanceerasure.org/aggregators/mapping-manuscript-migrations
+- Nanopublications (publication model and service ecosystem; The scholarly record; expresses/records): https://www.provenanceerasure.org/aggregators/nanopublications
+- OLMoTrace (tracing tool; Models and training data; records): https://www.provenanceerasure.org/aggregators/olmotrace
+- ProvStore (repository (retired); Computational lineage; records): https://www.provenanceerasure.org/aggregators/provstore
+- Schoenberg Database of Manuscripts (database; Manuscripts and books; records): https://www.provenanceerasure.org/aggregators/schoenberg-database
+- VroniPlag Wiki (documentation wiki; Authorship and reuse; records/tests): https://www.provenanceerasure.org/aggregators/vroniplag-wiki
+- WikiWho (algorithm and API; Authorship and reuse; records/tests): https://www.provenanceerasure.org/aggregators/wikiwho
+<!-- PROVENANCE-AGGREGATOR-END -->

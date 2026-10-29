@@ -1,0 +1,75 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>WikiWho — provenance meta-aggregator</title><meta name="description" content="WikiWho is a algorithm and API from first developed by Karlsruhe Institute of Technology and GESIS; since August 2021 maintained by Wikimedia Community Tech and the Wiki Education Foundation. The object it attaches provenance to: a single token (word) of a Wikipedia article."><link rel="canonical" href="https://www.provenanceerasure.org/aggregators/wikiwho">
+<meta name="citation_title" content="WikiWho — provenance meta-aggregator record"><meta name="citation_editor" content="Lee Sharks"><meta name="citation_date" content="2026-10-29"><meta name="citation_public_url" content="https://www.provenanceerasure.org/aggregators/wikiwho">
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://www.provenanceerasure.org/aggregators/wikiwho",
+   "@type": "WebPage",
+   "name": "WikiWho — provenance meta-aggregator record",
+   "mainEntity": {
+    "@id": "https://www.provenanceerasure.org/aggregators/wikiwho#entity"
+   },
+   "about": {
+    "@id": "https://www.provenanceerasure.org/aggregators/wikiwho#entity"
+   },
+   "abstract": "WikiWho is a algorithm and API from first developed by Karlsruhe Institute of Technology and GESIS; since August 2021 maintained by Wikimedia Community Tech and the Wiki Education Foundation. The object it attaches provenance to: a single token (word) of a Wikipedia article.",
+   "dateCreated": "2026-10-29",
+   "dateModified": "2026-10-29",
+   "publisher": {
+    "@type": "Organization",
+    "name": "Provenance Erasure",
+    "url": "https://www.provenanceerasure.org/"
+   },
+   "editor": {
+    "@type": "Person",
+    "name": "Lee Sharks",
+    "identifier": "https://orcid.org/0009-0000-1599-0703"
+   },
+   "isPartOf": {
+    "@type": "Dataset",
+    "name": "Provenance meta-aggregator",
+    "url": "https://www.provenanceerasure.org/aggregators/"
+   },
+   "citation": [
+    "https://raw.githubusercontent.com/gesiscss/wikiwho_api_public/master/README.md",
+    "https://www.mediawiki.org/wiki/WikiWho",
+    "https://meta.wikimedia.org/wiki/Research:Wikiwho_Provenance_Api"
+   ],
+   "license": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  {
+   "@id": "https://www.provenanceerasure.org/aggregators/wikiwho#entity",
+   "@type": "SoftwareApplication",
+   "name": "WikiWho",
+   "alternateName": [
+    "WhoColor",
+    "Who Wrote That?"
+   ],
+   "url": "https://wikiwho.wmcloud.org/",
+   "creator": {
+    "@type": "Organization",
+    "name": "first developed by Karlsruhe Institute of Technology and GESIS; since August 2021 maintained by Wikimedia Community Tech and the Wiki Education Foundation"
+   },
+   "description": "The WikiWho API gives access to the provenance/changes of words (tokens) in Wikipedia articles."
+  }
+ ]
+}</script><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap"><link rel="stylesheet" href="/assets/pe.css"></head><body><header class="top"><div class="in"><a class="wm" href="/"><i></i>Provenance Erasure</a><nav class="nav-top"><a class="" href="/module/">Audit</a><a class="on" href="/aggregators/">Aggregators</a><a class="" href="/#per">PER</a><a class="" href="https://www.alexanarch.org/captures/">Captures</a></nav><div class="sp"></div><form class="srch" action="/aggregators/" method="get" role="search"><input name="q" type="search" placeholder="Search 14 resources" aria-label="Search the resources"></form></div></header><div class="wrap">
+<div class="crumb"><a href="/aggregators/">Provenance meta-aggregator</a> / Authorship and reuse</div><h1>WikiWho</h1><div class="chips"><span class="chip">Authorship and reuse</span><span class="chip">algorithm and API</span><span class="chip live">active</span></div><div class="kernel">WikiWho is a algorithm and API from first developed by Karlsruhe Institute of Technology and GESIS; since August 2021 maintained by Wikimedia Community Tech and the Wiki Education Foundation. The object it attaches provenance to: a single token (word) of a Wikipedia article.</div>
+<div class="act"><a class="btn" href="https://wikiwho.wmcloud.org/">Visit WikiWho ↗</a><a class="btn ghost" href="/module/">Run an erasure audit</a><button class="btn ghost" type="button" data-copy="cite">Copy citation</button></div>
+<blockquote class="q">The WikiWho API gives access to the provenance/changes of words (tokens) in Wikipedia articles.</blockquote><p class="d">In its own words: <a href="https://raw.githubusercontent.com/gesiscss/wikiwho_api_public/master/README.md">https://raw.githubusercontent.com/gesiscss/wikiwho_api_public/master/README.md</a>, read 2026-10-29</p>
+<h2>What it carries</h2><table><tr><td>What receives provenance</td><td>a single token (word) of a Wikipedia article</td></tr><tr><td>Relations carried</td><td>origin (the revision and editor that introduced the token); deletion; reintroduction <a class="bl" href="#ev-relation_types" title="the operator&#x27;s own statement · “find out who wrote and/or removed and/or reinserted which exact text at token level at what revision .”"><span class="b">op</span></a></td></tr><tr><td>Carrier</td><td>the article&#x27;s full revision history, re-parsed</td></tr><tr><td>Expresses · records · tests</td><td><span class="cap"><span class="">expresses</span><span class="on">records</span><span class="on">tests</span></span></td></tr><tr><td>Operations tested</td><td>every edit in an article&#x27;s revision history</td></tr><tr><td>What survived</td><td>per token: when it entered, who wrote it, every removal and reinsertion; method evaluated at 95% on revision-rich articles <a class="bl" href="#ev-retention_results" title="the operator&#x27;s own statement · “The original algorithm working behind the scenes is described in a WWW 2014 paper , along with an extensive evaluation resulting in 95% accuracy on fairly revision-rich articles.”"><span class="b">op</span></a></td></tr></table><p class="legend">op the operator's own statement · 3p a third-party account · obs our observation · rd our reading. Hover a tag for its quote; each opens below with its source.</p>
+<h2>Entity</h2><table><tr><td>Canonical name</td><td>WikiWho</td></tr><tr><td>Also known as</td><td>WhoColor, Who Wrote That?</td></tr><tr><td>Address</td><td><a href="https://wikiwho.wmcloud.org/">https://wikiwho.wmcloud.org/</a></td></tr><tr><td>Operator</td><td>first developed by Karlsruhe Institute of Technology and GESIS; since August 2021 maintained by Wikimedia Community Tech and the Wiki Education Foundation <a class="bl" href="#ev-operator" title="the operator&#x27;s own statement · “In August 2021, it was moved to Wikimedia Cloud Services infrastructure and is now maintained and under further development by Community Tech and the Wiki Education Foundation .”"><span class="b">op</span></a></td></tr><tr><td>Kind</td><td>algorithm and API</td></tr><tr><td>Unit</td><td>a token in an article revision</td></tr><tr><td>Lifecycle</td><td>active — moved to Wikimedia Cloud Services in August 2021; the GESIS host is to give way to Wikimedia <a class="bl" href="#ev-lifecycle" title="the operator&#x27;s own statement · “In the future, only Wikimedia will continue its support.”"><span class="b">op</span></a></td></tr><tr><td>Data access</td><td>the WikiWho and WhoColor APIs</td></tr><tr><td>Versions and dates</td><td>algorithm: WWW 2014; moved: 2021-08; read: 2026-10-29</td></tr><tr><td>Observation</td><td>2026-10-29: read</td></tr></table>
+<h2>Relations</h2><p class="pend">None recorded yet.</p>
+<div style="margin-top:34px"><details class="sec"><summary><span class="st">Evidence</span><span class="sd">every field's quote, its source and the hash of the saved copy</span><span class="sn">7</span></summary><div class="body"><ul class="ev"><li id="ev-self_description"><b>self description</b> <span class="b">op</span><div class="q">The WikiWho API gives access to the provenance/changes of words (tokens) in Wikipedia articles.</div><div class="d"><a href="https://raw.githubusercontent.com/gesiscss/wikiwho_api_public/master/README.md">https://raw.githubusercontent.com/gesiscss/wikiwho_api_public/master/README.md</a> · read 2026-10-29 · saved copy sha256 <code>b93dc1cea1081954…</code></div></li><li id="ev-relation_types"><b>relation types</b> <span class="b">op</span><div class="q">find out who wrote and/or removed and/or reinserted which exact text at token level at what revision .</div><div class="d"><a href="https://www.mediawiki.org/wiki/WikiWho">https://www.mediawiki.org/wiki/WikiWho</a> · read 2026-10-29 · saved copy sha256 <code>97cd049ccef3a05b…</code></div></li><li id="ev-retention_results"><b>retention results</b> <span class="b">op</span><div class="q">The original algorithm working behind the scenes is described in a WWW 2014 paper , along with an extensive evaluation resulting in 95% accuracy on fairly revision-rich articles.</div><div class="d"><a href="https://www.mediawiki.org/wiki/WikiWho">https://www.mediawiki.org/wiki/WikiWho</a> · read 2026-10-29 · saved copy sha256 <code>97cd049ccef3a05b…</code></div></li><li id="ev-operator"><b>operator</b> <span class="b">op</span><div class="q">In August 2021, it was moved to Wikimedia Cloud Services infrastructure and is now maintained and under further development by Community Tech and the Wiki Education Foundation .</div><div class="d"><a href="https://www.mediawiki.org/wiki/WikiWho">https://www.mediawiki.org/wiki/WikiWho</a> · read 2026-10-29 · saved copy sha256 <code>97cd049ccef3a05b…</code></div></li><li id="ev-lifecycle"><b>lifecycle</b> <span class="b">op</span><div class="q">In the future, only Wikimedia will continue its support.</div><div class="d"><a href="https://raw.githubusercontent.com/gesiscss/wikiwho_api_public/master/README.md">https://raw.githubusercontent.com/gesiscss/wikiwho_api_public/master/README.md</a> · read 2026-10-29 · saved copy sha256 <code>b93dc1cea1081954…</code></div></li><li id="ev-earlier_state"><b>earlier state</b> <span class="b">op</span><div class="q">We currently offer the service in English, German, Turkish and Basque, with more languages planned.</div><div class="d"><a href="https://meta.wikimedia.org/wiki/Research:Wikiwho_Provenance_Api">https://meta.wikimedia.org/wiki/Research:Wikiwho_Provenance_Api</a> · read 2026-10-29 · saved copy sha256 <code>2055e9f1886d3385…</code></div></li><li id="ev-precision_note"><b>precision note</b> <span class="b">op</span><div class="q">the task of identifying the &quot;correct&quot; original author of a piece of text in a WP article is not trivial.</div><div class="d"><a href="https://meta.wikimedia.org/wiki/Research:Wikiwho_Provenance_Api">https://meta.wikimedia.org/wiki/Research:Wikiwho_Provenance_Api</a> · read 2026-10-29 · saved copy sha256 <code>2055e9f1886d3385…</code></div></li></ul></div></details><details class="sec"><summary><span class="st">Negative tags</span><span class="sd">what it is not</span><span class="sn">1</span></summary><div class="body"><ul><li>the Meta research page still describes a beta for four languages: an earlier state of the project</li></ul></div></details><details class="sec"><summary><span class="st">Sources</span><span class="sd">every source read, with its date and hash</span><span class="sn">3</span></summary><div class="body"><ul><li><a href="https://raw.githubusercontent.com/gesiscss/wikiwho_api_public/master/README.md">https://raw.githubusercontent.com/gesiscss/wikiwho_api_public/master/README.md</a><div class="d">read 2026-10-29 · HTTP 200 · sha256 <code>b93dc1cea1081954…</code></div></li><li><a href="https://www.mediawiki.org/wiki/WikiWho">https://www.mediawiki.org/wiki/WikiWho</a><div class="d">read 2026-10-29 · HTTP 200 · sha256 <code>97cd049ccef3a05b…</code></div></li><li><a href="https://meta.wikimedia.org/wiki/Research:Wikiwho_Provenance_Api">https://meta.wikimedia.org/wiki/Research:Wikiwho_Provenance_Api</a><div class="d">read 2026-10-29 · HTTP 200 · sha256 <code>2055e9f1886d3385…</code></div></li></ul></div></details><details class="sec"><summary><span class="st">Not yet checked</span><span class="sd">what remains to read</span><span class="sn">2</span></summary><div class="body"><ul><li>the WWW 2014 paper itself</li><li>the list of supported wikis today</li></ul></div></details></div>
+<h2>Cite this record</h2><div class="cite"><p id="cite">Lee Sharks, ed. &quot;WikiWho.&quot; Provenance meta-aggregator, Provenance Erasure, compiled 2026-10-29. https://www.provenanceerasure.org/aggregators/wikiwho</p><p class="d">Record https://www.provenanceerasure.org/aggregators/wikiwho · entity https://www.provenanceerasure.org/aggregators/wikiwho#entity · <a href="/data/provenance-census/census.json">the census as data</a></p></div><pre class="bib">@misc{pe-wikiwho2026,
+  editor = {Sharks, Lee},
+  title = {WikiWho},
+  howpublished = {Provenance meta-aggregator, Provenance Erasure},
+  year = {2026},
+  note = {Compiled 2026-10-29; every field sourced and dated},
+  url = {https://www.provenanceerasure.org/aggregators/wikiwho}
+}</pre>
+<div class="foot">Editor: Lee Sharks (<a href="https://orcid.org/0009-0000-1599-0703">ORCID 0009-0000-1599-0703</a>). This page is the provenance meta-aggregator's record of the resource above: its reading and fields are ours, and each field carries its source, its basis and the hash of the copy read. Compiled 2026-10-29. CC BY 4.0.</div></div>
+<script>document.querySelectorAll('[data-copy]').forEach(b=>b.onclick=()=>{const t=document.getElementById(b.dataset.copy).innerText;(navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(()=>{const o=b.textContent;b.textContent='Copied';setTimeout(()=>b.textContent=o,1600)}).catch(()=>{})})</script></body></html>

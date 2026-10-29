@@ -1,0 +1,71 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OLMoTrace — provenance meta-aggregator</title><meta name="description" content="OLMoTrace is a tracing tool from Allen Institute for AI (Ai2), with the University of Washington, UC Berkeley and Stanford. The object it attaches provenance to: a span of a language model&#x27;s output and the training documents that contain it verbatim."><link rel="canonical" href="https://www.provenanceerasure.org/aggregators/olmotrace">
+<meta name="citation_title" content="OLMoTrace — provenance meta-aggregator record"><meta name="citation_editor" content="Lee Sharks"><meta name="citation_date" content="2026-10-29"><meta name="citation_public_url" content="https://www.provenanceerasure.org/aggregators/olmotrace">
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@id": "https://www.provenanceerasure.org/aggregators/olmotrace",
+   "@type": "WebPage",
+   "name": "OLMoTrace — provenance meta-aggregator record",
+   "mainEntity": {
+    "@id": "https://www.provenanceerasure.org/aggregators/olmotrace#entity"
+   },
+   "about": {
+    "@id": "https://www.provenanceerasure.org/aggregators/olmotrace#entity"
+   },
+   "abstract": "OLMoTrace is a tracing tool from Allen Institute for AI (Ai2), with the University of Washington, UC Berkeley and Stanford. The object it attaches provenance to: a span of a language model's output and the training documents that contain it verbatim.",
+   "dateCreated": "2026-10-29",
+   "dateModified": "2026-10-29",
+   "publisher": {
+    "@type": "Organization",
+    "name": "Provenance Erasure",
+    "url": "https://www.provenanceerasure.org/"
+   },
+   "editor": {
+    "@type": "Person",
+    "name": "Lee Sharks",
+    "identifier": "https://orcid.org/0009-0000-1599-0703"
+   },
+   "isPartOf": {
+    "@type": "Dataset",
+    "name": "Provenance meta-aggregator",
+    "url": "https://www.provenanceerasure.org/aggregators/"
+   },
+   "citation": [
+    "https://arxiv.org/abs/2504.07096",
+    "https://arxiv.org/html/2504.07096v2"
+   ],
+   "license": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  {
+   "@id": "https://www.provenanceerasure.org/aggregators/olmotrace#entity",
+   "@type": "SoftwareApplication",
+   "name": "OLMoTrace",
+   "alternateName": [],
+   "url": "https://playground.allenai.org",
+   "creator": {
+    "@type": "Organization",
+    "name": "Allen Institute for AI (Ai2), with the University of Washington, UC Berkeley and Stanford"
+   },
+   "description": "We present OLMoTrace, the first system that traces the outputs of language models back to their full, multi-trillion-token training data in real time."
+  }
+ ]
+}</script><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap"><link rel="stylesheet" href="/assets/pe.css"></head><body><header class="top"><div class="in"><a class="wm" href="/"><i></i>Provenance Erasure</a><nav class="nav-top"><a class="" href="/module/">Audit</a><a class="on" href="/aggregators/">Aggregators</a><a class="" href="/#per">PER</a><a class="" href="https://www.alexanarch.org/captures/">Captures</a></nav><div class="sp"></div><form class="srch" action="/aggregators/" method="get" role="search"><input name="q" type="search" placeholder="Search 14 resources" aria-label="Search the resources"></form></div></header><div class="wrap">
+<div class="crumb"><a href="/aggregators/">Provenance meta-aggregator</a> / Models and training data</div><h1>OLMoTrace</h1><div class="chips"><span class="chip">Models and training data</span><span class="chip">tracing tool</span><span class="chip live">active</span></div><div class="kernel">OLMoTrace is a tracing tool from Allen Institute for AI (Ai2), with the University of Washington, UC Berkeley and Stanford. The object it attaches provenance to: a span of a language model&#x27;s output and the training documents that contain it verbatim.</div>
+<div class="act"><a class="btn" href="https://playground.allenai.org">Visit OLMoTrace ↗</a><a class="btn ghost" href="/module/">Run an erasure audit</a><button class="btn ghost" type="button" data-copy="cite">Copy citation</button></div>
+<blockquote class="q">We present OLMoTrace, the first system that traces the outputs of language models back to their full, multi-trillion-token training data in real time.</blockquote><p class="d">In its own words: <a href="https://arxiv.org/abs/2504.07096">https://arxiv.org/abs/2504.07096</a>, read 2026-10-29</p>
+<h2>What it carries</h2><table><tr><td>What receives provenance</td><td>a span of a language model&#x27;s output and the training documents that contain it verbatim</td></tr><tr><td>Relations carried</td><td>verbatim match between output and training text <a class="bl" href="#ev-relation_types" title="the operator&#x27;s own statement · “OLMoTrace finds and shows verbatim matches between segments of language model output and documents in the training text corpora.”"><span class="b">op</span></a></td></tr><tr><td>Carrier</td><td>the model&#x27;s full training corpus, indexed with an extended infini-gram</td></tr><tr><td>Expresses · records · tests</td><td><span class="cap"><span class="">expresses</span><span class="on">records</span><span class="">tests</span></span></td></tr><tr><td>Operations tested</td><td>model generation, traced back to training text</td></tr><tr><td>What survived</td><td>returns matching documents within a few seconds; the authors state the matches are not causal and not citations</td></tr></table><p class="legend">op the operator's own statement · 3p a third-party account · obs our observation · rd our reading. Hover a tag for its quote; each opens below with its source.</p>
+<h2>Entity</h2><table><tr><td>Canonical name</td><td>OLMoTrace</td></tr><tr><td>Address</td><td><a href="https://playground.allenai.org">https://playground.allenai.org</a></td></tr><tr><td>Operator</td><td>Allen Institute for AI (Ai2), with the University of Washington, UC Berkeley and Stanford</td></tr><tr><td>Kind</td><td>tracing tool</td></tr><tr><td>Unit</td><td>a maximal matching span of model output</td></tr><tr><td>Lifecycle</td><td>active — ACL 2025 demo track</td></tr><tr><td>Count</td><td>3.2 billion documents and 4.6 trillion tokens (OLMo-2-32B-Instruct&#x27;s training data) <span class="d">(as of the paper, v2)</span> <a class="bl" href="#ev-count" title="the operator&#x27;s own statement · “which totals 3.2 billion documents and 4.6 trillion (Llama-2) tokens”"><span class="b">op</span></a></td></tr><tr><td>Data access</td><td>Ai2 Playground; open source <a class="bl" href="#ev-data_access" title="the operator&#x27;s own statement · “OLMoTrace is publicly available and fully open-source.”"><span class="b">op</span></a></td></tr><tr><td>Versions and dates</td><td>v1: 2025-04-09; v2: 2025-07-08; read: 2026-10-29</td></tr><tr><td>Observation</td><td>2026-10-29: read</td></tr></table>
+<h2>Relations</h2><h3>Neighbours</h3><ul><li><a href="/aggregators/data-provenance-initiative">Data Provenance Initiative</a></li></ul>
+<div style="margin-top:34px"><details class="sec"><summary><span class="st">Evidence</span><span class="sd">every field's quote, its source and the hash of the saved copy</span><span class="sn">5</span></summary><div class="body"><ul class="ev"><li id="ev-self_description"><b>self description</b> <span class="b">op</span><div class="q">We present OLMoTrace, the first system that traces the outputs of language models back to their full, multi-trillion-token training data in real time.</div><div class="d"><a href="https://arxiv.org/abs/2504.07096">https://arxiv.org/abs/2504.07096</a> · read 2026-10-29 · saved copy sha256 <code>cd982680a1ca4c02…</code></div></li><li id="ev-relation_types"><b>relation types</b> <span class="b">op</span><div class="q">OLMoTrace finds and shows verbatim matches between segments of language model output and documents in the training text corpora.</div><div class="d"><a href="https://arxiv.org/abs/2504.07096">https://arxiv.org/abs/2504.07096</a> · read 2026-10-29 · saved copy sha256 <code>cd982680a1ca4c02…</code></div></li><li id="ev-limit"><b>limit</b> <span class="b">op</span><div class="q">The retrieved documents should not be interpreted as having a causal effect on the LM output, or as supporting evidence or citations for the LM output.</div><div class="d"><a href="https://arxiv.org/html/2504.07096v2">https://arxiv.org/html/2504.07096v2</a> · read 2026-10-29 · saved copy sha256 <code>b1b16ba583eeb0db…</code></div></li><li id="ev-count"><b>count</b> <span class="b">op</span><div class="q">which totals 3.2 billion documents and 4.6 trillion (Llama-2) tokens</div><div class="d"><a href="https://arxiv.org/html/2504.07096v2">https://arxiv.org/html/2504.07096v2</a> · read 2026-10-29 · saved copy sha256 <code>b1b16ba583eeb0db…</code></div></li><li id="ev-data_access"><b>data access</b> <span class="b">op</span><div class="q">OLMoTrace is publicly available and fully open-source.</div><div class="d"><a href="https://arxiv.org/abs/2504.07096">https://arxiv.org/abs/2504.07096</a> · read 2026-10-29 · saved copy sha256 <code>cd982680a1ca4c02…</code></div></li></ul></div></details><details class="sec"><summary><span class="st">Negative tags</span><span class="sd">what it is not</span><span class="sn">3</span></summary><div class="body"><ul><li>the retrieved documents are not causes of the output</li><li>NOT a citation system</li><li>traces only models whose training data is open</li></ul></div></details><details class="sec"><summary><span class="st">Sources</span><span class="sd">every source read, with its date and hash</span><span class="sn">2</span></summary><div class="body"><ul><li><a href="https://arxiv.org/abs/2504.07096">https://arxiv.org/abs/2504.07096</a><div class="d">read 2026-10-29 · HTTP 200 · sha256 <code>cd982680a1ca4c02…</code></div></li><li><a href="https://arxiv.org/html/2504.07096v2">https://arxiv.org/html/2504.07096v2</a><div class="d">read 2026-10-29 · HTTP 200 · sha256 <code>b1b16ba583eeb0db…</code></div></li></ul></div></details><details class="sec"><summary><span class="st">Not yet checked</span><span class="sd">what remains to read</span><span class="sn">2</span></summary><div class="body"><ul><li>the Playground itself</li><li>infini-gram as a separate record</li></ul></div></details></div>
+<h2>Cite this record</h2><div class="cite"><p id="cite">Lee Sharks, ed. &quot;OLMoTrace.&quot; Provenance meta-aggregator, Provenance Erasure, compiled 2026-10-29. https://www.provenanceerasure.org/aggregators/olmotrace</p><p class="d">Record https://www.provenanceerasure.org/aggregators/olmotrace · entity https://www.provenanceerasure.org/aggregators/olmotrace#entity · <a href="/data/provenance-census/census.json">the census as data</a></p></div><pre class="bib">@misc{pe-olmotrace2026,
+  editor = {Sharks, Lee},
+  title = {OLMoTrace},
+  howpublished = {Provenance meta-aggregator, Provenance Erasure},
+  year = {2026},
+  note = {Compiled 2026-10-29; every field sourced and dated},
+  url = {https://www.provenanceerasure.org/aggregators/olmotrace}
+}</pre>
+<div class="foot">Editor: Lee Sharks (<a href="https://orcid.org/0009-0000-1599-0703">ORCID 0009-0000-1599-0703</a>). This page is the provenance meta-aggregator's record of the resource above: its reading and fields are ours, and each field carries its source, its basis and the hash of the copy read. Compiled 2026-10-29. CC BY 4.0.</div></div>
+<script>document.querySelectorAll('[data-copy]').forEach(b=>b.onclick=()=>{const t=document.getElementById(b.dataset.copy).innerText;(navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(()=>{const o=b.textContent;b.textContent='Copied';setTimeout(()=>b.textContent=o,1600)}).catch(()=>{})})</script></body></html>
