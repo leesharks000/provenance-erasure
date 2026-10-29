@@ -1,0 +1,228 @@
+Overview — Metawatch 
+ Metawatch by IPTC 
+ Overview Countries Sites Fields CDN C2PA AI prefs Source type About 
+ Metawatch
+
+Metawatch tracks how often major news publishers preserve embedded photo metadata
+ (Exif, IPTC Photo Metadata (in both original IIM format and newer XMP format), and C2PA) on the images they publish.
+ We crawl a curated list of publishers monthly and score the photographs they serve.
+
+Got a publisher we should add, a metric we're missing, or a number that looks wrong?
+ Tell us via this short form 
+— we read every response.
+
+ Latest run 2026-10-01 Sites crawled 425 Countries 122 Images analysed 6,580 
+ Mean IPTC score 5.96 
+ % with any IPTC 11% % with C2PA 0.5% 
+ Trends across runs
+
+Each point is one crawl run. Note that the earlier points are slightly
+ skewed, as we crawled fewer publishers in those runs. See the
+ dataset page for the underlying
+ parquet files.
+
+ Mean IPTC score
+
+ % of images with any IPTC
+
+ How the scores are distributed
+
+Every publisher we scored, ranked from best to worst. Any average
+ describes almost nobody here: a small group embed metadata thoroughly,
+ and 321 of 425 publishers
+ embed none we can find at all.
+ The faint line is the previous run. 
+ By publisher
+ Each line is one of 425 publishers 2026-09-01 104 carry metadata · 321 carry none 
+ By country
+ Each line is one of 120 countries 2026-09-01 64 carry metadata · 56 carry none 
+
+Covers every publisher that returned at least one image. Publishers we
+ reached but got no photograph from are listed separately as
+ no_images rather than scored
+ zero, since that is usually our blind spot rather than their practice.
+ Country scores are the mean of that country’s publishers. The
+ dashed line averages these scores one publisher at a time, so it sits a
+ little below the 5.96 headline
+ figure, which weights every image equally instead.
+
+ Top sites
+ Ranked by mean IPTC score across all sampled images in the latest crawl. Only publishers with at least 10 images sampled are ranked, so a couple of lucky photographs can't put a site at the top.
+ #
+ Site
+ Country
+ Category
+ Images
+ % with IPTC
+ Score
+
+ 1
+ taz 
+ Germany
+ newspaper 
+ 20
+ 95%
+ 93.8 
+
+ 2
+ Süddeutsche Zeitung 
+ Germany
+ newspaper 
+ 15
+ 93.3%
+ 91.7 
+
+ 3
+ Politico 
+ United States
+ online 
+ 18
+ 94.4%
+ 84.7 
+
+ 4
+ The Japan Times 
+ Japan
+ newspaper 
+ 20
+ 90%
+ 78.8 
+
+ 5
+ PBS NewsHour 
+ United States
+ broadcaster 
+ 20
+ 90%
+ 77.5 
+
+ 6
+ Les Echos 
+ France
+ newspaper 
+ 20
+ 80%
+ 72.5 
+
+ 7
+ NPR 
+ United States
+ broadcaster 
+ 10
+ 90%
+ 70.0 
+
+ 8
+ Le Figaro 
+ France
+ newspaper 
+ 18
+ 77.8%
+ 66.7 
+
+ 9=
+ Prensa Libre 
+ Guatemala
+ newspaper 
+ 20
+ 90%
+ 62.5 
+
+ 9=
+ Nederlands Dagblad 
+ Netherlands
+ newspaper 
+ 20
+ 100%
+ 62.5 
+
+ See all sites → · Share this ranking as an image → 
+ Top countries
+
+Country mean is the average of site scores, equal-weighted per site. Only
+ countries with more than 3 publishers scored are ranked,
+ so a single publisher can't put a country at the top.
+Movement is against the 2026-09-01 run. 
+ #
+ Country
+ Sites scored
+ Mean score
+ Since last run
+
+ 1
+ France 
+ 10
+ 19.8 
+ ▲ 1 Up 1 place since 2026-09-01 (was #2) 
+
+ 2
+ Germany 
+ 18
+ 19.2 
+ ▲ 2 Up 2 places since 2026-09-01 (was #4) 
+
+ 3
+ Taiwan 
+ 4
+ 18.8 
+ ▲ 12 Up 12 places since 2026-09-01 (was #15) 
+
+ 4
+ United States 
+ 21
+ 18.1 
+ ▼ 3 Down 3 places since 2026-09-01 (was #1) 
+
+ 5
+ Sweden 
+ 5
+ 17.6 
+ ▼ 2 Down 2 places since 2026-09-01 (was #3) 
+
+ 6
+ Norway 
+ 6
+ 15.7 
+ ▼ 1 Down 1 place since 2026-09-01 (was #5) 
+
+ 7
+ Netherlands 
+ 4
+ 15.6 
+ – Unchanged since 2026-09-01 
+
+ 8
+ Austria 
+ 7
+ 10.5 
+ ▲ 2 Up 2 places since 2026-09-01 (was #10) 
+
+ 9
+ Portugal 
+ 4
+ 7.5 
+ ▼ 3 Down 3 places since 2026-09-01 (was #6) 
+
+ 10
+ Japan 
+ 18
+ 6.9 
+ ▲ 2 Up 2 places since 2026-09-01 (was #12) 
+
+ How this run’s top 10 ranked in earlier runs
+
+A break in a line means that country wasn’t ranked that run —
+ usually because too few of its publishers returned images. Earlier
+ runs ranked fewer countries, as we tracked fewer publishers. Hover a
+ point for its score.
+
+ See all countries → · Share this month's rankings as images → 
+ Metawatch · A project of the
+ International Press Telecommunications Council .
+
+Data licensed CC BY 4.0 .
+
+ Source on GitHub ·
+ Methodology ·
+ Send feedback ·
+ Publishers may opt out by emailing office@iptc.org .

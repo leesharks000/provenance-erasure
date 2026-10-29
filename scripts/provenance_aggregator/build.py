@@ -47,7 +47,8 @@ def chips(r):
             + f'<span class="chip {c}">{e(st)}</span></div>')
 
 def kernel(r):
-    return f'{r["name"]} is a {r["kind"]} from {r["operator"]}. The object it attaches provenance to: {r["provenance_object"]}.'
+    k = r["kind"]; art = "an" if k[:1].lower() in "aeiou" else "a"
+    return f'{r["name"]}: {art} {k}. Operator: {r["operator"]}. The object it attaches provenance to: {r["provenance_object"]}.'
 
 def cite_text(r):
     return f'Lee Sharks, ed. "{r["name"]}." Provenance meta-aggregator, Provenance Erasure, compiled {D["compiled"]}. {BASE}{r["slug"]}'
@@ -96,7 +97,7 @@ def page(r):
            ("version_and_time", "Versions and dates", e(vt)), ("observed", "Observation", e(f'{r["observed"]["on"]}: {r["observed"]["fetch"]}'))]
     tbl = lambda F: "".join(f'<tr><td>{k}</td><td>{v}{bchip(r, f)}</td></tr>' for f, k, v in F if v)
     own = r["evidence"].get("self_description")
-    ownq = f'<blockquote class="q">{e(own["quote"])}</blockquote><p class="d">In its own words{"" if own["basis"] == "operator" else ", as a third party gives them"}: <a href="{e(r["sources"][own["src"]]["url"])}">{e(r["sources"][own["src"]]["url"])}</a>, read {e(r["sources"][own["src"]]["read"])}</p>' if own and own.get("quote") else ""
+    ownq = f'<blockquote class="q">{e(own["quote"])}</blockquote><p class="d">{"In its own words" if own["basis"] == "operator" else "As a third party describes it"}: <a href="{e(r["sources"][own["src"]]["url"])}">{e(r["sources"][own["src"]]["url"])}</a>, read {e(r["sources"][own["src"]]["read"])}</p>' if own and own.get("quote") else ""
     ev = "".join(f'<li id="ev-{e(f)}"><b>{e(re.sub(r"_[0-9]+$", "", f).replace("_", " "))}</b> <span class="b">{BASIS[v["basis"]][0]}</span>'
                  + (f'<div class="q">{e(v["quote"])}</div>' if v.get("quote") else f'<div class="d">{e(v.get("note") or "")}</div>')
                  + f'<div class="d"><a href="{e(r["sources"][v["src"]]["url"])}">{e(r["sources"][v["src"]]["url"])}</a> · read {e(r["sources"][v["src"]]["read"])} · saved copy sha256 <code>{e(r["sources"][v["src"]]["sha256"][:16])}…</code></div></li>'
@@ -106,7 +107,8 @@ def page(r):
     for x in rels: groups.setdefault(x["rel"], []).append(x)
     def item(x):
         if x.get("target"): return f'<li>{link(x["target"])}' + (f'<div class="d">{e(x["note"])}</div>' if x.get("note") else "") + "</li>"
-        return f'<li><a href="{e(x["url"])}">{e(x["label"])}</a><div class="d">{e(x.get("note") or "")}</div></li>'
+        head = f'<a href="{e(x["url"])}">{e(x["label"])}</a>' if x.get("url") else e(x["label"])
+        return f'<li>{head}<div class="d">{e(x.get("note") or "")}</div></li>'
     relhtml = "".join(f'<h3>{REL[k]}</h3><ul>{"".join(item(x) for x in v)}</ul>' for k, v in groups.items())
     dis = "".join(f'<tr><td>{link(n["neighbour"]) if n.get("neighbour") else e(n["label"])}</td><td>{e(n["context"])}</td></tr>' for n in r.get("disambiguation", []))
     neg = "".join(f"<li>{e(t)}</li>" for t in r.get("negative_tags", []))
@@ -117,7 +119,7 @@ def page(r):
 <meta name="citation_title" content="{e(r["name"])} — provenance meta-aggregator record"><meta name="citation_editor" content="Lee Sharks"><meta name="citation_date" content="{D["compiled"]}"><meta name="citation_public_url" content="{BASE}{r["slug"]}">
 <script type="application/ld+json">{jsonld(r)}</script>{HEAD}</head><body>{topbar("Aggregators")}<div class="wrap">
 <div class="crumb"><a href="/aggregators/">Provenance meta-aggregator</a> / {e(LINEAGE.get(r["lineage"], r["lineage"]))}</div><h1>{e(r["name"])}</h1>{chips(r)}<div class="kernel">{e(kernel(r))}</div>
-<div class="act"><a class="btn" href="{e(r["url"])}">Visit {e(r["name"])} ↗</a><a class="btn ghost" href="/module/">Run an erasure audit</a><button class="btn ghost" type="button" data-copy="cite">Copy citation</button></div>
+<div class="act"><a class="btn" href="{e(r["url"])}">{("Its landing page ↗ (" + e(r["lifecycle"]["state"]) + ")") if (r.get("lifecycle") or {}).get("state") == "ended" else ("Visit " + e(r["name"]) + " ↗")}</a><a class="btn ghost" href="/module/">Run an erasure audit</a><button class="btn ghost" type="button" data-copy="cite">Copy citation</button></div>
 {ownq}
 <h2>What it carries</h2><table>{tbl(CARRY)}</table><p class="legend">op the operator's own statement · 3p a third-party account · obs our observation · rd our reading. Hover a tag for its quote; each opens below with its source.</p>
 <h2>Entity</h2><table>{tbl(ENT)}</table>

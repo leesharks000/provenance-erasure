@@ -324,19 +324,6 @@
   "text_chars": 156699,
   "error": ""
  },
- "mapping-manuscript-migrations--sdbm": {
-  "entity": "mapping-manuscript-migrations",
-  "id": "sdbm",
-  "url": "https://sdbm.library.upenn.edu/",
-  "final_url": "https://sdbm.library.upenn.edu/",
-  "http": "200",
-  "content_type": "text/html; charset=utf-8",
-  "fetched": "2026-10-29T15:55:59Z",
-  "sha256": "9a0fdf8805bd970aba7371e6ca91d6bef572b5f6be01d9ae2bf7c6ab4df31bb8",
-  "bytes": 62323,
-  "text_chars": 7137,
-  "error": ""
- },
  "vroniplag-wiki--dewiki": {
   "entity": "vroniplag-wiki",
   "id": "dewiki",
@@ -348,19 +335,6 @@
   "sha256": "fffeef99bb5626eded74f096bc05c1ad04052232323b36a0fa1bd5d61f5a7f98",
   "bytes": 26182,
   "text_chars": 25882,
-  "error": ""
- },
- "iptc-photo-metadata-tests--metawatch": {
-  "entity": "iptc-photo-metadata-tests",
-  "id": "metawatch",
-  "url": "https://iptc.org/news/announcing-iptc-metawatch/",
-  "final_url": "https://iptc.org/news/announcing-iptc-metawatch/",
-  "http": "200",
-  "content_type": "text/html; charset=UTF-8",
-  "fetched": "2026-10-29T15:56:28Z",
-  "sha256": "0a7fea35f38f83bbc3a4f2807ea580ed054e661b774a5055703b693632f5da3d",
-  "bytes": 159135,
-  "text_chars": 13316,
   "error": ""
  },
  "c2pa-conformance--products-json": {
@@ -375,5 +349,99 @@
   "bytes": 375146,
   "text_chars": 375134,
   "error": ""
+ },
+ "data-provenance-initiative--site-bundle": {
+  "entity": "data-provenance-initiative",
+  "id": "site-bundle",
+  "url": "https://www.dataprovenance.org/static/js/main.af19d7fc.js",
+  "final_url": "https://www.dataprovenance.org/static/js/main.af19d7fc.js",
+  "http": "200",
+  "content_type": "application/javascript; charset=utf-8",
+  "fetched": "2026-10-29T18:09:26Z",
+  "sha256": "91de539c0ec5317faec490142648792d586b0ee21e82a88f5d7feba90a0898e9",
+  "bytes": 2800478,
+  "text_chars": 2800478,
+  "error": "",
+  "redacted": "2026-10-29: one Mapbox public access token (pk.\u2026) in the script replaced by [REDACTED-ACCESS-KEY] in the saved .txt and .html.gz, for GitHub push protection; sha256 is of the bytes as fetched, before redaction"
+ },
+ "attributionbench--acl-anthology": {
+  "entity": "attributionbench",
+  "id": "acl-anthology",
+  "url": "https://aclanthology.org/2024.findings-acl.886/",
+  "final_url": "https://aclanthology.org/2024.findings-acl.886/",
+  "http": "200",
+  "content_type": "text/html; charset=utf-8",
+  "fetched": "2026-10-29T18:09:27Z",
+  "sha256": "c59c736a18a81530bc705482a966c4a4c7652e72fee48f1ca46e6397af1a9b02",
+  "bytes": 41681,
+  "text_chars": 12651,
+  "error": ""
+ },
+ "provstore--maintainer-software": {
+  "entity": "provstore",
+  "id": "maintainer-software",
+  "url": "https://trungdong.github.io/software.html",
+  "final_url": "https://trungdong.github.io/software.html",
+  "http": "200",
+  "content_type": "text/html; charset=utf-8",
+  "fetched": "2026-10-29T18:09:27Z",
+  "sha256": "2f01617b8f05f98af91078be74a5d5b187c2149026fffbf0d78b61d8a8191af4",
+  "bytes": 8728,
+  "text_chars": 2487,
+  "error": ""
+ },
+ "iptc-metawatch--overview": {
+  "entity": "iptc-metawatch",
+  "id": "overview",
+  "url": "https://metawatch.iptc.org/",
+  "final_url": "https://metawatch.iptc.org/",
+  "http": "200",
+  "content_type": "text/html; charset=utf-8",
+  "fetched": "2026-10-29T18:09:28Z",
+  "sha256": "4a9a9fb3a2a1ae5a097dfc1e0197c2e68e516b4ad66a1bb47d80ecbc06b9b730",
+  "bytes": 107817,
+  "text_chars": 4285,
+  "error": ""
+ },
+ "iptc-metawatch--conference-post": {
+  "entity": "iptc-metawatch",
+  "id": "conference-post",
+  "url": "https://iptc.org/news/iptc-photo-metadata-conference-2026-videos-are-now-available/",
+  "final_url": "https://iptc.org/news/iptc-photo-metadata-conference-2026-videos-are-now-available/",
+  "http": "200",
+  "content_type": "text/html; charset=UTF-8",
+  "fetched": "2026-10-29T18:09:29Z",
+  "sha256": "083858da42521de30105af0c6fb5d63c2cef218f640c30e4d03228e1ff37d6ae",
+  "bytes": 152144,
+  "text_chars": 8373,
+  "error": ""
+ },
+ "iptc-metawatch--announcement": {
+  "entity": "iptc-metawatch",
+  "id": "announcement",
+  "url": "https://iptc.org/news/announcing-iptc-metawatch/",
+  "final_url": "https://iptc.org/news/announcing-iptc-metawatch/",
+  "http": "200",
+  "content_type": "text/html; charset=UTF-8",
+  "fetched": "2026-10-29T15:56:28Z",
+  "sha256": "0a7fea35f38f83bbc3a4f2807ea580ed054e661b774a5055703b693632f5da3d",
+  "bytes": 159135,
+  "text_chars": 13316,
+  "error": "",
+  "renamed_from": "iptc-photo-metadata-tests--metawatch"
+ },
+ "schoenberg-database--home": {
+  "entity": "schoenberg-database",
+  "id": "home",
+  "url": "https://sdbm.library.upenn.edu/",
+  "final_url": "https://sdbm.library.upenn.edu/",
+  "http": "200",
+  "content_type": "text/html; charset=utf-8",
+  "fetched": "2026-10-29T15:55:59Z",
+  "sha256": "9a0fdf8805bd970aba7371e6ca91d6bef572b5f6be01d9ae2bf7c6ab4df31bb8",
+  "bytes": 62323,
+  "text_chars": 7137,
+  "error": "",
+  "renamed_from": "mapping-manuscript-migrations--sdbm"
  }
 }

@@ -39,7 +39,7 @@ The resources that carry, record and test provenance, each formalized as an enti
 - AttriBench (benchmark; Answer engines; tests): https://www.provenanceerasure.org/aggregators/attribench
 - AttributionBench (benchmark; Answer engines; tests): https://www.provenanceerasure.org/aggregators/attributionbench
 - C2PA Conformance Program and Explorer (registry; Media and images; expresses/records): https://www.provenanceerasure.org/aggregators/c2pa-conformance
-- Data Provenance Initiative (audit collection and explorer; Models and training data; records): https://www.provenanceerasure.org/aggregators/data-provenance-initiative
+- Data Provenance Initiative (audit collection and measurement systems; Models and training data; records): https://www.provenanceerasure.org/aggregators/data-provenance-initiative
 - Getty Provenance Index (database (linked open data); Objects and art; records): https://www.provenanceerasure.org/aggregators/getty-provenance-index
 - IPTC Metawatch (monitor; Media and images; tests): https://www.provenanceerasure.org/aggregators/iptc-metawatch
 - IPTC photo metadata tests (test series; Media and images; expresses/tests): https://www.provenanceerasure.org/aggregators/iptc-photo-metadata-tests

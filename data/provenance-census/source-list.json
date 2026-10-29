@@ -2,8 +2,7 @@
  "iptc-photo-metadata-tests": {
   "research": "https://iptc.org/standards/photo-metadata/research/",
   "social-2019": "https://iptc.org/standards/photo-metadata/social-media-sites-photo-metadata-test-results-2019/",
-  "interop-tests": "https://iptc.org/standards/photo-metadata/interoperability-tests/",
-  "metawatch": "https://iptc.org/news/announcing-iptc-metawatch/"
+  "interop-tests": "https://iptc.org/standards/photo-metadata/interoperability-tests/"
  },
  "nanopublications": {
   "home": "https://nanopub.net/",
@@ -16,11 +15,13 @@
  },
  "data-provenance-initiative": {
   "repo-readme": "https://raw.githubusercontent.com/Data-Provenance-Initiative/Data-Provenance-Collection/main/README.md",
-  "paper": "https://arxiv.org/abs/2310.16787"
+  "paper": "https://arxiv.org/abs/2310.16787",
+  "site-bundle": "https://www.dataprovenance.org/static/js/main.af19d7fc.js"
  },
  "attributionbench": {
   "project": "https://osu-nlp-group.github.io/AttributionBench/",
-  "dataset-card": "https://huggingface.co/datasets/osunlp/AttributionBench/raw/main/README.md"
+  "dataset-card": "https://huggingface.co/datasets/osunlp/AttributionBench/raw/main/README.md",
+  "acl-anthology": "https://aclanthology.org/2024.findings-acl.886/"
  },
  "attribench": {
   "paper": "https://arxiv.org/abs/2604.05224",
@@ -28,7 +29,8 @@
  },
  "provstore": {
   "openprovenance": "https://openprovenance.org/",
-  "maintainer": "https://trungdong.github.io/getting-started-with-provenance.html"
+  "maintainer": "https://trungdong.github.io/getting-started-with-provenance.html",
+  "maintainer-software": "https://trungdong.github.io/software.html"
  },
  "wikiwho": {
   "meta-research": "https://meta.wikimedia.org/wiki/Research:Wikiwho_Provenance_Api",
@@ -36,8 +38,7 @@
   "api-readme": "https://raw.githubusercontent.com/gesiscss/wikiwho_api_public/master/README.md"
  },
  "mapping-manuscript-migrations": {
-  "white-paper": "https://seco.cs.aalto.fi/publications/2020/burrows-et-al-mmm-white-paper.pdf",
-  "sdbm": "https://sdbm.library.upenn.edu/"
+  "white-paper": "https://seco.cs.aalto.fi/publications/2020/burrows-et-al-mmm-white-paper.pdf"
  },
  "vroniplag-wiki": {
   "wikipedia": "https://en.wikipedia.org/w/index.php?title=VroniPlag_Wiki&action=raw",
@@ -51,5 +52,13 @@
  "olmotrace": {
   "paper": "https://arxiv.org/html/2504.07096v2",
   "abs": "https://arxiv.org/abs/2504.07096"
+ },
+ "iptc-metawatch": {
+  "overview": "https://metawatch.iptc.org/",
+  "conference-post": "https://iptc.org/news/iptc-photo-metadata-conference-2026-videos-are-now-available/",
+  "announcement": "https://iptc.org/news/announcing-iptc-metawatch/"
+ },
+ "schoenberg-database": {
+  "home": "https://sdbm.library.upenn.edu/"
  }
 }
