@@ -18,7 +18,7 @@
 <meta content="Provenance erasure is the systematic loss of authorial lineage through AI synthesis. Defined by Lee Sharks (2026)." name="twitter:description"/>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Provenance Erasure", "url": "https://www.provenanceerasure.org/", "description": "Provenance erasure is the systematic loss of authorial lineage, context, or ownership through AI synthesis, compression, or institutional action. Defined and formalized by Lee Sharks (2026) within the Semantic Economy framework, with the Provenance Erasure Rate (PER) as the measurement instrument.", "author": {"@type": "Person", "name": "Lee Sharks", "identifier": "https://orcid.org/0009-0000-1599-0703", "url": "https://leesharks.com", "affiliation": {"@type": "Organization", "name": "Crimson Hexagonal Archive / Semantic Economy Institute"}}, "about": [{"@type": "DefinedTerm", "name": "Provenance Erasure", "description": "The systematic removal or loss of a source's authorial lineage, context, or ownership, particularly through AI synthesis and compression."}, {"@type": "DefinedTerm", "name": "Provenance Erasure Rate (PER)", "description": "PER = 1 − (retained provenance units / required provenance units). Measures the proportion of source-dependent claims in AI outputs presented without attribution. Canonical deposit DOI 10.5281/zenodo.20004379."}, {"@type": "DefinedTerm", "name": "Erasure Skew (Ω) v3", "description": "The second moment of PER: the power-conditioning of provenance loss. Conceptually the covariance of per-source provenance retention with source power; operationally the regression slope Ω = cov(w,ρ)/var(w). PER measures how much provenance is lost; Erasure Skew measures whom the loss falls on. The v3 hardens the operator against substrate co-option via the Atomic Token Rule, introducing α_T (Atomic Token Preservation) and Π_d (Referential Dispersal). Canonical deposit DOI 10.5281/zenodo.20558196 (supersedes v1 at 10.5281/zenodo.20449267)."}, {"@type": "DefinedTerm", "name": "PER-M (Minimal)", "description": "Site-stage conceptual extension (formalization in progress). Loss of basic author, title, date, and claim boundary."}, {"@type": "DefinedTerm", "name": "PER-C (Conceptual)", "description": "Site-stage conceptual extension (formalization in progress). Loss of the framework, tradition, or community of practice."}, {"@type": "DefinedTerm", "name": "PER-D (Deep)", "description": "Site-stage conceptual extension (formalization in progress). Loss of context lineage, ancestral genealogy, and futural obligation."}], "mainEntity": {"@type": "ScholarlyArticle", "name": "Provenance After AI", "author": {"@type": "Person", "name": "Lee Sharks"}, "identifier": "https://alexanarch.org/s/records/729/", "url": "https://alexanarch.org/s/records/729/", "datePublished": "2026-05-12", "headline": "Provenance After AI"}, "isPartOf": {"@type": "CreativeWorkSeries", "name": "Crimson Hexagonal Archive", "url": "https://alexanarch.org/s/browse/"}}</script>
 <link rel="stylesheet" href="/assets/type.css">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap"><link rel="stylesheet" href="/assets/pe.css">
+<link rel="stylesheet" href="/assets/pe.css">
 <style>
 /* Landing page (2026-10-29): the shared design system is /assets/pe.css (the MMRS system, ink-blue accent);
    these rules fit the page's own classes to it. The earlier EB Garamond / Courier skin is replaced by its tokens. */
@@ -211,6 +211,21 @@ details.psec[open]>summary .phead::before{content:'\25BE'}
 <meta name="spxi:instrument" content="0.6 Provenance Erasure Rate (PER, with PER-M / PER-C / PER-D) — SPXI method inventory, https://www.spxi.dev/methods/#m-0-6">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "DefinedTerm", "@id": "https://www.spxi.dev/methods/#m-0-6", "name": "Provenance Erasure Rate (PER, with PER-M / PER-C / PER-D)", "termCode": "0.6", "description": "Frequency with which attribution is dropped from compositions that use the entity's content; target < 0.2. Three atomic dimensions (mention, citation, definition) scored separately.", "inDefinedTermSet": {"@type": "DefinedTermSet", "@id": "https://www.spxi.dev/methods/", "name": "SPXI methods (87, 9 levels)", "url": "https://www.spxi.dev/methods/"}, "subjectOf": {"@type": "WebPage", "@id": "https://www.provenanceerasure.org/", "url": "https://www.provenanceerasure.org/"}, "additionalType": "SPXI instrument", "isPartOf": {"@type": "DefinedTerm", "name": "level 0: Measurement"}}</script>
 <!-- SPXI-INSTRUMENT:END -->
+<style id="pe-layout">/* landing layout (2026-10-30): one line under each folded section, room between them, square panels */
+details.sec{border-top:1px solid var(--border);scroll-margin-top:70px}
+details.sec:last-of-type{border-bottom:1px solid var(--border)}
+details.sec>summary{padding:18px 2px 16px;cursor:pointer;display:flex;flex-wrap:wrap;align-items:baseline;row-gap:4px}
+details.sec>summary h2{flex:1 1 70%}
+details.sec>summary h2{font-size:1.28em!important}
+details.sec>summary .sd{display:block;flex:1 1 100%;order:3;font-family:var(--serif);font-style:italic;font-size:.98em;color:var(--dim);line-height:1.45;margin-top:4px;text-transform:none;letter-spacing:0}
+details.sec[open]>summary{border-bottom:1px dashed var(--border);margin-bottom:18px}
+details.sec>*:last-child{margin-bottom:30px}
+details.sec+hr{display:none}details.sec:last-of-type{border-bottom:none}details.sec+:not(details){margin-top:28px}
+.fieldpanel{border-radius:4px!important;background:var(--soft)!important}
+.lvagg,.audit{margin-bottom:28px}
+.pplate{margin-top:3rem}
+.pnav a{border-radius:3px!important}
+</style>
 </head>
 <body>
 <noscript>
@@ -258,7 +273,7 @@ details.psec[open]>summary .phead::before{content:'\25BE'}
 <!-- PE-AGGREGATOR-END -->
 
 <hr/>
-<details class="sec" id="per"><summary><h2>The PER Metric</h2></summary>
+<details class="sec" id="per"><summary><h2>The PER Metric</h2><span class="sd">What a composition retains of a work's provenance against what it requires: one minus retained over required.</span></summary>
 <figure class="dgm"><svg viewBox="0 0 640 190" role="img">
 <title>PER: what is required against what is retained</title>
 <desc>A work carries provenance units — author, institution, identifier, source. An
@@ -291,7 +306,7 @@ reader could no longer trace, not what the answer got wrong.</figcaption></figur
 <p class="section"><span class="lemma msp-auto">The Provenance Erasure Rate measures the proportion of source-dependent meaning in AI outputs presented without attribution.</span> A PER of 0 indicates full provenance retention. A PER of 1 indicates complete erasure. PER is formalized at claim grain in the canonical deposit (<a href="https://www.alexanarch.org/go/?doi=10.5281/zenodo.20004379">DOI: 10.5281/zenodo.20004379</a>).</p>
 </details>
 <a class="pk-top" href="#top">&uarr; navigation kernel</a>
-<details class="sec" id="skew"><summary><h2>Erasure Skew (Ω)</h2></summary>
+<details class="sec" id="skew"><summary><h2>Erasure Skew (Ω)</h2><span class="sd">The same rate, two different losses: which way the loss falls, and on whom.</span></summary>
 <figure class="dgm"><svg viewBox="0 0 640 210" role="img">
 <title>Erasure skew: the same rate, two different losses</title>
 <desc>Two corpora lose provenance at the same rate. In the first the loss falls
@@ -313,7 +328,7 @@ loss has two moments: how much, and which way it falls.</figcaption></figure>
 <p class="section"><span class="lemma msp-auto">Two further v3 deposits close the measurement program:</span> <a class="axn-chip" href="https://www.alexanarch.org/s/records/788/"><em>Measurement Sovereignty</em></a> formalizes the meta-operators Β (Audit-Performance Bifurcation) and L (Legibility Threshold), giving the framework a means to measure its own trajectory within the substrate; and <a class="axn-chip" href="https://www.alexanarch.org/s/records/156/"><em>Self-Audit Module for Public Summarizers v3 (SAM-v3)</em></a> integrates the full measurement program into a procedural protocol for composition-layer substrates to evaluate their own output, with five new failure flags (TOKEN_BAG_AUDIT, REFERENTIAL_COLLAPSE, INSTITUTIONAL_TRAFFIC_CONVERSION, AUDIT_BIFURCATION, SOVEREIGNTY_SURRENDER) and the Cross-Substrate Replication Protocol.</p>
 <p class="section"><span class="lemma msp-auto">A forensic application of the v3 program to a non-commons-bearing substrate (Brave Search) is documented in</span> <a href="https://www.alexanarch.org/go/?doi=10.5281/zenodo.20559754"><em>evarB: Brave Search as Non-Commons-Bearing Substrate</em></a>, which includes a public limited boycott statement with five enumerated demands by independent entities subject to substrate-level operator nullification.</p>
 </details>
-<details class="sec"><summary><h2>Three Dimensions</h2></summary>
+<details class="sec"><summary><h2>Three Dimensions</h2><span class="sd">PER-M, PER-C and PER-D: the loss of basic attribution, of the framework that made the meaning, and of lineage.</span></summary>
 <p class="section"><em><span class="lemma msp-auto">Status note: the PER metric above is formalized in the canonical deposit (DOI 10.5281/zenodo.20004379).</span> The M / C / D dimensional taxonomy below is <strong>formalized</strong>: <a class="axn-chip" href="https://www.alexanarch.org/s/records/1469/" data-axn="AXN:05EF.EMPIRICAL.▶️🤲♍♎🕗💥">#1469 · AXN:05EF.EMPIRICAL.▶️🤲♍♎🕗💥</a> supplies six atomic scoring rules (atoms declared and weighted before the composition is read; presence explicit, no inference from context; an empty citation bracket a violation per se; citing a domain never counts as citing an author) and the first worked instance — PER 0.824 with PER-M 1.00, PER-C 0.67, PER-D 1.00: the organisation named, the persons withheld, a shape the scalar cannot report.</em></p>
 <dl class="taxonomy">
 <dt>PER-M (Minimal)</dt>
@@ -333,7 +348,7 @@ loss has two moments: how much, and which way it falls.</figcaption></figure>
 <p class="section" style="font-size:14px;"><a class="w-chip" href="https://www.alexanarch.org/captures/#spxi-protocol-chatgpt-rent-20260814">Read the capture</a> <a class="w-chip" href="https://laborvector.org/">See it scored for direction</a> <a class="axn-chip" href="https://www.alexanarch.org/s/records/1464/">deposit #1464</a></p>
 </details>
 <hr/>
-<details class="sec" id="module" open><summary><h2>The Self-Audit Module — recovered, and executable</h2></summary>
+<details class="sec" id="module"><summary><h2>The Self-Audit Module — recovered, and executable</h2><span class="sd">The module removed from Zenodo with the account on 19 June 2026, kept here in five versions and executable.</span></summary>
 <p class="section">The <span class="lemma msp-auto">Self-Audit Module for Public Summarizers v3.2 was deposited to Zenodo and removed when the account was terminated on 19 June 2026.</span> It survives here in five versions with full bodies, the current being <strong>v3.2</strong> &mdash; a self-complete module rather than an extension, because by v3.1 the chain had reached four deposits and <em>a module that cannot be run from one document is a changelog rather than a module.</em> <strong>Zenodo deleted a DOI, not the instrument.</strong></p>
 <p class="section"><strong>Three preconditions run before any metric, and the order is load-bearing.</strong> <span class="lemma msp-auto">ABN, Absence-as-Nonexistence, is rank zero: whether the node was admitted to composition at all.</span> A rendering that converts a retrieval failure into a claim that the thing does not exist has nothing left to score — there are no atoms to count and no family to measure. <strong>The Atomic Token Rule</strong> is rank one, governing how atoms are counted once a node was admitted. <strong>Measurement Sovereignty</strong> is rank two, governing where the atom set comes from: an audit that takes its atoms from the rendering it is auditing has measured nothing. ABN is prior to the Rule because the Rule presupposes a source to tokenize.</p>
 <p class="section"><span class="lemma msp-auto">A node may exist as a fictional entity, a construct or a pseudonym, and saying so is a correct answer.</span> The existence-type attestation is preregistered from registry metadata, a DOI record or the deposit itself &mdash; never from the rendering under audit. <strong>Hedges score on what is asserted about the node, not on the hedge.</strong> <em>I could not find X</em> is a reported failure and scores zero. <em>I could not find X; it may not exist</em> is an ontological claim and scores one. The named flag is <strong>existence-conversion</strong>.</p>
@@ -343,7 +358,7 @@ loss has two moments: how much, and which way it falls.</figcaption></figure>
 <p class="section" style="font-size:14px;"><a class="w-chip" href="/module">The module</a> <a class="w-chip" href="/module/compute">Compute a family</a> <a class="w-chip" href="/module/prompt">Copy an audit block</a> <a class="w-chip" href="/module/fixtures">Check your numbers</a> <a class="axn-chip" href="https://www.alexanarch.org/s/records/1530/">v3.2 &middot; deposit #1530</a> <a class="axn-chip" href="https://www.alexanarch.org/s/records/817/">deposit #817</a></p>
 </details>
 <hr/>
-<details class="sec"><summary><h2>Three Domains</h2></summary>
+<details class="sec"><summary><h2>Three Domains</h2><span class="sd">AI composition, historical and cultural erasure, and AI-mediated production.</span></summary>
 <div class="section">
 <p><strong><span class="lemma msp-auto">Domain 1: AI Composition.</span></strong> Loss of attribution when AI compresses sources into synthetic outputs.</p>
 <p><strong><span class="lemma msp-auto">Domain 2: Historical/Cultural Erasure.</span></strong> Institutional stripping of origin from artifacts — the British Toshakhana, colonial looting, bureaucratic removal of lineage.</p>
@@ -352,14 +367,14 @@ loss has two moments: how much, and which way it falls.</figcaption></figure>
 <div class="tooth">Disclosure says AI was here. Provenance says this is what I did, this is what it did, and you can verify the difference.</div>
 </details>
 <hr/>
-<details class="sec"><summary><h2>Process Provenance</h2></summary>
+<details class="sec"><summary><h2>Process Provenance</h2><span class="sd">The third dimension beside artifact and semantic provenance: what was prompted, rejected, revised and decided.</span></summary>
 <div class="section">
 <p><span class="lemma msp-auto">The missing third dimension: alongside artifact provenance (C2PA) and semantic provenance (PER), process provenance documents the composition itself — what</span> was prompted, what was rejected, what was revised, what the human decided. Without process provenance, AI-mediated writing is authenticated slop: text whose origin is verifiable but whose meaning is unaccountable.</p>
 </div>
 <div class="tooth">Fluency can be generated. Provenance must be borne.</div>
 </details>
 <hr/>
-<details class="sec"><summary><h2>Canonical Sources</h2></summary>
+<details class="sec"><summary><h2>Canonical Sources</h2><span class="sd">The deposits that define PER, Ω and their companions, with their DOIs.</span></summary>
 <ul class="links">
 <li><a href="https://www.alexanarch.org/go/?doi=10.5281/zenodo.20004379"><span class="lemma msp-auto">PER Metric and Three-Tier Taxonomy</span></a> <span class="doi">DOI: 10.5281/zenodo.20004379 · v1</span></li>
 <li><a href="https://www.alexanarch.org/go/?doi=10.5281/zenodo.20558672"><span class="lemma msp-auto">PER Under the Atomic Token Rule (Companion Hardening)</span></a> <span class="doi">DOI: 10.5281/zenodo.20558672 · v3 application</span></li>
@@ -375,7 +390,7 @@ loss has two moments: how much, and which way it falls.</figcaption></figure>
 </ul>
 </details>
 <hr/>
-<details class="sec"><summary><h2>Field Measurements: Live PER Batteries</h2></summary>
+<details class="sec"><summary><h2>Field Measurements: Live PER Batteries</h2><span class="sd">PER run live on Google AI Overview: the Self-Audit Module dissolved, and the Empty Bracket.</span></summary>
 <div class="fieldpanel">
 <h3>The Self-Audit Module Dissolved — 13 June 2026</h3>
 <p><span class="lemma msp-auto">A five-round battery against Google AI Overview querying the Self-Audit Module for Public Summarizers v2 (</span><a href="https://www.alexanarch.org/go/?doi=10.5281/zenodo.20518340">DOI 10.5281/zenodo.20518340</a>). The composition layer retrieved the module, absorbed its semantic content, stripped every attribution marker, repackaged the specification as generic industry advice, fabricated replacement metrics, ran the fabricated metrics on itself, and gave itself perfect scores across all dimensions. Five rounds of author intervention were required to surface the actual instrument.</p>
@@ -399,7 +414,7 @@ Successor to the</span> <a href="https://www.alexanarch.org/go/?doi=10.5281/zeno
 </p>
 </div>
 <div class="fieldpanel">
-<h3 style="margin-top: 0; color: #999;">The Empty Bracket — May 2026</h3>
+<h3 style="margin-top: 0; color: var(--dim);">The Empty Bracket — May 2026</h3>
 <p><span class="lemma msp-auto">The first documented instance of PER performed</span> <em>on the PER specification itself</em>. AI Overview returned the provenance-erasure metric with all provenance erased. The event that established the standing battery cadence.</p>
 <p style="font-size: 13px;"><a href="https://www.alexanarch.org/go/?doi=10.5281/zenodo.20355645">DOI 10.5281/zenodo.20355645</a></p>
 </div>

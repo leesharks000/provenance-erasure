@@ -15,8 +15,7 @@ LINEAGE = {"media": "Media and images", "scholarly record": "The scholarly recor
            "objects and art": "Objects and art"}
 CAPS = ["expresses", "records", "tests"]
 REL = {"part_of": "Part of", "has_part": "Has part", "neighbour": "Neighbours", "sibling": "Sibling record", "capture": "Captures: the composition layer's account", "non_row": "The /non row"}
-FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
-         '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">')
+FONTS = '<link rel="stylesheet" href="/assets/type.css">'   # the site's own type layer, IBM Plex Serif, Sans and Mono, self-hosted (2026-10-30)
 HEAD = FONTS + '<link rel="stylesheet" href="/assets/pe.css">'
 NAV = [("Audit", "/module/"), ("Aggregators", "/aggregators/"), ("PER", "/#per"), ("Captures", "https://www.alexanarch.org/captures/")]
 
