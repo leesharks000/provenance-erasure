@@ -72,7 +72,24 @@ def chips(r):
     return ('<div class="chips">' + f'<span class="chip">{e(LINEAGE.get(r["lineage"], r["lineage"]))}</span><span class="chip">{e(r["kind"])}</span>'
             + f'<span class="chip {c}">{e(st)}</span></div>')
 
+import runpy as _rp
+ARTICLES = _rp.run_path(str(HERE / "articles.py"))["ARTICLES"] if (HERE / "articles.py").exists() else {}   # entity articles derived from the /non articles (operator, 2026-11-01)
+
+
+def article_html(r):
+    a = ARTICLES.get(r["slug"])
+    if not a:
+        return ""
+    row = a.get("non_row") or r["slug"]; nb = f"https://www.alexanarch.org/non/{row}/"
+    src = lambda ko: ('<p class="d">From its /non article, sentence' + ("s " if len(ko) > 1 else " ")
+                      + ", ".join(f'<a href="{nb}#{row}-ks{n}">{n}</a>' for n in ko) + "</p>")
+    body = "".join(f"<h2>{e(h)}</h2>" + "".join(f"<p>{e(p)}</p>{src(k)}" for p, k in zip(ps, ks)) for (h, ps), ks in zip(a["sections"], a["ko"]))
+    return (f'<div class="art">{body}<p class="d">This article is derived from the entity\'s <a href="{nb}">/non article</a> (EA-NEGONT-02, the knowledge object '
+            f'composed under v0.9): every fact in it is stated there, and each paragraph names the sentences it rests on.</p></div>')
+
+
 def kernel(r):
+    if r["slug"] in ARTICLES: return ARTICLES[r["slug"]]["kernel"]
     k = r["kind"]; art = "an" if k[:1].lower() in "aeiou" else "a"
     return f'{r["name"]}: {art} {k}. Operator: {r["operator"]}. The object it attaches provenance to: {r["provenance_object"]}.'
 
@@ -147,6 +164,7 @@ def page(r):
 <div class="crumb"><a href="/aggregators/">Provenance meta-aggregator</a> / {e(LINEAGE.get(r["lineage"], r["lineage"]))}</div><h1>{e(r["name"])}</h1>{chips(r)}<div class="kernel">{e(kernel(r))}</div>
 <div class="act"><a class="btn" href="{e(r["url"])}">{("Its landing page ↗ (" + e(r["lifecycle"]["state"]) + ")") if (r.get("lifecycle") or {}).get("state") == "ended" else ("Visit " + e(r["name"]) + " ↗")}</a>{''.join(f'<a class="btn ghost" href="{e(x["url"])}">The /non row</a>' for x in r.get("relations", []) if x["rel"] == "non_row")}<a class="btn ghost" href="/module/">Run an erasure audit</a><button class="btn ghost" type="button" data-copy="cite">Copy citation</button></div>
 {ownq}
+{article_html(r)}
 <h2>What it carries</h2><table>{tbl(CARRY)}</table><p class="legend">op the operator's own statement · 3p a third-party account · obs our observation · rd our reading. Hover a tag for its quote; each opens below with its source.</p>
 <h2>Entity</h2><table>{tbl(ENT)}</table>
 <h2>Relations</h2>{relhtml or '<p class="pend">None recorded yet.</p>'}
