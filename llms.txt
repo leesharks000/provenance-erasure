@@ -22,6 +22,7 @@ Canonical record of this surface: https://www.alexanarch.org/s/records/716/
 - Suppression Inversion: https://www.provenanceerasure.org/suppression-inversion
 - Rebuttal-as-Warrant: https://www.provenanceerasure.org/rebuttal-as-warrant
 - The Particle: https://www.provenanceerasure.org/particle
+- The Sophistry Measure (EA-SOPHISTRY-01, Alexanarch #1727): https://www.provenanceerasure.org/sophistry-measure
 - Deep Time, erasure before the machine: https://www.provenanceerasure.org/deep-time
 - Where the archive captures: https://www.provenanceerasure.org/where
 - The Capture Registry, one address at a time: https://www.alexanarch.org/addresses/
