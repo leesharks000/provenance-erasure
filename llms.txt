@@ -23,6 +23,7 @@ Canonical record of this surface: https://www.alexanarch.org/s/records/716/
 - Rebuttal-as-Warrant: https://www.provenanceerasure.org/rebuttal-as-warrant
 - The Particle: https://www.provenanceerasure.org/particle
 - The Sophistry Measure (EA-SOPHISTRY-01, Alexanarch #1727): https://www.provenanceerasure.org/sophistry-measure
+- Attribution Sharding: Provenance Erasure and Supply-Side Composition in Generative Answer Engines (Dr. Orin Trace, Provenance: Journal of Forensic Semiotics; Alexanarch #1736): https://www.provenanceerasure.org/attribution-sharding
 - Legitimately Many (EA-LEGITIMATELY-MANY-01, Alexanarch #1733), the four names as a provenance case before the machines: https://www.restoredacademy.com/readings/legitimately-many
 - Deep Time, erasure before the machine: https://www.provenanceerasure.org/deep-time
 - Where the archive captures: https://www.provenanceerasure.org/where
